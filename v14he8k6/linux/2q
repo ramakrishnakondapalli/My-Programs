@@ -1,0 +1,21 @@
+#include"headers.h"
+#include<pwd.h>
+main()
+{
+
+struct stat v;
+   printf("%d %d",v.st_uid,v.st_gid);
+           
+// struct passwd *getpwnam(v.st_uid);
+//  struct passwd *getpwnam *p;
+
+   struct passwd *p;
+ p=getpwuid(v.st_uid);
+  
+   
+   printf(" %c\n %d\n %d\n %s\n %s\n",p->pw_name,p->pw_uid,p->pw_gid,p->pw_dir,p->pw_shell);
+
+
+
+
+}

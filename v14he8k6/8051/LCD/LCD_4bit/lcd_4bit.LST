@@ -1,0 +1,34 @@
+C51 COMPILER V7.08   LCD_4BIT                                                              10/08/2015 09:31:11 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD_4BIT
+OBJECT MODULE PLACED IN lcd_4bit.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd_4bit.h BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #ifndef LCD_4BIT_H
+   2          #define LCD_4BIT_H
+   3          
+   4          extern void cmdun_lcd(unsigned char);
+   5          extern void charun_lcd(unsigned char);
+   6          extern void writeun_lcd(unsigned char );
+   7          extern void cmdln_lcd(unsigned char);
+   8          extern void charln_lcd(unsigned char);
+   9          extern void writeln_lcd(unsigned char );
+  10          extern void cmd_lcd(unsigned char);
+  11          #endif
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

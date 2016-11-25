@@ -1,0 +1,132 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        10/02/2015  11:10:31  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE keypad_matrixmain.obj, keypad_matrix.obj, keypad_matrix.obj TO keypad_matrix RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+  keypad_matrix.obj (KEYPAD_MATRIX)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  keypad_matrix (KEYPAD_MATRIXMAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0015H     UNIT         ?PR?MAIN?KEYPAD_MATRIXMAIN
+            CODE    0018H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   keypad_matrix (KEYPAD_MATRIXMAIN)
+
+
+SEGMENT                              DATA_GROUP 
+  +--> CALLED SEGMENT              START    LENGTH
+--------------------------------------------------
+?C_C51STARTUP                      -----    -----
+  +--> ?PR?MAIN?KEYPAD_MATRIXMAIN
+
+?PR?MAIN?KEYPAD_MATRIXMAIN         0008H    0001H
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   INIT_KEYPAD
+   INIT_LCD
+   KEYSCAN
+   _CHAR_LCD
+
+
+
+SYMBOL TABLE OF MODULE:  keypad_matrix (KEYPAD_MATRIXMAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KEYPAD_MATRIXMAIN
+BL51 BANKED LINKER/LOCATER V5.03                                                      10/02/2015  11:10:31  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        keypad_val
+  -------         ENDDO         
+  C:0003H         LINE#         5
+  C:0003H         LINE#         6
+  C:0003H         LINE#         8
+  C:0006H         LINE#         9
+  C:0009H         LINE#         10
+  C:0009H         LINE#         11
+  C:0009H         LINE#         13
+  C:000EH         LINE#         14
+  C:0011H         LINE#         15
+  C:0016H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        KEYPAD_MATRIXMAIN
+
+  -------         MODULE        KEYPAD_MATRIX
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  -------         ENDMOD        KEYPAD_MATRIX
+
+*** WARNING L7: MODULE NAME NOT UNIQUE
+    MODULE:  keypad_matrix.obj (KEYPAD_MATRIX)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _CHAR_LCD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INIT_KEYPAD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INIT_LCD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEYSCAN
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INIT_KEYPAD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+    ADDRESS: 0004H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INIT_LCD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+    ADDRESS: 0007H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEYSCAN
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+    ADDRESS: 000AH
+BL51 BANKED LINKER/LOCATER V5.03                                                      10/02/2015  11:10:31  PAGE 3
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CHAR_LCD
+    MODULE:  keypad_matrixmain.obj (KEYPAD_MATRIXMAIN)
+    ADDRESS: 0014H
+
+Program Size: data=10.0 xdata=0 code=36
+LINK/LOCATE RUN COMPLETE.  9 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,59 @@
+C51 COMPILER V7.08   LCD_4BITUN                                                            10/08/2015 09:31:04 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD_4BITUN
+OBJECT MODULE PLACED IN lcd_4bitun.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd_4bitun.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"delay.h"
+   3          #define  lcd_data  P2
+   4            sbit rs=P0^1;
+   5            sbit rw=P0^2;
+   6            sbit en=P0^3;
+   7            bit flag;
+   8          void writeun_lcd(unsigned char dat)
+   9          {
+  10   1        lcd_data=(dat&0xf0);
+  11   1        if(flag)
+  12   1          rs=1;
+  13   1          en=1;
+  14   1          en=1;
+  15   1          en=0;
+  16   1          //lower nibble,rs=rw=en=0
+  17   1         lcd_data=(dat&0x0f)<<4;
+  18   1          if(flag)
+  19   1            rs=1;
+  20   1            en=1;
+  21   1            en=0;
+  22   1         delay_ms(2);
+  23   1      }
+  24          
+  25          void cmdun_lcd(unsigned char cmd)
+  26          {
+  27   1         flag=0;
+  28   1         writeun_lcd(cmd);
+  29   1      }
+  30          void charun_lcd(unsigned char ch)
+  31          {
+  32   1      
+  33   1         flag=1;
+  34   1        writeun_lcd(ch);
+  35   1      }
+  36          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     81    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

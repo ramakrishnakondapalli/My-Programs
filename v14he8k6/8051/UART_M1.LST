@@ -1,0 +1,55 @@
+C51 COMPILER V7.08   UART_M1                                                               09/23/2015 09:47:51 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE UART_M1
+OBJECT MODULE PLACED IN UART_M1.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE UART_M1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #ifndef UART_M1_H
+   3           #define UART_M1_H
+   4              #define BAUD 9600
+   5              #define DOUBLE_BAUD 1
+   6              #define XTAL 11.0592
+   7              #define LOAD_VAL  256-(((XTAL/BAUD)/(12*32))*1000*1000)
+   8          #endif
+   9            void init_uart(void)
+  10            {
+  11   1          //cfg urt for standard mode,recv enabled
+  12   1               SCON=0x05;
+  13   1               //cfg Timer1,auto reload mode
+  14   1                
+  15   1               TMOD=0x20;
+  16   1               //Load val for req baud rate
+  17   1             TH1=TL1=LOAD_VAL
+  18   1      
+  19   1                #ifdef STDIO_LIB
+                          TI=1;
+                        #endif
+  22   1      
+  23   1                #if DOUBLE_BAUD>0
+  24   1      
+  25   1                PCON|=0x80;   //set SMOD bit
+*** ERROR C141 IN LINE 25 OF UART_M1.C: syntax error near 'PCON'
+  26   1               
+  27   1      #endif
+  28   1      //start Timer1 to generate req baudrate
+  29   1      TR1=1;
+  30   1        }
+  31           void uart_tx(unsigned char dat)
+  32           {
+  33   1         SBUF=dat;
+  34   1         while(TI==0)
+  35   1           TI=0;
+  36   1       }
+  37           unsigned char uart_rx(void)
+  38           {
+  39   1         while(RI==0);
+  40   1         RI=0;
+  41   1         return SBUF;
+  42   1       }
+  43          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  TEXT2                                                                08/11/2015 19:11:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN Text2.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE Text2.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     extrn code (delay_10ms,delay_1ms)
+                       2     ;cseg at 0
+0000 1100     F        3     acall delay_10ms;2mc
+0002 80FE              4     sjmp $
+                       5     d segment code;seg_name segment block
+----                   6     rseg d
+                       7     ;delay_1ms:
+0000 78FA              8     mov r0,#250
+0002 D8FE              9     djnz r0,$
+0004 78F7             10     mov r0,#247
+0006 D8FE             11     djnz r0,$
+                      12     ;ret;delay_10ms:
+0008 7909             13     mov r1,#9
+000A                  14     s:
+000A 1100     F       15     acall delay_1ms
+000C D9FC             16     djnz r1,s
+000E 79FF             17     mov r1,#255
+0010 D9FE             18     djnz r1,$
+0012 79E8             19     mov r1,#232
+0014 D9FE             20     djnz r1,$
+0016 00               21     nop
+                      22     ;ret
+                      23     end
+A51 MACRO ASSEMBLER  TEXT2                                                                08/11/2015 19:11:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+D. . . . . . . . .  C SEG    0017H       REL=UNIT
+DELAY_10MS . . . .  C ADDR   -----       EXT
+DELAY_1MS. . . . .  C ADDR   -----       EXT
+S. . . . . . . . .  C ADDR   000AH   R   SEG=D
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

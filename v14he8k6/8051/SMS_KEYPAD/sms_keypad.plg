@@ -1,0 +1,130 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\8051\SMS_KEYPAD\sms_keypad.uv2
+Project File Date:  08/18/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(22): error C202: 'r0': undefined identifier
+SMS_KEYPAD_MAIN.C(42): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(44): error C202: 'presskey': undefined identifier
+compiling sms_lcd.c...
+SMS_LCD.C(36): warning C206: 'char_lcd': missing function-prototype
+SMS_LCD.C(36): error C267: 'char_lcd': requires ANSI-style prototype
+compiling sms_keypad.h...
+Target not created
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(40): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(42): error C202: 'presskey': undefined identifier
+compiling sms_lcd.c...
+SMS_LCD.C(36): warning C206: 'char_lcd': missing function-prototype
+SMS_LCD.C(36): error C267: 'char_lcd': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(40): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(42): error C202: 'presskey': undefined identifier
+compiling sms_lcd.c...
+Target not created
+Build target 'Target 1'
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(40): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(42): error C202: 'presskey': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(10): error C231: 'preekey': redefinition
+SMS_KEYPAD_MAIN.C(41): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(43): error C202: 'presskey': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling sms_keypad_main.c...
+SMS_KEYPAD_MAIN.C(41): error C202: 'presskey': undefined identifier
+SMS_KEYPAD_MAIN.C(43): error C202: 'presskey': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling sms_keypad_main.c...
+linking...
+*** WARNING L7: MODULE NAME NOT UNIQUE
+    MODULE:  sms_keypad.obj (SMS_KEYPAD)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _CHAR_LCD
+    MODULE:  sms_lcd.obj (SMS_LCD)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CHAR_LCD
+    MODULE:  sms_lcd.obj (SMS_LCD)
+    ADDRESS: 01DDH
+Program Size: data=22.0 xdata=0 code=622
+"sms_keypad" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling sms_lcd.c...
+SMS_LCD.C(17): warning C280: 'dat': unreferenced local variable
+linking...
+*** WARNING L7: MODULE NAME NOT UNIQUE
+    MODULE:  sms_keypad.obj (SMS_KEYPAD)
+Program Size: data=23.0 xdata=0 code=625
+"sms_keypad" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling sms_lcd.c...
+linking...
+*** WARNING L7: MODULE NAME NOT UNIQUE
+    MODULE:  sms_keypad.obj (SMS_KEYPAD)
+Program Size: data=22.0 xdata=0 code=627
+"sms_keypad" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+compiling sms_lcd.c...
+compiling sms_keypad.h...
+linking...
+*** WARNING L7: MODULE NAME NOT UNIQUE
+    MODULE:  sms_keypad.obj (SMS_KEYPAD)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  COLSCAN
+    MODULE:  sms_keypad_main.obj (SMS_KEYPAD_MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEYSCAN
+    MODULE:  sms_keypad_main.obj (SMS_KEYPAD_MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  COLSCAN
+    MODULE:  sms_keypad_main.obj (SMS_KEYPAD_MAIN)
+    ADDRESS: 0026H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEYSCAN
+    MODULE:  sms_keypad_main.obj (SMS_KEYPAD_MAIN)
+    ADDRESS: 006EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  COLSCAN
+    MODULE:  sms_keypad_main.obj (SMS_KEYPAD_MAIN)
+    ADDRESS: 0080H
+Program Size: data=20.0 xdata=0 code=367
+"sms_keypad" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+compiling sms_lcd.c...
+linking...
+Program Size: data=22.0 xdata=0 code=627
+"sms_keypad" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+compiling sms_lcd.c...
+linking...
+Program Size: data=22.0 xdata=0 code=627
+"sms_keypad" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling sms_keypad.c...
+compiling sms_keypad_main.c...
+compiling sms_lcd.c...
+linking...
+Program Size: data=22.0 xdata=0 code=627
+"sms_keypad" - 0 Error(s), 0 Warning(s).

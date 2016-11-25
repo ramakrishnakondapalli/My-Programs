@@ -1,0 +1,7 @@
+"uart_m0.obj",
+"uart_mo_main.obj",
+"uart_mo.obj",
+"utility.obj",
+"utility.obj" 
+TO "UART_M0" 
+RAMSIZE(256) 

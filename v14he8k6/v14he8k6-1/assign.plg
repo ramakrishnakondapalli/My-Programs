@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\assign.uv2
+Project File Date:  11/26/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+Target has no object modules
+Target not created
+Build target 'Target 1'
+assembling assign1.asm...
+V:\assign1.asm(27): error A9: SYNTAX ERROR
+V:\assign1.asm(27): error A9: SYNTAX ERROR
+V:\assign1.asm(48): warning A41: MISSING 'END' STATEMENT
+Target not created
+Build target 'Target 1'
+assembling assign1.asm...
+V:\assign1.asm(48): error A9: SYNTAX ERROR
+V:\assign1.asm(48): warning A41: MISSING 'END' STATEMENT
+Target not created
+Build target 'Target 1'
+assembling assign1.asm...
+linking...
+Program Size: data=8.0 xdata=0 code=59
+"assign" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling assign2.asm...
+V:\assign2.asm(2): error A9: SYNTAX ERROR
+V:\assign2.asm(2): error A34: ',' EXPECTED
+V:\assign2.asm(9): error A40: INVALID REGISTER
+Target not created
+Build target 'Target 1'
+assembling assign2.asm...
+V:\assign2.asm(2): error A9: SYNTAX ERROR
+V:\assign2.asm(2): error A34: ',' EXPECTED
+Target not created
+Build target 'Target 1'
+assembling assign2.asm...
+linking...
+Program Size: data=8.0 xdata=0 code=43
+"assign" - 0 Error(s), 0 Warning(s).

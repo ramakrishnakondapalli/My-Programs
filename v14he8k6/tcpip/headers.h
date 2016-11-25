@@ -1,0 +1,10 @@
+#include<sys/types.h>
+#include<unistd.h>
+#include<sys/socket.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<netdb.h>
+#include<string.h>
+#include<netinet/in.h>
+#include<arpa/inet.h>
+#include<signal.h>

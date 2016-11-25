@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<signal.h>
+#include<sys/resourse.h>
+main()
+{
+  signal(2,SIG_IGN);
+  printf("processs :%d",getpid());
+   while(1)
+   {
+     sleep(5);
+      process("process exiting");
+      exit(0);
+    }
+}

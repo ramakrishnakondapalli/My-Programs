@@ -1,0 +1,185 @@
+A51 MACRO ASSEMBLER  ROUND_ROBIN                                                          09/30/2015 17:49:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN round_robin.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE round_robin.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     ;IMPLEMENTATION OF ROUND ROBIN SCHEDULING USING TIMER INTERUPT
+                       3     
+                       4                               ;Task1 ret address save location
+                       5     
+  0000                 6      T1RA_LB  EQU  00H
+  0001                 7      T1RA_HB  EQU 01H
+                       8      
+                       9                             ;Task2 ret address save location
+                      10     
+  0002                11      T2RA_LB  EQU  02H
+  0003                12      T2RA_HB  EQU 03H
+                      13     
+                      14                             ;Task3 ret address save location
+  0004                15      T3RA_LB  EQU  04H
+  0005                16      T3RA_HB  EQU 05H
+                      17     
+                      18                   ;CPU begins executing from here/default
+----                  19      cseg at 0
+0000 803E             20      sjmp SCHEDULAR       ;goto schedular
+                      21     
+----                  22      cseg at 0BH    ;timer 0 interrupt vector
+                      23                    ;defining for timer0 ISR
+000B C28C             24      CLR TR0        ;HALT SCHEDULAR's timer
+                      25     
+                      26      ;User context saving if required
+                      27      ;startscheduling,check current active task
+                      28      ;to switch to next task
+                      29     
+000D 20E012           30      JB Acc.0,_TASK2
+0010 20E11B           31      JB Acc.1,_TASK3
+0013 20E200           32      JB Acc.2,_TASK1
+                      33     
+0016                  34      _TASK1:
+                      35      ;saving context of TASK3 From common/Stack area
+                      36      ;To TCB
+                      37     
+0016 D005             38      POP T3RA_HB
+0018 D004             39      POP T3RA_LB
+                      40      ;redirecting information for PC req
+                      41      ;ensure Task T1 Execute Next
+                      42     
+001A C000             43      PUSH T1RA_LB
+001C C001             44      PUSH T1RA_HB
+001E 7401             45      MOV A,#1;make Task1 again ready,Acc.0=1
+0020 8018             46      SJMP RST_SCHEDULAR
+                      47     
+                      48     
+0022                  49      _TASK2:
+                      50      ;saving context of TASK3 From common/Stack area To TCB
+                      51     
+0022 D001             52      POP T1RA_HB
+0024 D000             53      POP T1RA_LB
+                      54                         ;redirecting information for PC req
+                      55      
+                      56     
+0026 C002             57      PUSH T2RA_LB
+0028 C003             58      PUSH T2RA_HB
+A51 MACRO ASSEMBLER  ROUND_ROBIN                                                          09/30/2015 17:49:15 PAGE     2
+
+002A 7402             59      MOV A,#2            ;make Task1 again ready,Acc.1=1
+002C 800C             60      SJMP RST_SCHEDULAR
+                      61     
+                      62     
+002E                  63      _TASK3:
+                      64                           ;saving context of TASK3 From common/Stack areaTo TCB
+                      65     
+002E D003             66      POP T2RA_HB
+0030 D002             67      POP T2RA_LB
+                      68      ;redirecting information for PC req
+                      69     
+0032 C004             70      PUSH T3RA_LB
+0034 C005             71      PUSH T3RA_HB
+0036 7404             72      MOV A,#4                  ;make Task3 again ready,Acc.2=1
+0038 8000             73      SJMP RST_SCHEDULAR
+                      74     
+                      75       ;reset schedular for next task
+                      76     
+003A                  77        RST_SCHEDULAR:
+003A 758AE6           78        MOV TL0,#230  ;re-init time slice,26 units
+003D D28C             79        SETB TR0  ;Restart schedular timer
+003F 32               80        RETI      ;exit schedular,dispatch with next task
+                      81     
+                      82     
+                      83     ;main app of 3 tasks/Threads
+0040                  84      MAIN: 
+                      85     ;begin scheduling from here
+0040                  86     SCHEDULAR:
+                      87                      ;creating TCB for Task1
+0040 750060           88     MOV T1RA_LB,#TASK1    ;LSB start Address
+0043 750100           89     MOV T1RA_HB,#TASK1>>8 ;MSB
+                      90     
+                      91     ;creating TCB for Task2
+0046 750264           92     MOV T2RA_LB,#TASK2    ;LSB start Address
+0049 750300           93     MOV T2RA_HB,#TASK2>>8 ;MSB
+                      94     
+                      95     ;creating TCB for Task1
+004C 750468           96     MOV T3RA_LB,#TASK3    ;LSB start Address
+004F 750500           97     MOV T3RA_HB,#TASK3>>8 ;MSB
+                      98     
+                      99     
+                     100     ;EA=1   enable global interrupt bit
+0052 D2AF            101     SETB EA
+0054 D2A9            102     SETB ET0   ;ET0=1    enable timer0 interrupt
+                     103     ;sel TIMER0 in split timer mode,3
+                     104     ;Timer1Disabled
+0056 758933          105     MOV TMOD,#33H
+                     106     ;CFG RR schedule time slice 26 units
+0059 758AE6          107     MOV TL0,#230
+005C D28C            108     SETB TR0     ;start schedular TIMER here
+005E 7401            109     MOV A,#1    ;with TASK1
+                     110     
+                     111     ;def for Task1
+0060                 112     TASK1:
+                     113     ;INITIALISATION IF REQUIRED
+0060                 114     TASK1_LOOP:
+                     115           
+0060 0530            116         INC 30H
+0062 80FC            117      SJMP TASK1_LOOP
+                     118      ;def for Task2
+0064                 119     TASK2:
+                     120     ;INITIALISATION IF REQUIRED
+0064                 121     TASK2_LOOP:
+                     122         
+0064 0531            123           INC 31H
+0066 80FC            124       SJMP TASK2_LOOP
+A51 MACRO ASSEMBLER  ROUND_ROBIN                                                          09/30/2015 17:49:15 PAGE     3
+
+                     125      ;def for Task3
+0068                 126     TASK3:
+                     127     ;INITIALISATION IF REQUIRED
+0068                 128     TASK3_LOOP:
+                     129         
+0068 0532            130        INC 32H
+006A 80FC            131       SJMP TASK3_LOOP
+                     132     
+                     133     END
+                             
+A51 MACRO ASSEMBLER  ROUND_ROBIN                                                          09/30/2015 17:49:15 PAGE     4
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+MAIN . . . . . . .  C ADDR   0040H   A   
+RST_SCHEDULAR. . .  C ADDR   003AH   A   
+SCHEDULAR. . . . .  C ADDR   0040H   A   
+T1RA_HB. . . . . .  N NUMB   0001H   A   
+T1RA_LB. . . . . .  N NUMB   0000H   A   
+T2RA_HB. . . . . .  N NUMB   0003H   A   
+T2RA_LB. . . . . .  N NUMB   0002H   A   
+T3RA_HB. . . . . .  N NUMB   0005H   A   
+T3RA_LB. . . . . .  N NUMB   0004H   A   
+TASK1. . . . . . .  C ADDR   0060H   A   
+TASK1_LOOP . . . .  C ADDR   0060H   A   
+TASK2. . . . . . .  C ADDR   0064H   A   
+TASK2_LOOP . . . .  C ADDR   0064H   A   
+TASK3. . . . . . .  C ADDR   0068H   A   
+TASK3_LOOP . . . .  C ADDR   0068H   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+_TASK1 . . . . . .  C ADDR   0016H   A   
+_TASK2 . . . . . .  C ADDR   0022H   A   
+_TASK3 . . . . . .  C ADDR   002EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

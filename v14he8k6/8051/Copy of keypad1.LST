@@ -1,0 +1,91 @@
+C51 COMPILER V7.08   KEYPAD1                                                               08/17/2015 14:58:43 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE KEYPAD1
+OBJECT MODULE PLACED IN C:\v14he8k6\HEX\keypad1.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE keypad1.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\HEX\keypad1.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit r0=P3^0; sbit c0=P3^4;
+   3          sbit r1=P3^1; sbit c1=P3^5;
+   4          sbit r2=P3^2; sbit c2=P3^6;
+   5          sbit r3=P3^3; sbit c3=P3^7;
+   6          code unsigned char keypad_lut[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+   7          
+   8          bit colscan(void)
+   9          {
+  10   1        return(c0&c1&c2&c3);
+  11   1      }
+  12          void init_rows(void)
+  13          {
+  14   1      
+  15   1        r0=r1=r2=r3=1;
+  16   1      }
+  17          void init_cols(void)
+  18          {
+  19   1       
+  20   1       c0=c1=c2=c3=1;
+  21   1      }
+  22          unsigned char keyscan(void)
+  23          {
+  24   1        unsigned char row,col;
+  25   1        init_cols();
+  26   1        init_rows();
+  27   1        while(colscan());//identify key presss
+  28   1        //identify key press
+  29   1        //identify row
+  30   1        r0=0;r1=r2=r3=1;
+  31   1        if(!colscan())
+  32   1        {
+  33   2          row=0;goto colcheck;
+  34   2        }
+  35   1        r1=0;r0=r2=r3=1;
+  36   1        if(!colcheck())
+*** WARNING C206 IN LINE 36 OF KEYPAD1.C: 'colcheck': missing function-prototype
+  37   1         {
+  38   2          row=1;goto colcheck;
+  39   2         }
+  40   1         r2=0;r0=r1=r3=1;
+  41   1        if(!colcheck())
+  42   1         {
+  43   2          row=2;goto colcheck;
+  44   2         }
+  45   1         r3=0;r0=r1=r2=1;
+  46   1        if(!colcheck())
+  47   1         {
+  48   2          row=3;goto colcheck;
+  49   2         }
+  50   1         colcheck:
+  51   1               if(c0==0)  col=0;
+  52   1              else if(c1==0)  col=1;
+  53   1              else if(c2==0)  col=2;
+  54   1              else if(c3==0)  col=3;
+C51 COMPILER V7.08   KEYPAD1                                                               08/17/2015 14:58:43 PAGE 2   
+
+  55   1              return keypad_lut[row][col];
+  56   1      
+  57   1      }
+  58          main()
+  59          {
+  60   1      while(1)
+  61   1        {
+  62   2          P2=keyscan();
+  63   2        }
+  64   1      
+  65   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    181    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

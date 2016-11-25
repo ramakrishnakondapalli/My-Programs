@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\cal.uv2
+Project File Date:  03/01/2016
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(12): warning C206: 'InitUART': missing function-prototype
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(12): warning C206: 'Init_UART': missing function-prototype
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(12): warning C206: 'Init_UART': missing function-prototype
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+UART.H(117): error C237: '_uart_tx': function already has a body
+UART.H(125): error C237: 'uart_rx': function already has a body
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+UART.H(117): error C237: '_uart_tx': function already has a body
+UART.H(125): error C237: 'uart_rx': function already has a body
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(15): warning C206: 'UART_Str': missing function-prototype
+V:\CAL.C(15): error C267: 'UART_Str': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(15): error C207: 'UART_Str': declared with 'void' parameter list
+V:\CAL.C(16): error C207: 'UART_Str': declared with 'void' parameter list
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(19): warning C206: 'UART_Rx': missing function-prototype
+V:\CAL.C(20): warning C206: 'UART_Tx': missing function-prototype
+V:\CAL.C(20): error C267: 'UART_Tx': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(19): warning C206: 'UART_Rx': missing function-prototype
+V:\CAL.C(20): warning C206: 'UART_Tx': missing function-prototype
+V:\CAL.C(20): error C267: 'UART_Tx': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(19): warning C206: 'UART_Rx': missing function-prototype
+V:\CAL.C(20): warning C206: 'UART_Tx': missing function-prototype
+V:\CAL.C(20): error C267: 'UART_Tx': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(19): warning C206: 'UART_Rx': missing function-prototype
+V:\CAL.C(20): warning C206: 'UART_Tx': missing function-prototype
+V:\CAL.C(20): error C267: 'UART_Tx': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(51): warning C206: 'UART_Int': missing function-prototype
+V:\CAL.C(51): error C267: 'UART_Int': requires ANSI-style prototype
+V:\CAL.C(55): error C141: syntax error near 'void'
+V:\CAL.C(56): error C141: syntax error near '{'
+V:\CAL.C(63): error C141: syntax error near 'void'
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(51): error C214: illegal pointer conversion
+Target not created
+Build target 'Target 1'
+compiling cal.c...
+V:\CAL.C(51): error C214: illegal pointer conversion
+Target not created

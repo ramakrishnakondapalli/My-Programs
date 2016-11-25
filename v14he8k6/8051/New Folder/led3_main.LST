@@ -1,0 +1,41 @@
+C51 COMPILER V7.08   LED3_MAIN                                                             08/21/2015 14:04:12 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LED3_MAIN
+OBJECT MODULE PLACED IN C:\v14he8k6\HEX\led3_main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE led3_main.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\HEX\led3_main.obj)
+
+line level    source
+
+   1          #include"headers.h"
+   2          main()
+   3          {
+   4   1        unsigned char i;
+   5   1        while(1)
+   6   1        {
+   7   2      //for(i=0;i<250;i++)
+   8   2      //{
+   9   2         //   displ_mux_seg(i);
+  10   2      ///     delay_ms(500);
+  11   2      //}
+  12   2          dispf_mux_seg(12.34);
+  13   2              delay_ms(1000);
+  14   2      
+  15   2        }
+  16   1        
+  17   1      }
+*** WARNING C280 IN LINE 4 OF LED3_MAIN.C: 'i': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     20    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

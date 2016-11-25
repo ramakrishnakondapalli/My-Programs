@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  TIMER0_SQWV                                                          09/18/2015 17:13:32 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN timer0_sqwv.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE timer0_sqwv.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;create a dutycycle of 50% on P1.5
+                       2     
+0000 758901            3     MOV TMOD,#01
+0003                   4     HERE:
+0003 758A00            5     MOV TL0,#00
+0006 758CFF            6     MOV TH0,#0FFH
+0009 B295              7     CPL P1^5
+000B 110F              8     ACALL DELAY
+000D 80F4              9     SJMP HERE
+000F                  10     DELAY:
+000F D28C             11     setb TR0
+0011                  12     AGAIN:
+0011 308DFD           13     JNB TF0,AGAIN
+0014 C28C             14     clr TR0
+0016 C28D             15     clr TF0
+0018 22               16     ret
+                      17      
+                      18     end
+A51 MACRO ASSEMBLER  TIMER0_SQWV                                                          09/18/2015 17:13:32 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0011H   A   
+DELAY. . . . . . .  C ADDR   000FH   A   
+HERE . . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

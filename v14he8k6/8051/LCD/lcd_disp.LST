@@ -1,0 +1,155 @@
+C51 COMPILER V7.08   LCD_DISP                                                              08/31/2015 14:18:10 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD_DISP
+OBJECT MODULE PLACED IN C:\v14he8k6\lcd_disp.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd_disp.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\lcd_disp.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"lcd.h"
+   3          /*#define lcd_data P0
+   4          
+   5          sbit rs=P2^0;
+   6          sbit rw=P2^1;
+   7          sbit en=P2^2;
+   8          
+   9          void char_lcd(unsigned char);
+  10          void write_lcd(unsigned char);
+  11          void init_lcd(void);
+  12          void str_lcd(unsigned char *);
+  13          void int_lcd(unsigned int);
+  14          void float_lcd(float);
+  15          void delay_ms(unsigned char );
+  16          void build_cgram(unsigned char *,unsigned int);*/
+  17          
+  18          code unsigned char cgram_lut[8]={0x1d,0x05,0x1f,0x14,0x14,0x17,0x00};
+  19          
+  20          void write_lcd(unsigned char dat)
+  21          {
+  22   1      
+  23   1      
+  24   1       lcd_data=dat;
+  25   1          rw=0;
+  26   1              en=1;
+  27   1              en=0;
+  28   1              delay_ms(2);
+  29   1       }
+  30           void cmd_lcd(unsigned char cmd)
+  31           {
+  32   1       rs=0;
+  33   1         write_lcd(cmd);
+  34   1       
+  35   1       }
+  36           void char_lcd(unsigned char ch)
+  37           {
+  38   1       rs=1;
+  39   1         write_lcd(ch);
+  40   1       }
+  41           void init_lcd(void)
+  42           {
+  43   1         delay_ms(5);
+  44   1         cmd_lcd(0x30);
+  45   1         delay_ms(3);
+  46   1         cmd_lcd(0x30);
+  47   1         cmd_lcd(0x30);
+  48   1         cmd_lcd(0x38);
+  49   1         cmd_lcd(0x10);
+  50   1         cmd_lcd(0x01);
+  51   1         cmd_lcd(0x06);
+  52   1         cmd_lcd(0x0f);
+  53   1       }
+  54           void str_lcd(unsigned char *s)
+  55           {
+C51 COMPILER V7.08   LCD_DISP                                                              08/31/2015 14:18:10 PAGE 2   
+
+  56   1         while(*s)
+  57   1         char_lcd(*s++);
+  58   1       }
+  59           void int_lcd(unsigned int i)
+  60           {
+  61   1          unsigned char a[5]={0};
+  62   1              //char r i=0;
+  63   1          int n,num;
+  64   1          if(n==0)
+  65   1              {
+  66   2                char_lcd('0');
+  67   2                  return;
+  68   2           }
+  69   1               else
+  70   1                {
+  71   2              while(num>0)
+  72   2                       {
+  73   3                 a[i]=(n%10)+48;
+  74   3                   n=n/10;
+  75   3                               i++;
+  76   3                       }
+  77   2                       for(--i;i>=0;i--)
+  78   2                        {
+  79   3                  char_lcd(a[i]);
+  80   3                        }
+  81   2      
+  82   2                }
+  83   1      }
+  84          void float_lcd(float f)
+  85          {
+  86   1        int i;
+  87   1        unsigned char j;
+  88   1        i=f;
+  89   1         int_lcd(i);
+  90   1         char_lcd('.');
+  91   1         for(j=0;j<3;j++)
+  92   1         {
+  93   2            f=(f-i);
+  94   2                i=f;
+  95   2                int_lcd(i);
+  96   2      
+  97   2         }
+  98   1      }
+  99          
+ 100          void build_cgram(unsigned char *p,unsigned int n)
+ 101          {
+ 102   1        unsigned char i;
+ 103   1        cmd_lcd(0x40);
+ 104   1        for(i=0;i<n;i++)
+ 105   1        {
+ 106   2          char_lcd(p[i]);
+ 107   2        }
+ 108   1        cmd_lcd(0x80);
+ 109   1      
+ 110   1      }
+ 111          void delay_ms(unsigned int i)
+ 112          {
+ 113   1              unsigned int j;
+ 114   1              for(;i>0;i--)
+ 115   1          {
+ 116   2                      for(j=122;j>0;j--);
+ 117   2      
+C51 COMPILER V7.08   LCD_DISP                                                              08/31/2015 14:18:10 PAGE 3   
+
+ 118   2           }
+ 119   1      } 
+ 120          main()
+ 121          {
+ 122   1        init_lcd();
+ 123   1        build_cgram(cgram_lut,8);
+ 124   1        char_lcd('0');
+ 125   1        char_lcd('0');
+ 126   1        str_lcd("krishna");
+ 127   1        while(1);
+ 128   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    451    ----
+   CONSTANT SIZE    =     21    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      27
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

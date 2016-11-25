@@ -1,0 +1,40 @@
+C51 COMPILER V7.08   SRIAL3                                                                09/21/2015 09:37:54 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE SRIAL3
+OBJECT MODULE PLACED IN srial3.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE srial3.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          unsigned char myByte;
+   3          main()
+   4          {
+   5   1       TMOD=0x20;
+   6   1       TH1=0xFA; 
+   7   1      SCON=0x50;
+   8   1         TR1=1;
+   9   1        while(1)
+  10   1        {
+  11   2           myByte=SBUF;
+  12   2           P1=myByte;
+  13   2            if(RI==1)
+  14   2               RI=0;
+  15   2        }
+  16   1      
+  17   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     24    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

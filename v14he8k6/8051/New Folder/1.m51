@@ -1,0 +1,214 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        08/21/2015  14:04:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\v14he8k6\HEX\led3_main.obj, C:\v14he8k6\HEX\led3_seg.obj, C:\v14he8k6\HEX\led3_delay.obj TO 
+>> C:\v14he8k6\HEX\1 PRINT (.\1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  C:\v14he8k6\HEX\led3_main.obj (LED3_MAIN)
+  C:\v14he8k6\HEX\led3_seg.obj (LED3_SEG)
+  C:\v14he8k6\HEX\led3_delay.obj (LED3_DELAY)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  C:\v14he8k6\HEX\1 (LED3_MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0009H     UNIT         _DATA_GROUP_
+            DATA    0011H     0004H     UNIT         ?DT?LED3_SEG
+            IDATA   0015H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0257H     UNIT         ?C?LIB_CODE
+            CODE    025AH     00F6H     UNIT         ?PR?_DISPF_MUX_SEG?LED3_SEG
+            CODE    0350H     00A7H     UNIT         ?PR?_DISPL_MUX_SEG?LED3_SEG
+            CODE    03F7H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0483H     002BH     UNIT         ?PR?_DELAY_MS?LED3_DELAY
+            CODE    04AEH     0014H     UNIT         ?PR?MAIN?LED3_MAIN
+            CODE    04C2H     000DH     UNIT         ?C_INITSEG
+            CODE    04CFH     000AH     UNIT         ?CO?LED3_SEG
+
+
+
+OVERLAY MAP OF MODULE:   C:\v14he8k6\HEX\1 (LED3_MAIN)
+
+
+SEGMENT                               DATA_GROUP 
+  +--> CALLED SEGMENT               START    LENGTH
+---------------------------------------------------
+?C_C51STARTUP                       -----    -----
+  +--> ?PR?MAIN?LED3_MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?LED3_MAIN                  0008H    0001H
+BL51 BANKED LINKER/LOCATER V5.03                                                      08/21/2015  14:04:12  PAGE 2
+
+
+  +--> ?PR?_DISPF_MUX_SEG?LED3_SEG
+  +--> ?PR?_DELAY_MS?LED3_DELAY
+
+?PR?_DISPF_MUX_SEG?LED3_SEG         0009H    0006H
+  +--> ?PR?_DISPL_MUX_SEG?LED3_SEG
+
+?PR?_DISPL_MUX_SEG?LED3_SEG         000FH    0002H
+  +--> ?CO?LED3_SEG
+  +--> ?PR?_DELAY_MS?LED3_DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  C:\v14he8k6\HEX\1 (LED3_MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED3_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:04AEH         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:04AEH         LINE#         2
+  C:04AEH         LINE#         3
+  C:04AEH         LINE#         5
+  C:04AEH         LINE#         6
+  C:04AEH         LINE#         12
+  C:04B9H         LINE#         13
+  C:04C0H         LINE#         15
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED3_MAIN
+
+  -------         MODULE        LED3_SEG
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:0011H         PUBLIC        dp1
+  D:0012H         PUBLIC        dp2
+  D:0013H         PUBLIC        dp3
+  D:0014H         PUBLIC        dp4
+  C:025AH         PUBLIC        _dispf_mux_seg
+  C:0350H         PUBLIC        _displ_mux_seg
+  C:04CFH         PUBLIC        LUT
+  B:00B0H.0       PUBLIC        sel1
+  B:00B0H.1       PUBLIC        sel2
+  B:00B0H.2       PUBLIC        sel3
+  B:00B0H.3       PUBLIC        sel4
+  -------         PROC          _DISPL_MUX_SEG
+  D:000FH         SYMBOL        i
+  C:0350H         LINE#         9
+  C:0354H         LINE#         10
+  C:0354H         LINE#         11
+  C:036BH         LINE#         12
+  C:036DH         LINE#         13
+  C:0374H         LINE#         14
+BL51 BANKED LINKER/LOCATER V5.03                                                      08/21/2015  14:04:12  PAGE 3
+
+
+  C:0376H         LINE#         15
+  C:0398H         LINE#         16
+  C:039AH         LINE#         17
+  C:03A1H         LINE#         18
+  C:03A3H         LINE#         19
+  C:03C5H         LINE#         20
+  C:03C7H         LINE#         21
+  C:03CEH         LINE#         22
+  C:03D0H         LINE#         23
+  C:03EBH         LINE#         24
+  C:03EDH         LINE#         25
+  C:03F4H         LINE#         26
+  C:03F6H         LINE#         28
+  -------         ENDPROC       _DISPL_MUX_SEG
+  -------         PROC          _DISPF_MUX_SEG
+  D:0009H         SYMBOL        f
+  -------         DO            
+  D:000DH         SYMBOL        i
+  -------         ENDDO         
+  C:025AH         LINE#         29
+  C:0262H         LINE#         30
+  C:0262H         LINE#         32
+  C:028AH         LINE#         33
+  C:028AH         LINE#         34
+  C:028DH         LINE#         35
+  C:02A7H         LINE#         36
+  C:02ABH         LINE#         37
+  C:02AEH         LINE#         38
+  C:02D8H         LINE#         39
+  C:02D8H         LINE#         40
+  C:02DBH         LINE#         41
+  C:02F5H         LINE#         42
+  C:02FCH         LINE#         43
+  C:02FCH         LINE#         44
+  C:02FEH         LINE#         45
+  C:0328H         LINE#         46
+  C:0328H         LINE#         47
+  C:032BH         LINE#         48
+  C:0345H         LINE#         49
+  C:034CH         LINE#         50
+  C:034FH         LINE#         51
+  C:034FH         LINE#         54
+  -------         ENDPROC       _DISPF_MUX_SEG
+  -------         ENDMOD        LED3_SEG
+
+  -------         MODULE        LED3_DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0483H         PUBLIC        _delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        i
+  -------         DO            
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0483H         LINE#         1
+  C:0483H         LINE#         2
+  C:0483H         LINE#         4
+  C:048CH         LINE#         5
+BL51 BANKED LINKER/LOCATER V5.03                                                      08/21/2015  14:04:12  PAGE 4
+
+
+  C:048CH         LINE#         6
+  C:0499H         LINE#         8
+  C:04A6H         LINE#         10
+  C:04ADH         LINE#         12
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        LED3_DELAY
+
+  -------         MODULE        ?C?FPMUL
+  C:0003H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPCMP
+  C:010BH         PUBLIC        ?C?FPCMP
+  C:0109H         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?CASTF
+  C:0176H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?UIDIV
+  C:01F7H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?LNEG
+  C:024CH         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+Program Size: data=22.0 xdata=0 code=1241
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

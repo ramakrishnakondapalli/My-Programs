@@ -1,0 +1,92 @@
+C51 COMPILER V9.02   UART                                                                  09/29/2015 22:01:54 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN UART.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE UART.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"UART.h"
+   2          void init_uart(void)
+   3            {
+   4   1          //cfg urt for standard mode,recv enabled
+   5   1               SCON=0x50;
+   6   1               //cfg Timer1,auto reload mode
+   7   1                
+   8   1               TMOD=0x20;
+   9   1               //Load val for req baud rate
+  10   1             TH1=TL1=LOAD_VAL;
+  11   1                #ifdef STDIO_LIB
+                          TI=1;
+                        #endif
+  14   1                #if DOUBLE_BAUD>0
+                        PCON|=0x80;   //set SMOD bit
+                    #endif
+  17   1      
+  18   1      TR1=1;//start Timer1 to generate req baudrate
+  19   1        }
+  20          void uart_tx(u8 dat)
+  21           {
+  22   1         SBUF=dat;
+  23   1         while(TI==0);
+  24   1           TI=0;
+  25   1       }
+  26          /*u8 uart_rx(void)
+  27           {
+  28             while(RI==0);
+  29             RI=0;
+  30             return SBUF;
+  31           }*/
+  32                  void int_uart(unsigned int n)
+  33                    {
+  34   1                  unsigned char a[5]={0};
+  35   1                      char i=0;
+  36   1                       if(n==0)
+  37   1                       {  uart_tx('0');
+  38   2                              return;
+  39   2                       }
+  40   1                       else
+  41   1                        {
+  42   2                         while(n>0)
+  43   2                         {
+  44   3                              a[i]=(n%10)+48;
+  45   3                              n=n/10;
+  46   3                              i++;
+  47   3                         }
+  48   2                         for(--i;i>=0;i--)
+  49   2                           {
+  50   3                                uart_tx(a[i]);
+  51   3                               }
+  52   2                        }
+  53   1                }
+  54            
+  55            void float_uart(float f)
+C51 COMPILER V9.02   UART                                                                  09/29/2015 22:01:54 PAGE 2   
+
+  56            {
+  57   1                 unsigned int i;
+  58   1                 unsigned char j;
+  59   1                 i=f;
+  60   1                 int_uart(i);
+  61   1                 uart_tx('.');
+  62   1                 for(j=0;j<3;j++)
+  63   1                 {    i=f-i;
+  64   2                      i=f*10;
+  65   2                int_uart(i);
+  66   2                 }
+  67   1         }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    222    ----
+   CONSTANT SIZE    =      5    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      14
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

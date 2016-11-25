@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+main()
+{
+int i=1,j=1,k=1;
+//printf("%d %d %d",i--+j,i,j);
+printf("%d %d %d\n",++i,i++,i++);
+printf("%d %d %d\n",i++,i++,i++);
+
+printf("%d %d %d\n",++i,i++,i++);
+
+printf("%d %d %d\n",i++,i++,i++);
+
+//printf("%d",++i);
+
+
+
+
+
+
+}

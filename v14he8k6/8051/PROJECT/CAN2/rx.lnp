@@ -1,0 +1,5 @@
+"canfun2.obj",
+"main2.obj",
+"spi2.obj" 
+TO "rx" 
+RAMSIZE(256) 

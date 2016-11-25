@@ -1,0 +1,40 @@
+C51 COMPILER V7.08   MCP3204__1                                                            10/08/2015 08:44:43 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE MCP3204__1
+OBJECT MODULE PLACED IN mcp3204`_1.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE mcp3204`_1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          float read_adc_mcp3204(unsigned char chno)
+   2          {
+   3   1        unsigned char byte0,byte1,byte2,i;
+   4   1        
+   5   1          byte0=spi(0x06);
+*** WARNING C206 IN LINE 5 OF MCP3204`_1.C: 'spi': missing function-prototype
+*** ERROR C267 IN LINE 5 OF MCP3204`_1.C: 'spi': requires ANSI-style prototype
+   6   1          byte1=spi(chNo);
+*** ERROR C202 IN LINE 6 OF MCP3204`_1.C: 'chNo': undefined identifier
+   7   1          byte2=spi(0x00);
+   8   1         
+   9   1         return(adc_val*(5/4095));
+*** ERROR C202 IN LINE 9 OF MCP3204`_1.C: 'adc_val': undefined identifier
+  10   1      }unsigned char spi(unsigned char dat)
+  11          {
+*** ERROR C231 IN LINE 11 OF MCP3204`_1.C: '_spi': redefinition
+  12   1        unsigned char i,buff=0;
+  13   1        for(i=0;i<8;i++)
+  14   1         {
+  15   2               din=(dat&(0x80>>i))?1:0;
+*** ERROR C202 IN LINE 15 OF MCP3204`_1.C: 'din': undefined identifier
+  16   2               if(dout)  buff|=0x80>>i;
+*** ERROR C202 IN LINE 16 OF MCP3204`_1.C: 'dout': undefined identifier
+  17   2      
+  18   2         }
+  19   1      
+  20   1      return buff;
+  21   1      
+  22   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  6 ERROR(S)

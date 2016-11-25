@@ -1,0 +1,38 @@
+#include<stdio.h>
+main(int argc, char **argv)
+{
+  FILE *fp;
+  char name[20],ch,buf[500];
+  int size,i;
+  printf("Enter File name");
+  gets(argv[1]);
+  fp=fopen(argv[1],"r");
+  if(fp==NULL)
+   {
+     printf("File not exists");
+   }
+   while((ch=fgetc(fp)!=EOF))
+   {
+      //printf("%c",ch);
+       size++;
+   }
+  fclose(fp);
+   //***********************************//
+           fp=fopen(argv[1],fp);
+                  size++;
+            buf=calloc(1,size);
+  //************************************//
+  //************************************//
+       for(i=0;i<size-1;i++)
+       {
+           fputc(buf[i],fp);
+       }
+     fclose(fp);
+
+  //************************************//
+  if((i=strstr(buf,argv[2])
+    printf("String appeared for %dtimes",i);
+    else
+    printf("String is not present in the maain string:");
+
+

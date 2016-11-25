@@ -1,0 +1,1491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0031)http://www.mct.net/faq/spi.html -->
+<html><head><title>mct.net: SPI - Serial Peripheral Interface</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2087951140756446";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+//--></script>
+
+<script src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/show_ads.js" type="text/javascript">
+</script></head><body background="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/background.gif"><iframe name="google_ads_frame" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" frameborder="0" height="90" width="728"></iframe>
+
+
+<blockquote>
+  <h2>SPI - Serial Peripheral Interface</h2><a href="http://www.mct.net/new/dealer.html"><img alt="DealersWanted" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/dealer.gif" align="right" border="0" hspace="5"></a> <a href="http://www.mct.net/faq/dotw.html"><img alt="DOTW" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/dotw.gif" align="right" border="0" hspace="5"></a> <a href="http://www.mct.net/new/spims.html"><img alt="SPImS" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/spims.gif" align="right" border="0" hspace="5"></a> 
+  <p>You are visitor No.<br><img src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/tinc.png"><br>(since 
+  September 1, 2006).</p>
+  <p><img alt="-&gt;" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/item.gif" border="0">&nbsp;<a href="http://www.mct.net/new/spims.html">SPI made Simple</a> 
+  - a modular SPI Concept</p>
+  <p>Boards with SPI:<br><img alt="-&gt;" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/item.gif" border="0">&nbsp;<a href="http://www.mct.net/product/sbctbl.html">SBCs with 
+  SPI</a><br><img alt="-&gt;" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/item.gif" border="0">&nbsp;<a href="http://www.mct.net/product/relais8.html">RELAIS8</a><br><img alt="-&gt;" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/item.gif" border="0">&nbsp;<a href="http://www.mct.net/product/led7.html">LED7</a></p>
+  <h4>Preface</h4><font size="-1">
+  <p>With this article, the possibilities of serial communication with 
+  peripheral devices via SPI (Serial Peripheral Interface) will be discussed. 
+  More and more serial bus systems are preferred instead of a parallel bus, 
+  because of the simpler wiring. As the efficiency of serial buses increases, 
+  the speed advantage of the parallel data transmission gets less important. The 
+  clock frequencies of SPI devices can go up to some Megahertz and more. There 
+  are a lot of application where a serial transmission is perfectly sufficient. 
+  The usage of SPI is not limited to the measuring area, also in the audio field 
+  this type of transmission is used.</p>
+  <p>The SPI (this name was created by Motorola) is also known as Microwire, 
+  trade mark of National Semiconductor. Both have the same functionality. There 
+  are also the extensions QSPI (Queued Serial Peripheral Interface) and 
+  MicrowirePLUS.</p>
+  <p>The popularity of other serial bus systems like 
+  I<sup><small>2</small></sup>C, CAN bus or USB shows, that serial buses get 
+  used more and more.</p>
+  <p>Below is a <a href="http://www.mct.net/faq/spi.html#device">list of SPI 
+  devices</a>. However this list neither claims to be complete nor is the 
+  availablability of the listed components guaranteed. In addition there is a 
+  list of <a href="http://www.mct.net/faq/spi.html#manufacturer">manufacturers 
+  with the type of SPI components they produce</a>.</p>
+  <p>Martin Schwerdtfeger, 06/2000</p></font>
+  <h3>The Principle</h3>
+  <p>The Serial Peripheral Interface is used primarily for a synchronous serial 
+  communication of host processor and peripherals. However, a connection of two 
+  processors via SPI is just as well possible and is described at the end of the 
+  chapter.</p>
+  <p>In the standard configuration for a slave device (see illustration 1), two 
+  control and two data lines are used. The data output SDO serves on the one 
+  hand the reading back of data, offers however also the possibility to cascade 
+  several devices. The data output of the preceding device then forms the data 
+  input for the next IC.</p>
+  <blockquote><img alt="Fig.1" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/spi1.gif" border="0"> 
+    <h6>Illustration 1: SPI slave</h6></blockquote>
+  <p>There is a MASTER and a SLAVE mode. The MASTER device provides the clock 
+  signal and determines the state of the chip select lines, i.e. it activates 
+  the SLAVE it wants to communicate with. CS and SCKL are therefore outputs.</p>
+  <p>The SLAVE device receives the clock and chip select from the MASTER, CS and 
+  SCKL are therefore inputs.</p>
+  <p>This means there is one master, while the number of slaves is only limited 
+  by the number of chip selects.</p>
+  <p>A SPI device can be a simple shift register up to an independent subsystem. 
+  The basic principle of a shift register is always present. Command codes as 
+  well as data values are serially transferred, pumped into a shift register and 
+  are then internally available for parallel processing. Here we already see an 
+  important point, that must be considered in the philosophy of SPI bus systems: 
+  The length of the shift registers is not fixed, but can differ from device to 
+  device. Normally the shift registers are 8Bit or integral multiples of it. Of 
+  course there also exist shift registers with an odd number of bits. For 
+  example two cascaded 9Bit EEPROMs can store 18Bit data.</p>
+  <p>If a SPI device is not selected, its data output goes into a high-impedance 
+  state (hi-Z), so that it does not interfere with the currently activated 
+  devices. When cascading several SPI devices, they are treated as one slave and 
+  therefore connected to the same chip select.</p>
+  <p>Thus there are two meaningful types of connection of master and slave 
+  devices. illustration 2 shows the type of connection for cascading several 
+  devices.</p>
+  <blockquote><img alt="Fig.2" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/spi2.gif" border="0"> 
+    <h6>Illustration 2: Cascading several SPI devices</h6></blockquote>
+  <p>In illustration 2 the cascaded devices are evidently looked at as one 
+  larger device and receive therefore the same chip select. The data output of 
+  the preceding device is tied to the data input of the next, thus forming a 
+  wider shift register.</p>
+  <p>If independent slaves are to be connected to a master an other bus 
+  structure has to be chosen, as shown in illustration 3. Here, the clock and 
+  the SDI data lines are brought to each slave. Also the SDO data lines are tied 
+  together and led back to the master. Only the chip selects are separately 
+  brought to each SPI device.</p>
+  <blockquote><img alt="Fig.3" src="mct.net%20%20SPI%20-%20Serial%20Peripheral%20Interface_files/spi3.gif" border="0"> 
+    <h6>Illustration 3: Master with independent slaves</h6></blockquote>
+  <p>Last not least both types may be combined.</p>
+  <p>It is also possible to connect two micro controllers via SPI. For such a 
+  network, two protocol variants are possible. In the first, there is only one 
+  master and several slaves and in the second, each micro controller can take 
+  the role of the master. For the selection of slaves again two versions would 
+  be possible but only one variant is supported by hardware. The hardware 
+  supported variant is with the chip selects, while in the other the selection 
+  of the slaves is done by means of an ID packed into the frames. The assignment 
+  of the IDs is done by software. Only the selected slave drives its output, all 
+  other slaves are in high-impedancd state. The output remains active as long as 
+  the slave is selected by its address.</p>
+  <p>The first variant, named single-master protocol, resembles the normal 
+  master-slave communication. The micro controller configured as a slave behaves 
+  like a normal peripheral device.</p>
+  <p>The second possibility works with several masters and is therefore named 
+  multi-master protocol. Each micro processor has the possibility to take the 
+  roll of the master and to address another micro processor. One controller must 
+  permanently provide a clock signal. The MC68HC11 provides a harware error 
+  recognition, useful in multiple-master systems. There are two SPI system 
+  errors. The first occurs if several SPI devices want to become master at the 
+  same time. The other is a collision error that occurs for example when SPI 
+  devices work with with different polarities. More details can be found in the 
+  MC68HC11 manual.</p>
+  <h3>Data and Control Lines of the SPI</h3>
+  <p>The SPI requires two control lines (CS and SCLK) and two data lines (SDI 
+  and SDO). Motorola names these lines MOSI (Master-Out-Slave-In) and MISO 
+  (Master-In-Slave-Out). The chip select line is named SS (Slave-Select).</p>
+  <p>With CS (Chip-Select) the corresponding peripheral device is selected. This 
+  pin is mostly active-low. In the unselected state the SDO lines are hi-Z and 
+  therefore inactive. The master decides with which peripheral device it wants 
+  to communicate. The clock line SCLK is brought to the device whether it is 
+  selected or not. The clock serves as synchronization of the data 
+  communication.</p>
+  <p>The majority of SPI devices provide these four lines. Sometimes it happens 
+  that SDI and SDO are multiplexed, for example in the temperature sensor LM74 
+  from National Semiconductor, or that one of these lines is missing. A 
+  peripheral device which must or can not be configured, requires no input line, 
+  only a data output. As soon as it gets selected it starts sending data. In 
+  some ADCs therefore the SDI line is missing (e.g. MCCP3001 from 
+Microchip).</p>
+  <p>There are also devices that have no data output. For example LCD 
+  controllers (e.g. COP472-3 from National Semiconductor), which can be 
+  configured, but cannot send data or status messages.</p>
+  <h3>SPI Configuration</h3>
+  <p>Because there is no official specification, what exactly SPI is and what 
+  not, it is necessary to consult the data sheets of the components one wants to 
+  use. Important are the permitted clock frequencies and the type of valid 
+  transitions.</p>
+  <p>There are no general rules for transitions where data shouls be latched. 
+  Although not specified by Motorola, in practice four modes are used. These 
+  four modes are the combinations of CPOL and CPHA. In table 1, the four modes 
+  are listed.</p>
+  <blockquote>
+    <table summary="" bgcolor="#eeeeee" border="1" cellpadding="5" cellspacing="0">
+      <tbody>
+      <tr bgcolor="#dadada">
+        <th>SPI-mode</th>
+        <th>CPOL</th>
+        <th>CPHA</th></tr>
+      <tr>
+        <th>0<br>1<br>2<br>3</th>
+        <th>0<br>0<br>1<br>1</th>
+        <th>0<br>1<br>0<br>1<br></th></tr></tbody></table>
+    <h6>Table 1: SPI Modes</h6></blockquote>
+  <p>If the phase of the clock is zero, i.e. CPHA = 0, data is latched at the 
+  rising edge of the clock with CPOL = 0, and at the falling edge of the clock 
+  with CPOL = 1. If CPHA = 1, the polarities are reversed. CPOL = 0 means 
+  falling edge, CPOL = 1 rising edge.</p>
+  <p>The micro controllers from Motorola allow the polarity and the phase of the 
+  clock to be adjusted. A positive polarity results in latchig data at the 
+  rising edge of the clock. However data is put on the data line already at the 
+  falling edge in order to stabilize. Most peripherals which can only be slaves, 
+  work with this configuration. If it should become necessary to use the other 
+  polarity, transitions are reversed.</p>
+  <h3>The different Peripheral Types</h3>
+  <p>The question is of course, which peripheral types exist and which can be 
+  connected to the host processor. The available types and their characteristics 
+  are now discussed. Peripheral types can be subdivided into the following 
+  categories:</p>
+  <ul>
+    <li>Converters (ADC and DAC) 
+    </li><li>Memories (EEPROM and FLASH) 
+    </li><li>Real Time Clocks (RTC) 
+    </li><li>Sensors (temperature, pressure) 
+    </li><li>Others (signalmixer, potentiometer, LCD controller, UART, CAN 
+    controller, USB controller, amplifier) </li></ul>
+  <p>In the three categories converters, memories and RTCs, there is a great 
+  variety of component. Devices belonging to the last both groups are more 
+  rarely.</p>
+  <p>There are lots of converters with different resolutions, clock frequencies 
+  and number of channels to choose from. 8, 10, 12 up to 24Bit with clock 
+  frequencies from 30ksps up to 600ksps.</p>
+  <p>Memory devices are mostly EEPROM variants. There are also a few SPI flash 
+  memories. Capacities range from a couple of bits up to 64KBit. Clock 
+  frequencies up to 3MHz. Serial EEPROMS SPI are available for different supply 
+  voltages (2.7V to 5V) allowing their use in low-voltage applications. The data 
+  retention time duration from 10 years to 100 years. The permitted number of 
+  write accesses is 1 million cycles for most components. By cascading memory 
+  devices any number of bits/word can be obtained.</p>
+  <p>RTCs are ideally suited for serial communication because only small amounts 
+  of data have to be transferred. There is also a great variety of RTCs with 
+  supply voltages from 2.0V. In addition to the standard functions of a "normal" 
+  clock, some RTCs offer an alarm function, non-volatile RAM etc. Most RTCs come 
+  from DALLAS and EPSON.</p>
+  <p>The group of the sensors is yet weakly represented. Only a temperature and 
+  a pressure sensor could be found.</p>
+  <p>CAN and USB controllers with SPI make it easier to use these protocols on a 
+  micro controller and inerfacing a LCD via SPI saves the troublesome parallel 
+  wiring.</p><a name="manufacturer"></a>
+  <h3>Manufacturer List</h3>
+  <table summary="" bgcolor="#eeeeee" border="1" cellpadding="5" cellspacing="0">
+    <tbody>
+    <tr bgcolor="#dadada">
+      <th>Manufacturer</th>
+      <th>Device Types</th>
+      <th>Internet address</th></tr>
+    <tr>
+      <td>AKM</td>
+      <td>EEPROM</td>
+      <td><a href="http://www.akm.com/" target="_blank">http://www.akm.com/</a></td></tr>
+    <tr>
+      <td>Analog Devices</td>
+      <td>DSP, ADC, digital Poti</td>
+      <td><a href="http://www.analog.com/" target="_blank">http://www.analog.com/</a></td></tr>
+    <tr>
+      <td>Atmel</td>
+      <td>EEPROM, digital Poti</td>
+      <td><a href="http://www.atmel.com/" target="_blank">http://www.atmel.com/</a></td></tr>
+    <tr>
+      <td>Crystal</td>
+      <td>ADC</td>
+      <td><a href="http://www.cirrus.com/" target="_blank">http://www.cirrus.com/</a></td></tr>
+    <tr>
+      <td>Dallas</td>
+      <td>RTC</td>
+      <td><a href="http://www.dalsemi.com/" target="_blank">http://www.dalsemi.com/</a></td></tr>
+    <tr>
+      <td>EPSON</td>
+      <td>RTC</td>
+      <td><a href="http://www.epson.com/" target="_blank">http://www.epson.com/</a></td></tr>
+    <tr>
+      <td>Fairchild</td>
+      <td>EEPROM</td>
+      <td><a href="http://www.fairchildsemi.com/" target="_blank">http://www.fairchildsemi.com/</a></td></tr>
+    <tr>
+      <td>Infineon</td>
+      <td>Pressure Sensor</td>
+      <td><a href="http://www.infineon.com/" target="_blank">http://www.infineon.com/</a></td></tr>
+    <tr>
+      <td>Intel</td>
+      <td>CAN Controller</td>
+      <td><a href="http://www.intel.com/" target="_blank">http://www.intel.com/</a></td></tr>
+    <tr>
+      <td>Linear Technology</td>
+      <td>ADC, DAC, Temperature Sensor + Voltage Monitor</td>
+      <td><a href="http://www.linear.com/" target="_blank">http://www.linear.com/</a></td></tr>
+    <tr>
+      <td>Macronix</td>
+      <td>FLASH</td>
+      <td><a href="http://www.macronix.com/" target="_blank">http://www.macronix.com/</a></td></tr>
+    <tr>
+      <td>Maxim</td>
+      <td>ADC, DAC, UART, Analog Switches</td>
+      <td><a href="http://www.maxim-ic.com/" target="_blank">http://www.maxim-ic.com/</a></td></tr>
+    <tr>
+      <td>Microchip</td>
+      <td>Micro controller, EEPROM, ADC, CAN controller</td>
+      <td><a href="http://www.microchip.com/" target="_blank">http://www.microchip.com/</a></td></tr>
+    <tr>
+      <td>Motorola</td>
+      <td>DSP, MCU</td>
+      <td><a href="http://www.motorola.com/" target="_blank">http://www.motorola.com/</a></td></tr>
+    <tr>
+      <td>National Semiconductor</td>
+      <td>LCD Controller, dig. Temperature Sensor, USB Controller</td>
+      <td><a href="http://www.national.com/" target="_blank">http://www.national.com/</a></td></tr>
+    <tr>
+      <td>NeXFlash</td>
+      <td>FLASH</td>
+      <td><a href="http://www.nexflash.com/" target="_blank">http://www.nexflash.com/</a></td></tr>
+    <tr>
+      <td>RAMTRON</td>
+      <td>FRAM</td>
+      <td><a href="http://www.ramtron.com/" target="_blank">http://www.ramtron.com/</a></td></tr>
+    <tr>
+      <td>SanDisk</td>
+      <td>FLASH, MultiMediaCard</td>
+      <td><a href="http://www.sandisk.com/" target="_blank">http://www.sandisk.com/</a></td></tr>
+    <tr>
+      <td>SGS-Thomson</td>
+      <td>EEPROM, Micro controller</td>
+      <td><a href="http://us.st.com/" target="_blank">http://us.st.com/</a></td></tr>
+    <tr>
+      <td>Texas Instruments</td>
+      <td>DSP, ADC, DAC</td>
+      <td><a href="http://www.ti.com/" target="_blank">http://www.ti.com/</a></td></tr>
+    <tr>
+      <td>Xicor</td>
+      <td>CPU Supervisor, EEPROMs, FLASH</td>
+      <td><a href="http://www.xicor.com/" target="_blank">http://www.xicor.com/</a></td></tr>
+    <tr>
+      <td>Zilog</td>
+      <td>DSP</td>
+      <td><a href="http://www.zilog.com/" target="_blank">http://www.zilog.com/</a></td></tr></tbody></table><a name="device"></a>
+  <h3>Device List (Peripherals)</h3>
+  <table summary="" bgcolor="#eeeeee" border="1" cellpadding="5" cellspacing="0">
+    <tbody>
+    <tr bgcolor="#dadada">
+      <th>No.</th>
+      <th>Device</th>
+      <th>Type</th>
+      <th>Features</th>
+      <th>Manufacturer</th></tr>
+    <tr>
+      <td align="right">1</td>
+      <td>AK93C85A<br>AK93C95A<br>AK93C10A</td>
+      <td>EEPROM</td>
+      <td>Low power consumption<br>0.8µA standby</td>
+      <td>AKM</td></tr>
+    <tr>
+      <td align="right">2</td>
+      <td>SSM2163</td>
+      <td>8x2 Audio Mixer</td>
+      <td>63dB attenuation in<br>1dB steps</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">3</td>
+      <td>AD1893</td>
+      <td>Sample Rate Converter</td>
+      <td>Converts 1:2 to 2:1</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">4</td>
+      <td>AD5302<br>AD5312<br>AD5322</td>
+      <td>DAC</td>
+      <td>8/10/12Bit<br>buffered outputs<br>dual DAC</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">5</td>
+      <td>AD5530<br>AD5531</td>
+      <td>DAC</td>
+      <td>12/14Bit<br>cascadeable</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">6</td>
+      <td>AD7303</td>
+      <td>DAC</td>
+      <td>8Bit<br>clock rate up to 30MHz</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">7</td>
+      <td>AD7394<br>AD7395</td>
+      <td>DAC</td>
+      <td>12/10Bit</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">8</td>
+      <td>AD7715</td>
+      <td>ADC</td>
+      <td>Sigma-Delta</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">9</td>
+      <td>AD7811<br>AD7812</td>
+      <td>ADC</td>
+      <td>10Bit<br>4/8 channel<br>300ksps</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">10</td>
+      <td>AD7816<br>AD7817<br>AD7818</td>
+      <td>ADC+<br>Temperature Sensor</td>
+      <td>10Bit</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">11</td>
+      <td>AD7853</td>
+      <td>ADC</td>
+      <td>12Bit<br>200ksps<br>3V to 5V operation</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">12</td>
+      <td>AD7858</td>
+      <td>ADC</td>
+      <td>12Bit, 8 channel<br>200ksps</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">13</td>
+      <td>AD8303</td>
+      <td>DAC</td>
+      <td>12Bit<br>dual DAC</td>
+      <td>&nbsp;</td></tr>
+    <tr>
+      <td align="right">14</td>
+      <td>AD8400<br>AD8402<br>AD8403</td>
+      <td>Digital Poti</td>
+      <td>1/2/4 channel<br>256 positions<br>1, 10, 50 100kOhm<br>10MHz update 
+        rate</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">15</td>
+      <td>DAC8143</td>
+      <td>DAC</td>
+      <td>12Bit<br>cascadeable</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">16</td>
+      <td>DAC8420</td>
+      <td>DAC</td>
+      <td>12Bit<br>quad DAC<br>wide supply range</td>
+      <td>Analog Devices</td></tr>
+    <tr>
+      <td align="right">17</td>
+      <td>AT25010<br>AT25020<br>AT25040</td>
+      <td>EEPROM</td>
+      <td>Low voltage operation<br>1.8V/2.7V/5.0V<br>block write 
+        protection<br>100 years data retention</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">18</td>
+      <td>AT25080<br>AT25160<br>AT25320<br>AT25640</td>
+      <td>EEPROM</td>
+      <td>Low voltage operation<br>1.8V/2.7V/5.0V<br>block write protection</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">19</td>
+      <td>AT25P1024</td>
+      <td>EEPROM</td>
+      <td>Low voltage operation<br>1.8V/2.7V/5.0V<br>block write protection</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">20</td>
+      <td>AT25HP256</td>
+      <td>EEPROM</td>
+      <td>Low voltage operation<br>1.8V/2.7V/5.0V<br>block write protection</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">21</td>
+      <td>AT45D011</td>
+      <td>FLASH</td>
+      <td>5V<br>1MBit<br>15MHz clock rate</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">22</td>
+      <td>AT45D021</td>
+      <td>FLASH</td>
+      <td>5V<br>2MBit<br>10MHz</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">23</td>
+      <td>AT45DB021</td>
+      <td>FLASH</td>
+      <td>2.7V<br>2MBit<br>5MHz clock rate</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">24</td>
+      <td>AT45DB041</td>
+      <td>FLASH</td>
+      <td>5V<br>4MBit<br>10MHz</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">25</td>
+      <td>AT45D081</td>
+      <td>FLASH</td>
+      <td>5V<br>8MBit<br>10MHz</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">26</td>
+      <td>AT45DB161</td>
+      <td>FLASH</td>
+      <td>2.7V<br>16MBit<br>13MHz</td>
+      <td>ATMEL</td></tr>
+    <tr>
+      <td align="right">27</td>
+      <td>ADS1210<br>ADS1211</td>
+      <td>ADC</td>
+      <td>24Bit</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">28</td>
+      <td>ADS1212<br>ADS1213</td>
+      <td>ADC</td>
+      <td>22Bit</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">29</td>
+      <td>ADS1286</td>
+      <td>ADC</td>
+      <td>12Bit<br>micro power<br>20ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">30</td>
+      <td>ADS7812</td>
+      <td>ADC</td>
+      <td>12Bit,<br>multiple input ranges<br>low power<br>40ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">31</td>
+      <td>ADS7813</td>
+      <td>ADC</td>
+      <td>16Bit<br>low power<br>40ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">32</td>
+      <td>ADS7818</td>
+      <td>ADC</td>
+      <td>12Bit<br>low power<br>500ksps<br>internal reference</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">33</td>
+      <td>ADS7834</td>
+      <td>ADC</td>
+      <td>12Bit<br>low power<br>500ksps<br>internal reference</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">34</td>
+      <td>ADS7835</td>
+      <td>ADC</td>
+      <td>12Bit<br>low power<br>500ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">35</td>
+      <td>ADS7846</td>
+      <td>Touch-screen controller</td>
+      <td>2.2V to 5.25V</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">36</td>
+      <td>ADS7870</td>
+      <td>&nbsp;</td>
+      <td>16Bit<br>2.7V to 5.5V<br>52ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">37</td>
+      <td>ADSS8320</td>
+      <td>ADC</td>
+      <td>2.7V to 5V<br>100ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">38</td>
+      <td>ADS8321</td>
+      <td>ADC</td>
+      <td>16Bit<br>5V<br>100ksps</td>
+      <td>BURR-BROWN</td></tr>
+    <tr>
+      <td align="right">39</td>
+      <td>CS5531<br>CS5533</td>
+      <td>ADC</td>
+      <td>16Bit, 2 channel<br>Low noise up to 23Bit<br>selectable word 
+rates</td>
+      <td>Crystal</td></tr>
+    <tr>
+      <td align="right">40</td>
+      <td>CS5532<br>CS5534</td>
+      <td>ADC</td>
+      <td>24Bit, 2 channel<br>Low noise up to 23Bit<br>selectable word 
+rates</td>
+      <td>Crystal</td></tr>
+    <tr>
+      <td align="right">41</td>
+      <td>DS1267</td>
+      <td>Digital potentiomenter</td>
+      <td>Dual<br>10k, 50k and 100k</td>
+      <td>DALLAS</td></tr>
+    <tr>
+      <td align="right">42</td>
+      <td>DS1305</td>
+      <td>RTC</td>
+      <td>96-byte User-RAM</td>
+      <td>DALLAS</td></tr>
+    <tr>
+      <td align="right">43</td>
+      <td>DS1306</td>
+      <td>RTC</td>
+      <td>96-byte User-RAM</td>
+      <td>DALLAS</td></tr>
+    <tr>
+      <td align="right">44</td>
+      <td>DS1722</td>
+      <td>Digital Thermometer</td>
+      <td>-55 °C to 120 °C<br>accuracy +/- 2°C<br>wide supply range</td>
+      <td>DALLAS</td></tr>
+    <tr>
+      <td align="right">45</td>
+      <td>DS1844</td>
+      <td>Digital Poti</td>
+      <td>4 channel, linear<br>64 positions<br>10, 50 and 100kOhm</td>
+      <td>DALLAS</td></tr>
+    <tr>
+      <td align="right">46</td>
+      <td>RTC4553</td>
+      <td>RTC</td>
+      <td>built-in crystal<br>RAM 30x4Bit</td>
+      <td>EPSON</td></tr>
+    <tr>
+      <td align="right">47</td>
+      <td>NM25C020<br>NM25C040<br>NM25C041<br>NM25C160<br>NM25C640</td>
+      <td>EEPROM</td>
+      <td>data retention &gt;40 years<br>hard- and software write 
+protection</td>
+      <td>Fairchild</td></tr>
+    <tr>
+      <td align="right">48</td>
+      <td>NM93C06<br>NM93C56<br>NM93C66</td>
+      <td>EEPROM</td>
+      <td>data retention &gt;40 years<br>hard- and software write 
+protection</td>
+      <td>Fairchild</td></tr>
+    <tr>
+      <td align="right">49</td>
+      <td>NM93C46<br>NM93C56</td>
+      <td>EEPROM</td>
+      <td>1k/2k</td>
+      <td>Fairchild</td></tr>
+    <tr>
+      <td align="right">50</td>
+      <td>NM93C46A<br>NM93C46A</td>
+      <td>EEPROM</td>
+      <td>1k/2k<br>selectable organization</td>
+      <td>Fairchild</td></tr>
+    <tr>
+      <td align="right">51</td>
+      <td>NM93S46<br>NM93S56</td>
+      <td>EEPROM</td>
+      <td>1K/2K<br>data protect<br>sequential read</td>
+      <td>Fairchild</td></tr>
+    <tr>
+      <td align="right">52</td>
+      <td>KP100</td>
+      <td>Pressure Sensor</td>
+      <td>range 60... 130kPa</td>
+      <td>infineon</td></tr>
+    <tr>
+      <td align="right">53</td>
+      <td>82527</td>
+      <td>CAN Controller</td>
+      <td>Flexible CPU-interface<br>CAN 2.0<br>Programmable Bit rate</td>
+      <td>intel</td></tr>
+    <tr>
+      <td align="right">54</td>
+      <td>IS93C46-3</td>
+      <td>EEPROM</td>
+      <td>&nbsp;</td>
+      <td>issi</td></tr>
+    <tr>
+      <td align="right">55</td>
+      <td>LTC1091<br>LTC1092<br>LTC1093<br>LTC1094</td>
+      <td>ADC</td>
+      <td>1-/2-/6-/8-Kanal<br>wide supply range :<br>5V to 10V</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">56</td>
+      <td>LTC1096<br>LTC1098</td>
+      <td>A/D-Wabdler</td>
+      <td>8Bit<br>33ksps</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">57</td>
+      <td>LTC1197<br>LTC1199</td>
+      <td>ADC</td>
+      <td>10Bit<br>500ksps<br>low-power version</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">58</td>
+      <td>LTC1285<br>LTC1288</td>
+      <td>ADC</td>
+      <td>12Bit<br>7.5ksps/6.5ksps<br>3V</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">59</td>
+      <td>LTC1287</td>
+      <td>ADC</td>
+      <td>12Bit<br>3.3V<br>30ksps</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">60</td>
+      <td>LTC1289</td>
+      <td>ADC</td>
+      <td>12Bit<br>25ksps<br>3.3V</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">61</td>
+      <td>LTC1290</td>
+      <td>ADC</td>
+      <td>12Bit<br>50ksps<br>variable word length</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">62</td>
+      <td>LTC1291</td>
+      <td>ADC</td>
+      <td>12Bit<br>5V</td>
+      <td>&nbsp;</td></tr>
+    <tr>
+      <td align="right">63</td>
+      <td>LTC 1329-10<br>LTC 1329-50<br>LTC1329A-50</td>
+      <td>DAC</td>
+      <td>Wide supply range<br>2.7V to 6.5V<br>8Bit<br>Current output</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">64</td>
+      <td>LTC1392</td>
+      <td>Temperatur+Power Monitor</td>
+      <td>10Bit</td>
+      <td>Linear Technilogy</td></tr>
+    <tr>
+      <td align="right">65</td>
+      <td>LTC1404</td>
+      <td>ADC</td>
+      <td>12Bit<br>600ksps</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">66</td>
+      <td>LTC1418</td>
+      <td>ADC</td>
+      <td>14Bit<br>200ksps<br>serial/parallel I/O</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">67</td>
+      <td>LTC1451<br>LTC1452<br>LTC1453</td>
+      <td>DAC</td>
+      <td>12Bit<br>kaskadierbar</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">68</td>
+      <td>LTC1594<br>LTC1598</td>
+      <td>ADC</td>
+      <td>12Bit<br>4/8 channel</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">69</td>
+      <td>LTC1655</td>
+      <td>DAC</td>
+      <td>16Bit<br>kaskadierbar</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">70</td>
+      <td>LTC2400</td>
+      <td>ADC</td>
+      <td>24Bit<br>Sigma/Delta</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">71</td>
+      <td>LTC2408</td>
+      <td>ADC</td>
+      <td>24Bit<br>Sigma/Delta<br>no latency</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">72</td>
+      <td>LTC2410</td>
+      <td>ADC</td>
+      <td>24Bit</td>
+      <td>&nbsp;</td></tr>
+    <tr>
+      <td align="right">73</td>
+      <td>LTC2420</td>
+      <td>ADC</td>
+      <td>20Bit, no latency</td>
+      <td>Linear Technology</td></tr>
+    <tr>
+      <td align="right">74</td>
+      <td>MAX144<br>MAX145</td>
+      <td>ADC</td>
+      <td>12Bit<br>Low power<br>2 channel<br>108ksps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">75</td>
+      <td>MAX146<br>MAX147</td>
+      <td>ADC</td>
+      <td>12Bit<br>Low power<br>8 channel</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">76</td>
+      <td>MAX157<br>MAX159</td>
+      <td>ADC</td>
+      <td>10Bit<br>2 channels</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">77</td>
+      <td>MAX186<br>MAX188</td>
+      <td>ADC</td>
+      <td>12Bit<br>8 channel<br>133ksps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">78</td>
+      <td>MAX349<br>MAX350</td>
+      <td>MUX</td>
+      <td>8-to-1<br>dual 4-to-1</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">79</td>
+      <td>MAX395</td>
+      <td>Switch</td>
+      <td>8 channel</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">80</td>
+      <td>MAX504</td>
+      <td>DAC</td>
+      <td>10Bit<br>low power<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">81</td>
+      <td>MAX522</td>
+      <td>DAC</td>
+      <td>8Bit<br>5MHz</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">82</td>
+      <td>MAX525</td>
+      <td>DAC</td>
+      <td>12Bit<br>quad DAC</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">83</td>
+      <td>MAX531</td>
+      <td>DAC</td>
+      <td>12Bit<br>low power</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">84</td>
+      <td>MAX534</td>
+      <td>DAC</td>
+      <td>8Bit<br>rail-to-rail output buffers<br>low power<br>10MHz clock 
+      rate</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">85</td>
+      <td>MAX535<br>MAX5351</td>
+      <td>DAC</td>
+      <td>13Bit<br>schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">86</td>
+      <td>MAX536<br>MAX537</td>
+      <td>DAC</td>
+      <td>12Bit<br>quad DAC<br>calibrated</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">87</td>
+      <td>MAX 548<br>MAX549<br>MAX550</td>
+      <td>DAC</td>
+      <td>8Bit<br>low power<br>single/dual DAC<br>10MHz clock rate</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">88</td>
+      <td>MAX551<br>MAX552</td>
+      <td>DAC</td>
+      <td>12Bit<br>12.5MHz clock rate<br>schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">89</td>
+      <td>MAX1084<br>MAX1085</td>
+      <td>ADC</td>
+      <td>10Bit<br>300ksps/400ksps<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">90</td>
+      <td>MAX1106<br>MAX1107</td>
+      <td>ADC</td>
+      <td>8Bit<br>low power<br>25ksps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">91</td>
+      <td>MAX1110<br>MAX1111</td>
+      <td>ADC</td>
+      <td>8Bit<br>low power<br>multi-channel</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">92</td>
+      <td>MAX1112<br>MAX1113</td>
+      <td>ADC</td>
+      <td>8Bit<br>50ksps<br>multi-channel</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">93</td>
+      <td>MAX1202<br>MAX1203</td>
+      <td>ADC</td>
+      <td>12Bit<br>8 channel<br>133ksps<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">94</td>
+      <td>MAX1204</td>
+      <td>ADC</td>
+      <td>10Bit<br>8 channel<br>133ksps<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">95</td>
+      <td>MAX1240<br>MAX1241</td>
+      <td>ADC</td>
+      <td>12Bit<br>low power<br>73ksps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">96</td>
+      <td>MAX1242<br>MAX1243</td>
+      <td>ADC</td>
+      <td>10Bit<br>8 channel<br>low power<br>73ksps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">97</td>
+      <td>MAX1270<br>MAX1271</td>
+      <td>ADC</td>
+      <td>12Bit<br>8 channel<br>multi-range<br>110ksps<br>internal 
+reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">98</td>
+      <td>MAX1400</td>
+      <td>ADC</td>
+      <td>18Bit, Sigma-Delta<br>multi-channel<br>programmable 
+        gain+offset<br>480sps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">99</td>
+      <td>MAX1401</td>
+      <td>ADC</td>
+      <td>18Bit, Sigma-Delta<br>multi­channel<br>480sps</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">100</td>
+      <td>MAX1403</td>
+      <td>ADC</td>
+      <td>18Bit, Sigma-Delta<br>multi-channel<br>480sps</td>
+      <td>&nbsp;</td></tr>
+    <tr>
+      <td align="right">101</td>
+      <td>MAX1402</td>
+      <td>ADC</td>
+      <td>18Bit<br>multi-channel</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">102</td>
+      <td>MAX3100</td>
+      <td>UART</td>
+      <td>Up to 230kBaud<br>Schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">103</td>
+      <td>MAX3110E<br>MAX3111E</td>
+      <td>UART</td>
+      <td>ESD-protected<br>internal capacitors</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">104</td>
+      <td>MAX3140</td>
+      <td>UART</td>
+      <td>&nbsp;</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">105</td>
+      <td>MAX4548</td>
+      <td>Switch</td>
+      <td>Triple 3x2-crosspoint switch</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">106</td>
+      <td>MAX4550<br>MAX4570</td>
+      <td>Switch</td>
+      <td>Dual 4x2 crosspoint switch</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">107</td>
+      <td>MAX4562<br>MAX4573</td>
+      <td>Switch</td>
+      <td>Clickless Audio/Video Switch</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">108</td>
+      <td>MAX4571<br>MAX4574</td>
+      <td>Switch</td>
+      <td>Audio/Video</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">109</td>
+      <td>MAX4588</td>
+      <td>MUX</td>
+      <td>Dual 4 channel<br>180MHz bandwidth</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">110</td>
+      <td>MAX4589</td>
+      <td>MUX</td>
+      <td>Dual 2 channel<br>200MHz bandwidth</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">111</td>
+      <td>MAX5104</td>
+      <td>DAC</td>
+      <td>12Bit</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">112</td>
+      <td>MAX5120<br>MAX5121</td>
+      <td>DAC</td>
+      <td>12Bit<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">113</td>
+      <td>MAX5122<br>MAX5123</td>
+      <td>DAC</td>
+      <td>12Bit<br>internal reference<br>buffered output can drive up to 
+      20mA</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">114</td>
+      <td>MAX5130<br>MAX5131</td>
+      <td>DAC</td>
+      <td>13Bit<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">115</td>
+      <td>MAX5132<br>MAX5133</td>
+      <td>DAC</td>
+      <td>13Bit<br>internal reference</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">116</td>
+      <td>MAX5150<br>MAX5151</td>
+      <td>DAC</td>
+      <td>13Bit, dual<br>16 us settling time</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">117</td>
+      <td>MAX5152<br>MAX5153</td>
+      <td>DAC</td>
+      <td>13Bit<br>dual DAC<br>configurable outputs<br>drive up to 20mA</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">118</td>
+      <td>MAX5156<br>MAX5157</td>
+      <td>DAC</td>
+      <td>12Bit<br>dual DAC<br>configurable outputs<br>drive up to 20mA</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">119</td>
+      <td>MAX5170<br>MAX5172</td>
+      <td>DAC</td>
+      <td>14Bit<br>low power</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">120</td>
+      <td>MAX5171<br>MAX5173</td>
+      <td>DAC</td>
+      <td>14Bit<br>Force/Sense voltage output</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">121</td>
+      <td>MAX5174<br>MAX5176</td>
+      <td>DAC</td>
+      <td>12Bit</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">122</td>
+      <td>MAX5175<br>MAX5177</td>
+      <td>DAC</td>
+      <td>12Bit<br>Force/Sense voltage output</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">123</td>
+      <td>MAX5222</td>
+      <td>DAC</td>
+      <td>8Bit<br>dual DAC<br>25MHz clock rate</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">124</td>
+      <td>MAX5250</td>
+      <td>DAC</td>
+      <td>10Bit<br>quad DAC<br>schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">125</td>
+      <td>MAX5251</td>
+      <td>DAC</td>
+      <td>10Bit<br>quad DAC<br>schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">126</td>
+      <td>MAX5253</td>
+      <td>DAC</td>
+      <td>12Bit</td>
+      <td>&nbsp;</td></tr>
+    <tr>
+      <td align="right">127</td>
+      <td>MAX5302</td>
+      <td>DAC</td>
+      <td>12Bit<br>5V</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">128</td>
+      <td>MAX5352</td>
+      <td>DAC</td>
+      <td>12Bit<br>schmitt-trigger inputs<br>low power</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">129</td>
+      <td>MAX5354</td>
+      <td>DAC</td>
+      <td>10Bit<br>schmitt-trigger inputs</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">130</td>
+      <td>MAX5541</td>
+      <td>DAC</td>
+      <td>16Bit<br>schmitt-trigger inputs<br>10MHz clock rate</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">131</td>
+      <td>MAX5544</td>
+      <td>DAC</td>
+      <td>14Bit<br>schmitt-trigger inputs<br>10MHz</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">132</td>
+      <td>MAX7219<br>Max7221</td>
+      <td>LED display driver</td>
+      <td>8-digit<br>10MHz clock rate<br>digital/analog brightness control</td>
+      <td>Maxim</td></tr>
+    <tr>
+      <td align="right">133</td>
+      <td>25AA040<br>25LC040<br>25C040</td>
+      <td>EEPROM</td>
+      <td>4k<br>max. 3MHz clock<br>data retention &gt;200 years</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">134</td>
+      <td>25AA080<br>25LC080<br>25C080</td>
+      <td>EEPROM</td>
+      <td>8k, max 3MHz clock<br>data retention &gt;200 years</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">135</td>
+      <td>25AA160<br>25LC160<br>25C160</td>
+      <td>EEPROM</td>
+      <td>16k, max 3MHz clock<br>data retention &gt;200 years</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">136</td>
+      <td>25LC320<br>25C320</td>
+      <td>EEPROM</td>
+      <td>32k, max 3MHz clock<br>data retention &gt;200 years</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">137</td>
+      <td>25AA640<br>25LC640</td>
+      <td>EEPROM</td>
+      <td>64k, max 3MHz clock<br>data retention &gt;200 years</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">138</td>
+      <td>MCP3001</td>
+      <td>ADC</td>
+      <td>10Bit, 2.7V to 5V<br>200ksps @ 5V<br>low power</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">139</td>
+      <td>MCP3002</td>
+      <td>ADC</td>
+      <td>10Bit, 2.7V to 5V,<br>2 channel<br>200ksps @ 5V</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">140</td>
+      <td>MCP3004<br>MCP3008</td>
+      <td>ADC</td>
+      <td>10Bit<br>4/8 channel<br>200ksps @ 5V<br>2.7V to 5V</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">141</td>
+      <td>MCP3201</td>
+      <td>ADC</td>
+      <td>12Bit<br>100ksps<br>2.7V to 5V<br>industrial temp range</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">142</td>
+      <td>MCP3202</td>
+      <td>ADC</td>
+      <td>12Bit<br>2 channel<br>100ksps @ 5V</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">143</td>
+      <td>MCP3204/3208</td>
+      <td>ADC</td>
+      <td>12Bit<br>4/8 channel<br>100ksps @ 5V</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">144</td>
+      <td>MCP2510</td>
+      <td>CAN Controller</td>
+      <td>Programmable Bit rate<br>up tp 1MHz<br>0... 8 Bytes message frame</td>
+      <td>Microchip</td></tr>
+    <tr>
+      <td align="right">145</td>
+      <td>MC68HC86T1</td>
+      <td>RTC + RAM</td>
+      <td>32x8Bit static-RAM</td>
+      <td>Motorola</td></tr>
+    <tr>
+      <td align="right">146</td>
+      <td>CLC5506</td>
+      <td>GTA (Gain Trim Amplifier)</td>
+      <td>600MHz bandwidth<br>control range 16dB</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">147</td>
+      <td>COP472-3</td>
+      <td>LCD Controller</td>
+      <td>Keine SDO-Leitung</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">148</td>
+      <td>LM74</td>
+      <td>Temperature Sensor</td>
+      <td>12Bit + sign<br>3V to 5V<br>-55 °C to +150 °C<br>max resolution: 
+        1.25 °C</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">149</td>
+      <td>MM5483</td>
+      <td>LCD Controller</td>
+      <td>31 segment outputs<br>cascadeable</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">150</td>
+      <td>MM58342</td>
+      <td>High Voltage<br>Display Drive</td>
+      <td>35V max.<br>cascadeable</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">151</td>
+      <td>TP3465</td>
+      <td>Microwire Interface Device</td>
+      <td>Allows memory-mapped SPI devices<br>Clock 5MHz/20MHz</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">152</td>
+      <td>USBN9602</td>
+      <td>USB Controller</td>
+      <td>DMA-Support<br>Several FIFOs</td>
+      <td>National Semiconductor</td></tr>
+    <tr>
+      <td align="right">153</td>
+      <td>NX25F011A<br>NX25F041A</td>
+      <td>FLASH</td>
+      <td>Data retention 10 years<br>Clock 16MHz</td>
+      <td>NexFlash</td></tr>
+    <tr>
+      <td align="right">154</td>
+      <td>NX25F080A</td>
+      <td>FLASH</td>
+      <td>8MBit<br>data retention 10 years<br>DOS-compatible sectors</td>
+      <td>NexFlash</td></tr>
+    <tr>
+      <td align="right">155</td>
+      <td>NX25M</td>
+      <td>FLASH</td>
+      <td>Serial FLASH module,<br>removeable</td>
+      <td>NexFlash</td></tr>
+    <tr>
+      <td align="right">156</td>
+      <td>FM25L256<br>FM25W256</td>
+      <td>FRAM</td>
+      <td>Ferroelectric RAM,<br>256KB 3V/wide range,<br>endurance 1E16 
+      cycles</td>
+      <td>RAMTRON</td></tr>
+    <tr>
+      <td align="right">157</td>
+      <td>FM25CL64<br>FM25640</td>
+      <td>FRAM</td>
+      <td>Ferroelectric RAM,<br>64KB 3V/5V,<br>endurance 1E16 cycles</td>
+      <td>RAMTRON</td></tr>
+    <tr>
+      <td align="right">158</td>
+      <td>FM25CL160</td>
+      <td>FRAM</td>
+      <td>Ferroelectric RAM,<br>16KB 5V,<br>endurance 1E16 cycles</td>
+      <td>RAMTRON</td></tr>
+    <tr>
+      <td align="right">159</td>
+      <td>FM25CL04<br>FM25040</td>
+      <td>FRAM</td>
+      <td>Ferroelectric RAM,<br>4KB 3V/5V,<br>endurance 1E16 cycles</td>
+      <td>RAMTRON</td></tr>
+    <tr>
+      <td align="right">160</td>
+      <td>SDMB-4<br>SDMB-8<br>SDMB-16<br>SDMB-32</td>
+      <td>MultiMediaCard</td>
+      <td>Up to 32MB FLASH<br>SPI and PCMCIA interfaces</td>
+      <td>SanDisk</td></tr>
+    <tr>
+      <td align="right">161</td>
+      <td>M35080</td>
+      <td>EEPROM</td>
+      <td>8KBit<br>5MHz clock rate<br>data retention &gt;40 years</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">162</td>
+      <td>M93C86<br>M93C76<br>M93C66<br>M93C56<br>M93C46<br>M93C06</td>
+      <td>EEPROM</td>
+      <td>Word or byte organization<br>16K/8K/4K<br>/2K/1K/256<br>data 
+        retention: 40 years</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">163</td>
+      <td>M93S46<br>M93S56<br>M93S66</td>
+      <td>EEPROM</td>
+      <td>Block protection<br>1k/2K/4kx16Bit</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">164</td>
+      <td>M95010<br>M95020<br>M95040</td>
+      <td>EEPROM</td>
+      <td>5MHz clock rate</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">165</td>
+      <td>M95080<br>M95160<br>M95320<br>M95640</td>
+      <td>EEPROM</td>
+      <td>8/16/32/64KBit<br>5MHz clock rate</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">166</td>
+      <td>M95128<br>M95256</td>
+      <td>EEPROM</td>
+      <td>128/256KBit<br>5MHz</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">167</td>
+      <td>ST95010<br>ST95020<br>ST95040</td>
+      <td>EEPROM</td>
+      <td>1K,2K,4K<br>2MHz</td>
+      <td>SGS-Thomson</td></tr>
+    <tr>
+      <td align="right">168</td>
+      <td>TLV1504<br>TLV1508</td>
+      <td>ADC</td>
+      <td>10Bit<br>200ksps<br>4/8 channel<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">169</td>
+      <td>TLV1544</td>
+      <td>ADC</td>
+      <td>10Bit<br>4/8 channel</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">170</td>
+      <td>TLV1570</td>
+      <td>ADC</td>
+      <td>10Bit<br>1.25Msps</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">171</td>
+      <td>TLV1572</td>
+      <td>ADC</td>
+      <td>10Bit<br>1.25Msps</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">172</td>
+      <td>TLC1514<br>TLC1518</td>
+      <td>ADC</td>
+      <td>10Bit, 400ksps<br>DSP-compatible 20MHz</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">173</td>
+      <td>TLV2541<br>TLV2542<br>TLV2545</td>
+      <td>ADC</td>
+      <td>12Bit, 200ksps<br>low power<br>DSP-compatible 20MHz</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">174</td>
+      <td>TLV2544<br>TLV2548</td>
+      <td>ADC</td>
+      <td>12Bit<br>200ksps<br>4/8 channel<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">175</td>
+      <td>TLC2554<br>TLC2558</td>
+      <td>ADC</td>
+      <td>12Bit<br>400ksps<br>4/8 channel<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">176</td>
+      <td>TLV5604</td>
+      <td>DAC</td>
+      <td>10Bit</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">177</td>
+      <td>TLV5606</td>
+      <td>DAC</td>
+      <td>10Bit<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">178</td>
+      <td>TLV5616<br>TLV5616</td>
+      <td>DAC</td>
+      <td>12Bit<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">179</td>
+      <td>TLV5617<br>TLV5617A</td>
+      <td>DAC</td>
+      <td>10Bit<br>dual DAC<br>programmable settling time</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">180</td>
+      <td>TLV5618A</td>
+      <td>DAC</td>
+      <td>12Bit<br>dual DAC<br>low power</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">181</td>
+      <td>TLV5623<br>TLV5623</td>
+      <td>DAC</td>
+      <td>8Bit</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">182</td>
+      <td>TLV5624</td>
+      <td>DAC</td>
+      <td>8Bit<br>internal reference</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">183</td>
+      <td>TLV5627</td>
+      <td>DAC</td>
+      <td>8Bit<br>4 channel</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">184</td>
+      <td>TLV5636</td>
+      <td>DAC</td>
+      <td>12Bit<br>internal reference<br>programmable reference</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">185</td>
+      <td>TLV5637</td>
+      <td>DAC</td>
+      <td>10Bit</td>
+      <td>Texas Instruments</td></tr>
+    <tr>
+      <td align="right">186</td>
+      <td>X25020</td>
+      <td>EEPROM</td>
+      <td>2K<br>256x8Bit<br>clock 1MHz</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">187</td>
+      <td>X25040</td>
+      <td>EEPROM</td>
+      <td>4K<br>512x8Bit<br>clock 1MHz</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">188</td>
+      <td>X25160</td>
+      <td>EEPROM</td>
+      <td>16k<br>2048x8Bit<br>clock 2MHz</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">189</td>
+      <td>X25F008<br>X25F016<br>X25F032<br>X25F064</td>
+      <td>FLASH</td>
+      <td>1.8V to 3.6V<br>data retention 100 years<br>clock 1MHz</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">190</td>
+      <td>X25F128</td>
+      <td>FLASH</td>
+      <td>Block Lock Protection</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">191</td>
+      <td>X5001</td>
+      <td>CPU Supervisor</td>
+      <td>5 Reset voltage levels</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">192</td>
+      <td>X5043</td>
+      <td>CPU Supervisor</td>
+      <td>4K EEPROM</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">193</td>
+      <td>X5163<br>X5165</td>
+      <td>CPU Supervisor</td>
+      <td>16K EEPROM</td>
+      <td>XICOR</td></tr>
+    <tr>
+      <td align="right">194</td>
+      <td>X5323</td>
+      <td>CPU Supervisor<br></td>
+      <td>32K EEPROM</td>
+      <td>XICOR</td></tr></tbody></table>
+  <h3>Literature</h3>
+  <p>[1] Motorola MC68HC11 Reference Manual, Prentice Hall 1989<br>[2] Motorola 
+  MC68332 User Manual<br>[3] Various application notes<br>[4] Data 
+  sheets</p><font size="1"><a href="http://www.mct.net/index.html" target="_top">http://www.mct.net/index.html</a></font></blockquote>
+</body></html>

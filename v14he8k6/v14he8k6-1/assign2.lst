@@ -1,0 +1,61 @@
+A51 MACRO ASSEMBLER  ASSIGN2                                                              11/26/2015 19:56:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN .\assign2.obj
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE V:\assign2.asm SET(SMALL) DEBUG PRINT(.\assign2.lst) OBJECT(.\assign2.obj
+                      ) EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1     cseg at 200h
+0200 34730201          2     mydata: db 34h,73h,02h,01h,0ABh,0FCh,0Fh,98h,74h,0A0h
+0204 ABFC0F98                
+0208 74A0                    
+----                   3     cseg at 0
+0000 900200            4     mov dptr,#mydata
+0003 93                5     movc a,@a+dptr
+0004 F8                6     mov r0,a
+0005 A3                7     l1:inc dptr
+0006 E4                8     clr a
+0007 93                9     movc a,@a+dptr
+0008 600B             10     jz l3
+000A F9               11     mov r1,a
+000B 98               12     subb a,r0
+000C 40F7             13     jc l1
+000E 5000             14     jnc l2
+0010 E8               15     l2: mov a,r0
+0011 C9               16     xch a,r1
+0012 F8               17     mov r0,a
+0013 80F0             18     sjmp l1
+0015                  19     l3:
+                      20     
+0015 E8               21       mov a,r0
+0016 C2D3             22       clr psw.3
+0018 C2D4             23       clr psw.4
+001A FF               24       mov r7,a
+001B D2D4             25       setb psw.4
+001D FF               26       mov r7,a
+001E C2D3             27       clr psw.3
+0020 FF               28       mov r7,a
+                      29     
+                      30       end
+A51 MACRO ASSEMBLER  ASSIGN2                                                              11/26/2015 19:56:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L1 . . . . . . . .  C ADDR   0005H   A   
+L2 . . . . . . . .  C ADDR   0010H   A   
+L3 . . . . . . . .  C ADDR   0015H   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,41 @@
+C51 COMPILER V7.08   MCP3204_MAIN                                                          10/08/2015 08:44:41 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE MCP3204_MAIN
+OBJECT MODULE PLACED IN mcp3204_main.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE mcp3204_main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"delay.c"
+   3          #include"mcp3204.h"
+*** ERROR C301 IN LINE 1 OF mcp3204.h: identifier expected
+*** WARNING C323 IN LINE 2 OF mcp3204.h: newline expected, extra characters found
+*** WARNING C312 IN LINE 12 OF mcp3204.h: misplaced endif control
+   4          main()
+   5          {
+   6   1         init_lcd();
+   7   1          while(1)
+   8   1          {
+   9   2            cmd_lcd(0x80);
+  10   2            float_lcd(read_adc_mcp3204(0));
+  11   2      
+  12   2            cmd_lcd(0x80);
+  13   2            float_lcd(read_adc_mcp3204(1));
+  14   2      
+  15   2           cmd_lcd(0x80);
+  16   2            float_lcd(read_adc_mcp3204(2));
+  17   2      
+  18   2           cmd_lcd(0x80);
+  19   2            float_lcd(read_adc_mcp3204(3));
+  20   2      
+  21   2      
+  22   2          }
+  23   1      
+  24   1      
+  25   1      
+  26   1      
+  27   1      }
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  1 ERROR(S)

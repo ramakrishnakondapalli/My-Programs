@@ -1,0 +1,87 @@
+;************************************************************************
+;		I2C Protocol Library
+;
+;	Description:	I2C Subroutines for I2C communication
+;			these subroutines covers start, stop, send, recieve
+;			etc. They can be used by anyone and can be changed
+;			and distributed.
+;
+;	IMPORTANT:	Some I2C devices may be slow so you need to add one
+;			or two nops where ever it required.
+;
+;	NOTE:		This library works only with single master multi-slave 
+;			configuration.
+;************************************************************************
+
+
+;************************************************************************
+;		Ports Used for I2C Communication
+;************************************************************************
+	sda equ P0.0
+	scl equ P0.1
+
+;************************************************************************
+;		Start Condition for I2C Communication
+;************************************************************************
+
+I2Cstart:		
+	setb scl
+	setb sda	
+	clr sda	
+	clr scl
+	ret
+
+;************************************************************************
+;			Stop Condition For I2C Bus
+;************************************************************************
+
+stop:			
+	clr sda
+	setb scl
+	setb sda
+	ret
+
+;************************************************************************
+;		Sending Data to slave on I2C bus
+;		       with Acknowledgement
+;************************************************************************
+
+send:
+	mov r7,#08
+back1:
+	clr scl
+	rlc a
+	mov sda,c
+	setb scl
+	clr scl
+	djnz r7,back1
+ack:
+	clr scl
+	setb sda
+	setb scl
+;	mov c,sda
+	clr scl
+	ret
+;************************************************************************
+;		Receiving Data from slave on I2C bus
+;		       with Acknowledgement
+;************************************************************************
+
+recv:
+	mov r7,#08
+back2:
+	setb sda
+	setb scl
+	mov c,sda
+	rlc a
+	clr scl
+	djnz r7,back2
+ack:
+	clr scl
+	setb sda
+	setb scl
+	clr scl
+
+save:	mov @r0,a
+	inc r0
+	ret

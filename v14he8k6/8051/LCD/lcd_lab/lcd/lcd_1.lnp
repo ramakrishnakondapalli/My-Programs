@@ -1,0 +1,3 @@
+"C:\v14he8k6\temp.obj" 
+TO "C:\v14he8k6\lcd_1" 
+PRINT(".\lcd_1.m51") RAMSIZE(256) 

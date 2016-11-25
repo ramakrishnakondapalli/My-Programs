@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  MUL1A                                                                08/13/2015 15:24:52 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN mul1a.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE mul1a.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     delay segment code
+----                   2     rseg delay
+0000                   3     mul_16bit:
+0000 E8                4     mov a,r0
+0001 89F0              5     mov b,r1
+0003 A4                6     mul ab
+0004 22                7     ret
+                       8     ;public mul_16bit
+                       9     end
+A51 MACRO ASSEMBLER  MUL1A                                                                08/13/2015 15:24:52 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DELAY. . . . . . .  C SEG    0005H       REL=UNIT
+MUL_16BIT. . . . .  C ADDR   0000H   R   SEG=DELAY
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

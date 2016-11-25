@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  DELAY_1MS                                                            08/11/2015 20:03:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN delay_1ms.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE delay_1ms.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     delay_1ms:
+0000 7FFA              2     mov r7,#250;1mc
+0002                   3     l1:
+0002 DFFE              4     djnz r7,l1;2*250
+0004 7EF8              5     mov r6,#248;1mc
+0006                   6     l2:
+0006 DEFE              7     djnz r6,l2;2*248
+0008 22                8     ret        ;2mc
+                       9     
+*** WARNING #A41 IN 9 (delay_1ms.asm, LINE 9): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  DELAY_1MS                                                            08/11/2015 20:03:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY_1MS. . . . .  C ADDR   0000H   A   
+L1 . . . . . . . .  C ADDR   0002H   A   
+L2 . . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

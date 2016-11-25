@@ -1,0 +1,105 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        08/17/2015  19:49:57  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL2\C51\BIN\BL51.EXE keypad3.obj TO keypad3
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  keypad3.obj (KEYPAD3)
+  C:\KEIL2\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  keypad3 (KEYPAD3)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0046H     UNIT         ?PR?KEYSCAN?KEYPAD3
+            CODE    0049H     0020H     UNIT         ?CO?KEYPAD3
+            CODE    0069H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0075H     0007H     UNIT         ?PR?MAIN?KEYPAD3
+            CODE    007CH     0004H     UNIT         ?PR?INIT_ROWS?KEYPAD3
+
+
+
+OVERLAY MAP OF MODULE:   keypad3 (KEYPAD3)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?KEYPAD3
+
+?PR?MAIN?KEYPAD3
+  +--> ?PR?KEYSCAN?KEYPAD3
+
+?PR?KEYSCAN?KEYPAD3
+  +--> ?PR?INIT_ROWS?KEYPAD3
+  +--> ?CO?KEYPAD3
+
+
+
+SYMBOL TABLE OF MODULE:  keypad3 (KEYPAD3)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KEYPAD3
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V5.03                                                      08/17/2015  19:49:57  PAGE 2
+
+
+  D:00B0H         PUBLIC        P3
+  C:0049H         PUBLIC        scan_codes
+  C:0075H         PUBLIC        main
+  C:007CH         PUBLIC        init_rows
+  C:0003H         PUBLIC        keyscan
+  -------         PROC          INIT_ROWS
+  C:007CH         LINE#         8
+  C:007CH         LINE#         9
+  C:007CH         LINE#         10
+  C:007FH         LINE#         11
+  -------         ENDPROC       INIT_ROWS
+  -------         PROC          KEYSCAN
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         12
+  C:0003H         LINE#         13
+  C:0003H         LINE#         15
+  C:0006H         LINE#         17
+  C:000CH         LINE#         20
+  C:0013H         LINE#         21
+  C:0013H         LINE#         22
+  C:0026H         LINE#         23
+  C:0041H         LINE#         24
+  C:0041H         LINE#         25
+  C:0045H         LINE#         26
+  C:0045H         LINE#         27
+  C:0048H         LINE#         28
+  -------         ENDPROC       KEYSCAN
+  -------         PROC          MAIN
+  C:0075H         LINE#         30
+  C:0075H         LINE#         31
+  C:0075H         LINE#         32
+  C:0075H         LINE#         33
+  C:0075H         LINE#         34
+  C:007AH         LINE#         35
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        KEYPAD3
+
+Program Size: data=9.0 xdata=0 code=128
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

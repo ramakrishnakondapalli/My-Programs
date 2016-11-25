@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  4                                                                    09/04/2015 14:59:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN 4.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE 4.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;;subtract 1000 from 65535 and up[date the result in scratchpad area begining fromMSB to LS
+                             B
+----                   2     CSEG AT 0
+0000 74FF              3     MOV A,#0FFH
+0002 94E8              4     SUBB A,#0E8H
+0004 F531              5     MOV 31H,A
+0006 74FF              6     MOV A,#0FFH
+0008 9403              7     SUBB A,#03H
+000A F530              8     MOV 30H,A
+                       9     END
+A51 MACRO ASSEMBLER  4                                                                    09/04/2015 14:59:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

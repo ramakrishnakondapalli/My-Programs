@@ -1,0 +1,96 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/29/2015  09:49:03  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE mul1.obj TO assign
+
+
+INPUT MODULES INCLUDED:
+  mul1.obj (MUL1)
+
+
+LINK MAP OF MODULE:  assign (MUL1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     004BH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  assign (MUL1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MUL1
+  D:00F0H         SYMBOL        B
+  C:004BH         SYMBOL        L3
+  C:001BH         SYMBOL        MUL_16
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  C:0006H         LINE#         5
+  C:0008H         LINE#         6
+  C:000AH         LINE#         8
+  C:000DH         LINE#         9
+  C:000EH         LINE#         10
+  C:000FH         LINE#         11
+  C:0010H         LINE#         12
+  C:0011H         LINE#         13
+  C:0012H         LINE#         14
+  C:0013H         LINE#         15
+  C:0014H         LINE#         16
+  C:0015H         LINE#         17
+  C:0016H         LINE#         18
+  C:0017H         LINE#         19
+  C:0018H         LINE#         20
+  C:0019H         LINE#         21
+  C:001BH         LINE#         24
+  C:001CH         LINE#         25
+  C:001EH         LINE#         26
+  C:001FH         LINE#         27
+  C:0020H         LINE#         28
+  C:0022H         LINE#         30
+  C:0023H         LINE#         31
+  C:0025H         LINE#         32
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/29/2015  09:49:03  PAGE 2
+
+
+  C:0026H         LINE#         33
+  C:0027H         LINE#         34
+  C:0028H         LINE#         35
+  C:002AH         LINE#         36
+  C:002CH         LINE#         37
+  C:002DH         LINE#         38
+  C:002FH         LINE#         39
+  C:0031H         LINE#         40
+  C:0032H         LINE#         42
+  C:0033H         LINE#         43
+  C:0035H         LINE#         44
+  C:0036H         LINE#         45
+  C:0037H         LINE#         46
+  C:0038H         LINE#         47
+  C:003AH         LINE#         48
+  C:003BH         LINE#         49
+  C:003CH         LINE#         50
+  C:003EH         LINE#         51
+  C:003FH         LINE#         52
+  C:0040H         LINE#         54
+  C:0041H         LINE#         55
+  C:0043H         LINE#         56
+  C:0044H         LINE#         57
+  C:0045H         LINE#         58
+  C:0046H         LINE#         59
+  C:0048H         LINE#         60
+  C:0049H         LINE#         61
+  C:004AH         LINE#         62
+  -------         ENDMOD        MUL1
+
+Program Size: data=8.0 xdata=0 code=75
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

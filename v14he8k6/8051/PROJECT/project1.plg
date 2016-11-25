@@ -1,0 +1,151 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+V:\8051\PROJECT\project1.uvproj
+Project File Date:  10/16/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(40): warning C206: 'Init_SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(42): warning C206: 'CMD_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(42): error C267: 'CMD_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(40): warning C206: 'Init_SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(42): warning C206: 'CMD_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(42): error C267: 'CMD_2515': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(44): warning C206: 'modify_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(44): error C267: 'modify_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.h'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.h'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RD2.H'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.H'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.H'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51Rx2.H'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+spi.h(1): warning C318: can't open file 'P89V51RX2.H'
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+spi.h(1): warning C318: can't open file 'P89V51RX2.H'
+compiling main.c...
+spi.h(1): warning C318: can't open file 'P89V51RX2.H'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): warning C206: 'BW_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(47): error C267: 'BW_2515': requires ANSI-style prototype
+compiling spi.c...
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(60): warning C206: 'BR_2515': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(60): error C267: 'BR_2515': requires ANSI-style prototype
+compiling spi.c...
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+SPI.H(6): error C129: missing ';' before 'BR_2515'
+compiling spi.c...
+SPI.H(6): error C129: missing ';' before 'BR_2515'
+compiling main.c...
+SPI.H(6): error C129: missing ';' before 'BR_2515'
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): warning C206: 'SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): error C267: 'SPI': requires ANSI-style prototype
+compiling spi.c...
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): warning C206: 'SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): error C267: 'SPI': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): warning C206: 'SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): error C267: 'SPI': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling canfun.c...
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): warning C206: 'SPI': missing function-prototype
+C:\V14HE8K6\CAN PROJECT\CANFUN.C(94): error C267: 'SPI': requires ANSI-style prototype
+Target not created

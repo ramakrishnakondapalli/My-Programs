@@ -1,0 +1,13 @@
+C51 COMPILER V7.08   MAIN                                                                  08/17/2015 14:43:31 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN C:\v14he8k6\HEX\main.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE C:\v14he8k6\main.c BROWSE DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(C:\v
+                    -14he8k6\HEX\main.obj)
+
+line level    source
+
+*** ERROR C318 OF C:\v14he8k6\main.c: can't open file 'C:\v14he8k6\main.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

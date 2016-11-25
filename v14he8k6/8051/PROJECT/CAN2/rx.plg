@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+V:\8051\PROJECT\CAN2\rx.uvproj
+Project File Date:  10/16/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling canfun2.c...
+canfun2.c(1): warning C318: can't open file 'headers.h'
+CANFUN2.C(2): error C129: missing ';' before 'flg'
+compiling main2.c...
+main2.c(1): warning C318: can't open file 'headers.h'
+MAIN2.C(3): error C129: missing ';' before 'ch'
+compiling spi2.c...
+spi2.c(1): warning C318: can't open file 'headers.h'
+SPI2.C(5): error C202: 'SPCTL': undefined identifier
+SPI2.C(6): error C202: 'cs': undefined identifier
+SPI2.C(10): error C129: missing ';' before 'SPI'
+Target not created
+Build target 'Target 1'
+compiling canfun2.c...
+compiling main2.c...
+compiling spi2.c...
+linking...
+Program Size: data=31.0 xdata=0 code=894
+"rx" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=31.0 xdata=0 code=894
+creating hex file from "canrx"...
+"canrx" - 0 Error(s), 0 Warning(s).

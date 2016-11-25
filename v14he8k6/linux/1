@@ -1,0 +1,13 @@
+#include"headers.h"
+#include<pwd.h>
+main()
+{
+
+
+ struct passwd v; 
+   printf(" %d %d %d %s %s",v->pw_name,v.pw_uid,v.pw_gid,v->pw_dir,v->pw_shell);
+
+
+
+
+}

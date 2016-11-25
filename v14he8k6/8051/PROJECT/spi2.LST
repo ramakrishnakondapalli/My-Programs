@@ -1,0 +1,90 @@
+C51 COMPILER V9.02   SPI2                                                                  10/17/2015 20:26:48 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE SPI2
+OBJECT MODULE PLACED IN spi2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE spi2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"headers.h"
+*** ERROR C103 IN LINE 1 OF HEADERS.H: '<string>': unclosed string
+*** ERROR C141 IN LINE 1 OF HEADERS.H: syntax error near '<string>'
+*** WARNING C318 IN LINE 1 OF headers.h: can't open file 'p89v51rx2.h'
+*** ERROR C305 IN LINE 1 OF headers.h: unterminated string/char const
+*** ERROR C202 IN LINE 6 OF DEFINES.H: 'P1': undefined identifier
+*** ERROR C202 IN LINE 7 OF DEFINES.H: 'P2': undefined identifier
+*** ERROR C202 IN LINE 8 OF DEFINES.H: 'P3': undefined identifier
+*** ERROR C202 IN LINE 9 OF DEFINES.H: 'P2': undefined identifier
+*** ERROR C202 IN LINE 10 OF DEFINES.H: 'P3': undefined identifier
+*** WARNING C318 IN LINE 6 OF headers.h: can't open file 'canfun.h'
+   2          /* SPI initialization func*/
+   3          void Init_SPI(void)
+   4          {
+   5   1       SPCTL=0x50;
+*** ERROR C202 IN LINE 5 OF SPI2.C: 'SPCTL': undefined identifier
+   6   1       cs=deselect;
+*** ERROR C202 IN LINE 6 OF SPI2.C: 'cs': undefined identifier
+   7   1      }
+   8          
+   9          /* SPI transfer fun def*/
+  10          u8 SPI(u8 c)
+  11          {
+  12   1       SPCFG&=0x00;
+*** ERROR C202 IN LINE 12 OF SPI2.C: 'SPCFG': undefined identifier
+  13   1       SPDAT=c;
+*** ERROR C202 IN LINE 13 OF SPI2.C: 'SPDAT': undefined identifier
+  14   1       while(!(SPCFG));
+*** ERROR C202 IN LINE 14 OF SPI2.C: 'SPCFG': undefined identifier
+  15   1       return(SPDAT);
+*** ERROR C202 IN LINE 15 OF SPI2.C: 'SPDAT': undefined identifier
+  16   1      }
+  17          
+  18          /* funct to send command to mcp2515  */
+  19          void CMD_2515(u8 CMD)
+  20          {
+  21   1       cs=select;
+*** ERROR C202 IN LINE 21 OF SPI2.C: 'cs': undefined identifier
+  22   1       SPI(CMD);
+  23   1       cs=deselect;
+*** ERROR C202 IN LINE 23 OF SPI2.C: 'cs': undefined identifier
+  24   1      }
+  25          
+  26          void modify_2515(u8 addr,u8 mask,u8 ch)
+  27          {
+  28   1       cs=select;
+*** ERROR C202 IN LINE 28 OF SPI2.C: 'cs': undefined identifier
+  29   1       SPI(CMD_MODIFY);
+  30   1       SPI(addr);
+  31   1       SPI(mask);
+  32   1       SPI(ch);
+  33   1       cs=deselect;
+*** ERROR C202 IN LINE 33 OF SPI2.C: 'cs': undefined identifier
+  34   1      }
+  35          void BW_2515(u8 addr,u8 ch)
+C51 COMPILER V9.02   SPI2                                                                  10/17/2015 20:26:48 PAGE 2   
+
+  36          {
+  37   1       cs=select;
+*** ERROR C202 IN LINE 37 OF SPI2.C: 'cs': undefined identifier
+  38   1       SPI(CMD_WRITE);
+  39   1       SPI(addr);
+  40   1       SPI(ch);
+  41   1       cs=deselect;
+*** ERROR C202 IN LINE 41 OF SPI2.C: 'cs': undefined identifier
+  42   1      }
+  43          u8 BR_2515(u8 addr)
+  44          {
+  45   1       u8 ch;
+  46   1       cs=select;
+*** ERROR C202 IN LINE 46 OF SPI2.C: 'cs': undefined identifier
+  47   1       SPI(CMD_READ);
+  48   1       SPI(addr);
+  49   1       ch=SPI(0xff);
+  50   1       cs=deselect;
+*** ERROR C202 IN LINE 50 OF SPI2.C: 'cs': undefined identifier
+  51   1       return(ch);
+  52   1      }
+  53          
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  22 ERROR(S)

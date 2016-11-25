@@ -1,0 +1,6 @@
+"..\CAN project\spi.obj",
+"..\CAN project\canfun.obj",
+"..\CAN project\main.obj" 
+TO "..\CAN project\node2" 
+PRINT(".\node2.m51") RAMSIZE(256) 
+CODE( 0X0000-0XFFFF )

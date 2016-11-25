@@ -1,0 +1,44 @@
+$include(mul1a.asm)
+cseg at 0
+mov r0,#28h
+mov r1,#34h
+acall mul_16bit
+mov 20h,a
+mov 21h,a
+mov r0,#12h
+mov r1,#78h
+acall mul_16bit
+mov 22h,b
+addc a,21h
+mov 21h,a
+mov r0,#56h
+mov r1,#34h
+acall mul_16bit
+addc a,21h
+mov 21h,a
+mov a,b
+addc a,22h
+mov 22h,a
+clr a
+addc a,22h
+mov 23h,a
+mov r0,#56h
+mov r1,#12h
+acall mul_16bit
+addc a,22h
+mov a,b
+addc a,23h
+mov 23h,a
+mov dptr,#1000h
+mov a,20h
+movx @dptr,a
+inc dptr
+mov a,21h
+movx @dptr,a
+inc dptr
+mov a,22h
+movx @dptr,a
+inc dptr
+mov a,23h
+movx @dptr,a
+end

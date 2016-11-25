@@ -1,0 +1,43 @@
+C51 COMPILER V7.08   SERIAL2                                                               09/21/2015 09:20:35 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE SERIAL2
+OBJECT MODULE PLACED IN serial2.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE serial2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          main()
+   4          {
+   5   1      char s[3]="YES";  
+   6   1      unsigned char i;
+   7   1       TMOD=0x20;
+   8   1       TH1=0xFD;
+   9   1       SCON=0x50;
+  10   1       TR1=1;
+  11   1        while(1)
+  12   1        {
+  13   2         for(i=0;i<2;i++)
+  14   2         {
+  15   3           SBUF=s[i];
+  16   3           while(TI==0);
+  17   3            TI=0;
+  18   3         }
+  19   2        }
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     50    ----
+   CONSTANT SIZE    =      3    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

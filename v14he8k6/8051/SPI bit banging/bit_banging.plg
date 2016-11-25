@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\8051\SPI bit banging\bit_banging.uv2
+Project File Date:  08/27/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling mcp3204.c...
+MCP3204.C(35): error C202: 'adc_val1': undefined identifier
+compiling mcp3204_main.c...
+MCP3204_MAIN.C(6): warning C206: 'init_lcd': missing function-prototype
+MCP3204_MAIN.C(9): warning C206: 'cmd_lcd': missing function-prototype
+MCP3204_MAIN.C(9): error C267: 'cmd_lcd': requires ANSI-style prototype
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+compiling mcp3204.h...
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+MCP3204.C(36): error C202: 'adc_val1': undefined identifier
+compiling mcp3204_main.c...
+MCP3204_MAIN.C(6): warning C206: 'init_lcd': missing function-prototype
+MCP3204_MAIN.C(9): warning C206: 'cmd_lcd': missing function-prototype
+MCP3204_MAIN.C(9): error C267: 'cmd_lcd': requires ANSI-style prototype
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+compiling mcp3204.h...
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+compiling mcp3204_main.c...
+MCP3204_MAIN.C(6): warning C206: 'init_lcd': missing function-prototype
+MCP3204_MAIN.C(9): warning C206: 'cmd_lcd': missing function-prototype
+MCP3204_MAIN.C(9): error C267: 'cmd_lcd': requires ANSI-style prototype
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+compiling mcp3204.h...
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+compiling mcp3204_main.c...
+MCP3204_MAIN.C(9): warning C206: 'cmd_lcd': missing function-prototype
+MCP3204_MAIN.C(9): error C267: 'cmd_lcd': requires ANSI-style prototype
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+compiling mcp3204.h...
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+compiling mcp3204_main.c...
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+compiling mcp3204_main.c...
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+MCP3204`_1.C(11): error C231: '_spi': redefinition
+MCP3204`_1.C(15): error C202: 'din': undefined identifier
+MCP3204`_1.C(16): error C202: 'dout': undefined identifier
+compiling mcp3204.h...
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+compiling mcp3204_main.c...
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+MCP3204`_1.C(11): error C231: '_spi': redefinition
+MCP3204`_1.C(15): error C202: 'din': undefined identifier
+MCP3204`_1.C(16): error C202: 'dout': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling mcp3204.c...
+mcp3204.h(1): error C301: identifier expected
+mcp3204.h(2): warning C323: newline expected, extra characters found
+mcp3204.h(12): warning C312: misplaced endif control
+compiling mcp3204_main.c...
+mcp3204.h(1): error C301: identifier expected
+mcp3204.h(2): warning C323: newline expected, extra characters found
+mcp3204.h(12): warning C312: misplaced endif control
+compiling mcp3204`_1.c...
+MCP3204`_1.C(5): warning C206: 'spi': missing function-prototype
+MCP3204`_1.C(5): error C267: 'spi': requires ANSI-style prototype
+MCP3204`_1.C(6): error C202: 'chNo': undefined identifier
+MCP3204`_1.C(9): error C202: 'adc_val': undefined identifier
+MCP3204`_1.C(11): error C231: '_spi': redefinition
+MCP3204`_1.C(15): error C202: 'din': undefined identifier
+MCP3204`_1.C(16): error C202: 'dout': undefined identifier
+compiling mcp3204.h...
+mcp3204.h(1): error C301: identifier expected
+mcp3204.h(2): warning C323: newline expected, extra characters found
+mcp3204.h(12): warning C312: misplaced endif control
+compiling lcd.h...
+Target not created

@@ -1,0 +1,228 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\8051\lcd.uv2
+Project File Date:  08/17/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(1): error C141: syntax error near ')'
+LCD.C(3): error C202: 'lcd_data': undefined identifier
+LCD.C(4): error C202: 'rw': undefined identifier
+LCD.C(5): error C202: 'en': undefined identifier
+LCD.C(6): error C202: 'en': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+LCD.C(13): error C202: 'rs': undefined identifier
+LCD.C(17): error C141: syntax error near 'char'
+LCD.C(19): error C202: 'rs': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+LCD.C(19): error C202: 'rs': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_disp.c...
+*** WARNING C318 IN LINE 2 OF lcd_disp.c: can't open file 'delay.h'
+LCD_DISP.C(4): error C202: 'p2': undefined identifier
+LCD_DISP.C(5): error C202: 'p2': undefined identifier
+LCD_DISP.C(6): error C202: 'p2': undefined identifier
+LCD_DISP.C(19): error C141: syntax error near '='
+Target not created
+Build target 'Target 1'
+compiling lcd_disp.c...
+LCD_DISP.C(23): warning C206: 'delay_ms': missing function-prototype
+LCD_DISP.C(23): error C267: 'delay_ms': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling lcd_disp.c...
+LCD_DISP.C(43): warning C206: 'cmd_length': missing function-prototype
+LCD_DISP.C(43): error C267: 'cmd_length': requires ANSI-style prototype
+LCD_DISP.C(55): error C141: syntax error near 'int', expected ')'
+Target not created
+Build target 'Target 1'
+compiling lcd_disp.c...
+LCD_DISP.C(59): error C231: 'i': redefinition
+LCD_DISP.C(60): error C202: 'n': undefined identifier
+LCD_DISP.C(67): error C202: 'num': undefined identifier
+LCD_DISP.C(69): error C202: 'n': undefined identifier
+LCD_DISP.C(70): error C202: 'n': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_disp.c...
+LCD_DISP.C(98): warning C236: '_build_cgram': different length of parameter lists
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_STR_LCD?LCD_DISP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_FLOAT_LCD?LCD_DISP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_BUILD_CGRAM?LCD_DISP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY__MS?LCD_DISP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY_MS
+    MODULE:  lcd_disp.obj (LCD_DISP)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _CMD_LENGTH
+    MODULE:  lcd_disp.obj (LCD_DISP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY_MS
+    MODULE:  lcd_disp.obj (LCD_DISP)
+    ADDRESS: 0508H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY_MS
+    MODULE:  lcd_disp.obj (LCD_DISP)
+    ADDRESS: 04A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY_MS
+    MODULE:  lcd_disp.obj (LCD_DISP)
+    ADDRESS: 04B3H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CMD_LENGTH
+    MODULE:  lcd_disp.obj (LCD_DISP)
+    ADDRESS: 04C2H
+Program Size: data=39.0 xdata=0 code=1344
+"lcd" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+*** WARNING C318 IN LINE 2 OF lcd.h: can't open file 'delay.h'
+LCD.H(4): error C202: 'p2': undefined identifier
+LCD.H(5): error C202: 'p2': undefined identifier
+LCD.H(6): error C202: 'p2': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+*** WARNING C318 IN LINE 2 OF lcd.h: can't open file 'delay.h'
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+Target not created
+Build target 'Target 1'
+compiling lcd_main.c...
+LCD_MAIN.C(3): warning C206: 'init_lcd': missing function-prototype
+LCD_MAIN.C(4): warning C206: 'char_lcd': missing function-prototype
+LCD_MAIN.C(4): error C267: 'char_lcd': requires ANSI-style prototype
+compiling lcd.c...
+LCD.C(9): warning C206: 'delay_ms': missing function-prototype
+LCD.C(9): error C267: 'delay_ms': requires ANSI-style prototype
+compiling lcd.h...
+Target not created
+</pre>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\v14he8k6\CAN project\tx2.uvproj
+Project File Date:  10/16/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main1.c...
+compiling canfun1.c...
+compiling spi1.c...
+linking...
+BL51 BANKED LINKER/LOCATER V6.22 - SN: K1RMC-QRW6TC
+COPYRIGHT KEIL ELEKTRONIK GmbH 1987 - 2009
+"V:\8051\PROJECT\main1.obj",
+"V:\8051\PROJECT\canfun1.obj",
+"V:\8051\PROJECT\spi1.obj" 
+TO "V:\8051\PROJECT\node1" 
+PRINT(".\node1.m51") RAMSIZE(256) 
+*** FATAL ERROR L212: I/O ERROR ON LISTING FILE:
+    EXCEPTION 0029H: ACCESS TO FILE DENIED
+    FILE: .\node1.m51
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+V:\8051\PROJECT\MAIN2.C(1): error C141: syntax error near ']'
+V:\8051\PROJECT\MAIN2.C(2): error C129: missing ';' before '<string>'
+compiling canfun2.c...
+compiling spi2.c...
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+compiling canfun2.c...
+compiling spi2.c...
+linking...
+BL51 BANKED LINKER/LOCATER V6.22 - SN: K1RMC-QRW6TC
+COPYRIGHT KEIL ELEKTRONIK GmbH 1987 - 2009
+"V:\8051\PROJECT\main2.obj",
+"V:\8051\PROJECT\canfun2.obj",
+"V:\8051\PROJECT\spi2.obj" 
+TO "V:\8051\PROJECT\node1" 
+PRINT(".\node1.m51") RAMSIZE(256) 
+*** FATAL ERROR L212: I/O ERROR ON LISTING FILE:
+    EXCEPTION 0029H: ACCESS TO FILE DENIED
+    FILE: .\node1.m51
+Target not created
+Build target 'Target 1'
+compiling main2.c...
+compiling canfun2.c...
+compiling spi2.c...
+linking...
+BL51 BANKED LINKER/LOCATER V6.22 - SN: K1RMC-QRW6TC
+COPYRIGHT KEIL ELEKTRONIK GmbH 1987 - 2009
+"V:\8051\PROJECT\main2.obj",
+"V:\8051\PROJECT\canfun2.obj",
+"V:\8051\PROJECT\spi2.obj" 
+TO "V:\8051\PROJECT\node1" 
+PRINT(".\node1.m51") RAMSIZE(256) 
+*** FATAL ERROR L212: I/O ERROR ON LISTING FILE:
+    EXCEPTION 0029H: ACCESS TO FILE DENIED
+    FILE: .\node1.m51
+Target not created

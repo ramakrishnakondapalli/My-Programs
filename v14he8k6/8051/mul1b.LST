@@ -1,0 +1,80 @@
+A51 MACRO ASSEMBLER  MUL1B                                                                08/14/2015 20:08:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN mul1b.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE mul1b.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;$include (mul1a.asm)
+                +1     2     delay segment code
+----            +1     3     rseg delay
+0000            +1     4     mul_16bit:
+0000 E8         +1     5     mov a,r0
+0001 89F0       +1     6     mov b,r1
+0003 A4         +1     7     mul ab
+0004 22         +1     8     ret
+                +1     9     ;public mul_16bit
+                +1    10     
+                      11     
+----                  12     cseg at 0
+0000 7828             13     mov r0,#28h
+0002 7934             14     mov r1,#34h
+0004 1100     F       15     acall mul_16bit
+0006 F520             16     mov 20h,a
+0008 F521             17     mov 21h,a
+000A 7812             18     mov r0,#12h
+000C 7978             19     mov r1,#78h
+000E 1100     F       20     acall mul_16bit
+0010 85F022           21     mov 22h,b
+0013 3521             22     addc a,21h
+0015 F521             23     mov 21h,a
+0017 7856             24     mov r0,#56h
+0019 7934             25     mov r1,#34h
+001B 1100     F       26     acall mul_16bit
+001D 3521             27     addc a,21h
+001F F521             28     mov 21h,a
+0021 E5F0             29     mov a,b
+0023 3522             30     addc a,22h
+0025 F522             31     mov 22h,a
+0027 E4               32     clr a
+0028 3522             33     addc a,22h
+002A F523             34     mov 23h,a
+002C 7856             35     mov r0,#56h
+002E 7912             36     mov r1,#12h
+0030 1100     F       37     acall mul_16bit
+0032 3522             38     addc a,22h
+0034 E5F0             39     mov a,b
+0036 3523             40     addc a,23h
+0038 F523             41     mov 23h,a
+003A 901000           42     mov dptr,#1000h
+003D E520             43     mov a,20h
+003F F0               44     movx @dptr,a
+0040 A3               45     inc dptr
+0041 E521             46     mov a,21h
+0043 F0               47     movx @dptr,a
+0044 A3               48     inc dptr
+0045 E522             49     mov a,22h
+0047 F0               50     movx @dptr,a
+0048 A3               51     inc dptr
+0049 E523             52     mov a,23h
+004B F0               53     movx @dptr,a
+                      54     end
+A51 MACRO ASSEMBLER  MUL1B                                                                08/14/2015 20:08:42 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DELAY. . . . . . .  C SEG    0005H       REL=UNIT
+MUL_16BIT. . . . .  C ADDR   0000H   R   SEG=DELAY
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,146 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct student{
+                char name[20];
+                int roll_no;
+                float marks;
+                struct student *link;
+              }NODE;
+int cnt;
+NODE *input(NODE *);
+NODE *print(NODE *);
+NODE *delete(NODE *);
+main()
+{
+ NODE *head=NULL;
+  char ch;
+while(1)
+{
+
+ printf("\nEnter your choice\n i:input\n d:delete\n p:print\n");
+ scanf("%c",&ch);
+ 
+    switch(ch)
+       {
+          case 'i':head=input(head);
+                     break;
+          case 'p': head=print(head);
+                     break;
+          case 'd':head=delete(head);
+                     break;
+
+       }
+ }  
+
+}
+NODE *input(NODE *head)
+{
+  NODE *temp=head,*nu;
+   nu=calloc(1,sizeof(NODE));
+  int i; 
+  printf("Enter name");
+  scanf("%s",nu->name);
+  printf("Enter roll no");
+  scanf("%d",&(nu->roll_no));
+  printf("Enter marks");
+  scanf("%f",&(nu->marks));
+   for(i=0;i<cnt-1;i++)
+   {
+      temp=temp->link;
+   }
+   if(head==NULL)
+    {
+       head=nu;
+       head->link=head;
+         cnt++;
+       printf("%d",cnt);
+    }
+   else
+    {
+       nu->link=head;
+        temp->link=nu;
+        head=nu;
+          cnt++;
+      printf("%d",cnt);
+    }
+  
+   printf("%s %d %f",nu->name,nu->roll_no,nu->marks);  
+   return(head);
+}
+NODE *delete(NODE *head)
+{
+  NODE *temp=head,*prev=head;
+   int r,i;
+  temp=calloc(1,sizeof(NODE));
+   prev=calloc(1,sizeof(NODE));
+   printf("Enter roll no");
+   scanf("%d",&r);
+if(head==NULL)
+{
+  printf("No list to delete:");
+}
+   while(temp)
+    {  
+      if(head->roll_no==r)
+         {
+           if(cnt==1)
+            {
+             free(temp);
+             return;
+            }
+            else
+            {
+               prev=prev->link;
+             while(cnt)
+              {
+                temp=temp->link;
+                 //prev=prev->link;
+                  //temp->link=prev;
+                  //return;
+              }
+                temp->link=prev;
+                  return;
+            }
+         }
+        if(temp->link=head)
+          {
+              
+            while(prev->link!=temp)
+              {
+               prev=prev->link;
+              }
+         
+                prev->link=head;
+                 return;
+         }
+      if(temp->roll_no==r)
+        {
+            
+               while(prev->link!=temp)
+                {
+                  prev=prev->link;
+                     
+                }
+            prev->link=temp->link;
+             return;
+       }
+        printf("%d\n",temp->roll_no);
+        temp=temp->link;
+    }
+
+
+}
+NODE* print(NODE *head)
+{
+  NODE *temp=head;
+   while(temp->link!=head)
+    {
+          
+       printf("\n%s %d %f",temp->name,temp->roll_no,temp->marks);
+         temp=temp->link;
+       
+    }
+   printf("%d",head->roll_no);
+  return(head);
+
+}

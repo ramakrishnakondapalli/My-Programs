@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<fcntl.h>
+#include<signal.h>
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<unistd.h>
+#include<pthread.h>
+#include<sys/sem.h>
+#include<semaphore.h>
+#include<sys/msg.h>
+#include<sys/ipc.h>
+#include<sys/timeb.h>

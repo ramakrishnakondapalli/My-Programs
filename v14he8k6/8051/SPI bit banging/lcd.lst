@@ -1,0 +1,38 @@
+C51 COMPILER V7.08   LCD                                                                   10/08/2015 08:44:47 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN .\lcd.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE ..\LCD\lcd.h BROWSE DEBUG OBJECTEXTEND PRINT(.\lcd.lst) OBJECT(.\lcd.obj)
+
+line level    source
+
+   1          #ifndef lcd_h
+   2          #define lcd_h
+   3          
+   4          
+   5            extern void char_lcd( char);
+   6            extern void cmd_lcd( char);
+   7            extern void write_lcd(char);
+   8            extern void init_lcd(void);
+   9          
+  10            extern void str_lcd(char *);
+  11            extern void int_lcd(unsigned int);
+  12            extern void float_lcd(float);
+  13            extern void build_cgram(unsigned char *,unsigned int);
+  14          
+  15          #endif
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

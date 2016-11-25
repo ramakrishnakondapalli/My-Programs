@@ -1,0 +1,5 @@
+"V:\8051\PROJECT\main2.obj",
+"V:\8051\PROJECT\canfun2.obj",
+"V:\8051\PROJECT\spi2.obj" 
+TO "V:\8051\PROJECT\node1" 
+PRINT(".\node1.m51") RAMSIZE(256) 

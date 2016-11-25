@@ -1,0 +1,120 @@
+C51 COMPILER V7.08   TEMP                                                                  10/08/2015 09:18:50 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE TEMP
+OBJECT MODULE PLACED IN C:\v14he8k6\temp.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE temp.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\temp.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #define lcd P2
+   3          
+   4          sbit rs=P0^0;
+   5          sbit rw=P0^1;
+   6          sbit en=P0^2;
+   7          
+   8          void init_lcd(void);
+   9          void cmd_lcd(unsigned char );
+  10          void disp_lcd(unsigned char );
+  11          void write_lcd(unsigned char );
+  12          void delay_ms(unsigned int );
+  13          void char_lcd(unsigned char );
+  14          void int_lcd(unsigned int);
+  15            
+  16          void init_lcd(void)
+  17          {
+  18   1      
+  19   1              cmd_lcd(0x02);
+  20   1              cmd_lcd(0x38);
+  21   1              cmd_lcd(0x06);
+  22   1              cmd_lcd(0x0e);
+  23   1              cmd_lcd(0x01);  //clears previous display if pret
+  24   1              cmd_lcd(0x80);   //cursor present at beginnng of 1st line
+  25   1              //delay_ms(10);
+  26   1      }
+  27          
+  28          void cmd_lcd(unsigned char cmd)
+  29          {
+  30   1              rs=0;
+  31   1              write_lcd(cmd);
+  32   1      }
+  33          
+  34          void disp_lcd(unsigned char cmd1)
+  35          {
+  36   1              rs=1;
+  37   1              write_lcd(cmd1);
+  38   1      }
+  39          
+  40          void write_lcd(unsigned char cmd2)
+  41          {
+  42   1              lcd=cmd2;
+  43   1              rw=0;
+  44   1              en=1;
+  45   1              en=0;
+  46   1              delay_ms(2);
+  47   1      }
+  48          
+  49          void delay_ms(unsigned int dly)
+  50          {
+  51   1              unsigned char i;
+  52   1              for(;dly>0;dly--)
+  53   1              {
+  54   2                      for(i=250;i>0;i--);
+  55   2                      for(i=232;i>0;i--);
+C51 COMPILER V7.08   TEMP                                                                  10/08/2015 09:18:50 PAGE 2   
+
+  56   2              }
+  57   1      }
+  58          
+  59          void str_lcd(unsigned char *p)
+  60          {
+  61   1          while(*p)
+  62   1           disp_lcd(*p++);
+  63   1      }
+  64          
+  65          void int_lcd(unsigned int num)
+  66          {
+  67   1        int a[10],j=0; 
+  68   1        while(num>0)
+  69   1         {
+  70   2            a[j++]=(num%10)+48;
+  71   2            num/=10;
+  72   2              }
+  73   1      for(--j;j>=0;j--)
+  74   1         disp_lcd(a[j]);
+  75   1      }
+  76          
+  77          main()
+  78          {
+  79   1              init_lcd();
+  80   1      //      int_lcd(1234);
+  81   1      //      cmd_lcd(0xc0);
+  82   1       //   disp_lcd('K');
+  83   1      //for(k=0;k<10;k++)
+  84   1      {
+  85   2              //disp_lcd(k+48);
+  86   2              //delay_ms(1000);
+  87   2           str_lcd("ramakrishna"); 
+  88   2           cmd_lcd(0xc0);
+  89   2           str_lcd("kondapalli");
+  90   2           cmd_lcd(0x0F);     //cursor blinking
+  91   2           //cmd_lcd(0x06);
+  92   2         
+  93   2      }
+  94   1              while(1);
+  95   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    263    ----
+   CONSTANT SIZE    =     23    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      25
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

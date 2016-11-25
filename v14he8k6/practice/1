@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+   unsigned char ch=-127;
+  int i;
+   printf("%d  %x\n",ch,ch);
+  for(i=7;i>=0;i--)
+printf("%u",(ch>>i)&1);
+
+
+
+}

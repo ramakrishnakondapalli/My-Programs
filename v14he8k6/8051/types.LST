@@ -1,0 +1,41 @@
+C51 COMPILER V7.08   TYPES                                                                 09/23/2015 10:48:48 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE TYPES
+OBJECT MODULE PLACED IN types.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE types.h BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #ifndef TYPES_H
+   2          #define TYPES_H
+   3          
+   4          typedef unsigned char u8;
+   5          typedef signed char s8;
+   6          typedef unsigned int u16;
+   7          typedef signed int s16;
+   8          typedef unsigned long u32;
+   9          typedef signed long s32;
+  10          typedef unsigned char U8;
+  11          typedef signed char S8;
+  12          typedef unsigned int U16;
+  13          typedef signed int S16;
+  14          typedef unsigned long U32;
+  15          typedef signed long S32;
+  16          
+  17          #endif
+  18          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

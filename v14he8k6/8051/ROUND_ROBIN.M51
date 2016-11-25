@@ -1,0 +1,108 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        09/30/2015  17:49:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL2\C51\BIN\BL51.EXE round_robin.obj TO ROUND_ROBIN RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  round_robin.obj (ROUND_ROBIN)
+
+
+LINK MAP OF MODULE:  ROUND_ROBIN (ROUND_ROBIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     0009H                  *** GAP ***
+            CODE    000BH     0061H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ROUND_ROBIN (ROUND_ROBIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ROUND_ROBIN
+  D:00E0H         SYMBOL        ACC
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.1       SYMBOL        ET0
+  C:0040H         SYMBOL        MAIN
+  C:003AH         SYMBOL        RST_SCHEDULAR
+  C:0040H         SYMBOL        SCHEDULAR
+  N:0001H         SYMBOL        T1RA_HB
+  N:0000H         SYMBOL        T1RA_LB
+  N:0003H         SYMBOL        T2RA_HB
+  N:0002H         SYMBOL        T2RA_LB
+  N:0005H         SYMBOL        T3RA_HB
+  N:0004H         SYMBOL        T3RA_LB
+  C:0060H         SYMBOL        TASK1
+  C:0060H         SYMBOL        TASK1_LOOP
+  C:0064H         SYMBOL        TASK2
+  C:0064H         SYMBOL        TASK2_LOOP
+  C:0068H         SYMBOL        TASK3
+  C:0068H         SYMBOL        TASK3_LOOP
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0016H         SYMBOL        _TASK1
+  C:0022H         SYMBOL        _TASK2
+  C:002EH         SYMBOL        _TASK3
+  C:0000H         LINE#         20
+  C:000BH         LINE#         24
+  C:000DH         LINE#         30
+  C:0010H         LINE#         31
+BL51 BANKED LINKER/LOCATER V5.03                                                      09/30/2015  17:49:15  PAGE 2
+
+
+  C:0013H         LINE#         32
+  C:0016H         LINE#         38
+  C:0018H         LINE#         39
+  C:001AH         LINE#         43
+  C:001CH         LINE#         44
+  C:001EH         LINE#         45
+  C:0020H         LINE#         46
+  C:0022H         LINE#         52
+  C:0024H         LINE#         53
+  C:0026H         LINE#         57
+  C:0028H         LINE#         58
+  C:002AH         LINE#         59
+  C:002CH         LINE#         60
+  C:002EH         LINE#         66
+  C:0030H         LINE#         67
+  C:0032H         LINE#         70
+  C:0034H         LINE#         71
+  C:0036H         LINE#         72
+  C:0038H         LINE#         73
+  C:003AH         LINE#         78
+  C:003DH         LINE#         79
+  C:003FH         LINE#         80
+  C:0040H         LINE#         88
+  C:0043H         LINE#         89
+  C:0046H         LINE#         92
+  C:0049H         LINE#         93
+  C:004CH         LINE#         96
+  C:004FH         LINE#         97
+  C:0052H         LINE#         101
+  C:0054H         LINE#         102
+  C:0056H         LINE#         105
+  C:0059H         LINE#         107
+  C:005CH         LINE#         108
+  C:005EH         LINE#         109
+  C:0060H         LINE#         116
+  C:0062H         LINE#         117
+  C:0064H         LINE#         123
+  C:0066H         LINE#         124
+  C:0068H         LINE#         130
+  C:006AH         LINE#         131
+  -------         ENDMOD        ROUND_ROBIN
+
+Program Size: data=8.0 xdata=0 code=99
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

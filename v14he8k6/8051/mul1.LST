@@ -1,0 +1,92 @@
+A51 MACRO ASSEMBLER  MUL1                                                                 09/29/2015 09:49:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02
+OBJECT MODULE PLACED IN mul1.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE mul1.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+----                   1      cseg at 0
+0000 7CFF              2             mov r4,#0xff
+0002 7DFF              3             mov r5,#0xff
+0004 7EFF              4             mov r6,#0xff
+0006 7FFF              5             mov r7,#0xff
+0008 111B              6             acall mul_16
+                       7     
+000A 901000            8             mov dptr,#1000h
+000D E8                9             mov a,r0
+000E F0               10             movx @dptr,a
+000F A3               11             inc dptr
+0010 E9               12             mov a,r1
+0011 F0               13             movx @dptr,a
+0012 A3               14             inc dptr
+0013 EA               15             mov a,r2
+0014 F0               16             movx @dptr,a
+0015 A3               17             inc dptr
+0016 EB               18             mov a,r3
+0017 F0               19             movx @dptr,a
+0018 E4               20             clr a
+0019 6030             21             jz L3
+                      22           
+001B                  23     mul_16:
+001B ED               24             mov a,r5
+001C 8FF0             25             mov b,r7
+001E A4               26             mul ab
+001F FB               27             mov r3,a
+0020 AAF0             28             mov r2,b
+                      29     
+0022 ED               30             mov a,r5
+0023 8EF0             31             mov b,r6
+0025 A4               32             mul ab
+0026 2A               33             add a,r2
+0027 FA               34             mov r2,a
+0028 E5F0             35             mov a,b
+002A 2400             36             add a,#00h
+002C F9               37             mov r1,a
+002D 7400             38             mov a,#00h
+002F 3400             39             addc a,#00h
+0031 F8               40             mov r0,a
+                      41     
+0032 EC               42             mov a,r4
+0033 8FF0             43             mov b,r7
+0035 A4               44             mul ab
+0036 2A               45             add a,r2
+0037 FA               46             mov r2,a
+0038 E5F0             47             mov a,b
+003A 39               48             addc a,r1
+003B F9               49             mov r1,a
+003C 7400             50             mov a,#00h
+003E 38               51             addc a,r0
+003F F8               52             mov r0,a
+                      53     
+0040 EC               54             mov a,r4
+0041 8EF0             55             mov b,r6
+0043 A4               56             mul ab
+0044 29               57             add a,r1
+0045 F9               58             mov r1,a
+A51 MACRO ASSEMBLER  MUL1                                                                 09/29/2015 09:49:03 PAGE     2
+
+0046 E5F0             59             mov a,b
+0048 38               60             addc a,r0
+0049 F8               61             mov r0,a
+004A 22               62             ret
+004B                  63     L3:     
+                      64     end
+A51 MACRO ASSEMBLER  MUL1                                                                 09/29/2015 09:49:03 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+L3 . . . . . . . .  C ADDR   004BH   A   
+MUL_16 . . . . . .  C ADDR   001BH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

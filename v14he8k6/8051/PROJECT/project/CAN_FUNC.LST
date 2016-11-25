@@ -1,0 +1,253 @@
+C51 COMPILER V9.02   CAN_FUNC                                                              10/16/2015 08:39:14 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE CAN_FUNC
+OBJECT MODULE PLACED IN CAN_FUNC.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE CAN_FUNC.C BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          ///*********************CAN_FUNC.C******************************//
+   2          #include"Headers.h"
+*** WARNING C318 IN LINE 4 OF Headers.h: can't open file 'P89V51Rx2.H'
+*** WARNING C318 IN LINE 5 OF spi.h: can't open file 'tyes.h'
+*** ERROR C202 IN LINE 7 OF SPI.H: 'P1': undefined identifier
+*** ERROR C301 IN LINE 6 OF canfunc.h: identifier expected
+*** ERROR C304 IN LINE 6 OF canfunc.h: bad macro parameter list
+*** ERROR C202 IN LINE 13 OF CANFUNC.H: 'SPCTL': undefined identifier
+*** ERROR C202 IN LINE 14 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 22 OF CANFUNC.H: 'SPCFG': undefined identifier
+*** ERROR C202 IN LINE 23 OF CANFUNC.H: 'SPDAT': undefined identifier
+*** ERROR C202 IN LINE 24 OF CANFUNC.H: 'SPCFG': undefined identifier
+*** ERROR C202 IN LINE 25 OF CANFUNC.H: 'SPDAT': undefined identifier
+*** ERROR C202 IN LINE 31 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 33 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 39 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 44 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 50 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 52 OF CANFUNC.H: 'addr': undefined identifier
+*** ERROR C202 IN LINE 54 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 62 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 65 OF CANFUNC.H: 'cs': undefined identifier
+*** ERROR C202 IN LINE 11 OF HEADERS.H: 'P1': undefined identifier
+   3          
+   4          char flag;
+   5          
+   6          //structure to hold the ID and Data for Transmitting
+   7          
+   8          struct _TXBX_Buffer
+   9          {
+  10            u8 IS_RTR;     //REMOTE TRANSMIT BIT
+  11            u16 TX_ID;     //ID
+  12            u8  TX_Len;    //TO hold the data length
+  13            u8 TXBnD0;     //to hold the data length
+  14            u8 TX_Data[8];
+  15          }TXBX_Buffer;
+  16          
+  17          //structure to hold the ID and data for receive data
+  18          
+  19          struct _RXBX_Buffer
+  20          {
+  21            u8 IS_RTR;   //Remote Transmit Bit
+  22            u16  RX_ID;  //ID
+  23            u8   RX_Len; //TO hold the data length
+  24            u8 RXBnD0;   //TO hold the data length
+  25            u8 RX_Data[8];
+  26          
+  27          }RXBX_Buffer;
+  28          
+  29          //**********ISR ROUTINE************//
+  30          
+  31          void EXTINT0(void )interrupt  0
+  32          {
+  33   1         flag=1;
+  34   1         IE=0;//clear interrupt
+C51 COMPILER V9.02   CAN_FUNC                                                              10/16/2015 08:39:14 PAGE 2   
+
+*** ERROR C202 IN LINE 34 OF CAN_FUNC.C: 'IE': undefined identifier
+  35   1      }
+  36          
+  37          //INTERRUPTS INITIALISATION FUNCTION *****//
+  38          void init_ext(void)
+  39          {
+  40   1         IEN0=0x81;
+*** ERROR C202 IN LINE 40 OF CAN_FUNC.C: 'IEN0': undefined identifier
+  41   1         IT0=1;     /./falling edge triggering
+*** ERROR C202 IN LINE 41 OF CAN_FUNC.C: 'IT0': undefined identifier
+*** ERROR C141 IN LINE 41 OF CAN_FUNC.C: syntax error near '/'
+*** ERROR C202 IN LINE 41 OF CAN_FUNC.C: 'falling': undefined identifier
+  42   1      
+  43   1      }
+  44          
+  45          //delay routine for MCP2515 After Reset 
+  46          void RSTDelay_CONTROLLER(void)
+  47          {
+  48   1         u8 i;
+  49   1         for(i=70;i>0;i--);  //delay for 140us
+  50   1      }
+  51          
+  52          //CAN CONTROLLER INITIALISATION
+  53          void init_CANCONTROLLER(void)
+  54          {
+  55   1        u8 Test_Char;
+  56   1        init_SPI();   //SPI PORT INITIALISATION
+  57   1        init_ext();   //EXTERNAL INTERRUPT INITIALISATION
+  58   1      
+  59   1        CMD_2515(CMD_RESET);  //sending the RESET Command to the MCP@%!%
+  60   1        RSTDelay_CANCONMTROLLER();  //reset delay
+  61   1        //seting the MCP2515 in the CONFIGURE MODE
+  62   1        modify_2515(CANCTRL,MODE_MASK,MODE_BITS);
+  63   1        modify_2515(CANCTRL,CLK_MASK,CLK_BITS);
+  64   1        //setting the configuration bits based on bit timing
+  65   1      
+  66   1        BW_2515(CNF1,BRP_BITS);
+  67   1        BW_2515(CNF2,CONFIG_PSPH1);
+  68   1        BW_2515(CNF3,CONFIG_PH2);
+  69   1        BW_2515(CANINTE,INT_ENABLE);    //enabling the interrupts
+  70   1      
+  71   1        //enabling the receive buffer controll registers
+  72   1      
+  73   1         BW_2515(RXB0CTRL,RxBuf0_Mode);
+  74   1         BW_2515(RXB1CTRL,RxBuf1_Mode);
+  75   1         modify_2515(BFPCTRL,RXINENABLE_MASK,RXPNENABLE);
+  76   1      
+  77   1         do
+  78   1          {
+  79   2            modify_2515(CANCTRL,MODE_MASK,MODE_LOOPBACK);
+  80   2          // Set to Loop Back mode!!
+  81   2                  Test_Char=BR_2515(CANSTAT);
+  82   2               Test_Char&=MODE_MASK;
+  83   2              }while(Test_Char!=MODE_LOOPBACK);
+  84   1      
+  85   1              modify_2515(CANCTRL,MODE_MASK,MODE_NORMAL);
+  86   1      }
+  87          
+  88          //FUNCTION USED TO WRITE DATA TO BE TRANSMITTED TO mcp 2515
+  89            void WrBuf_CANCONTROLLER(struct_TXBX_Buffer*TXBn_Buffer)
+  90            {
+  91   1          u8 Res,l,i;
+C51 COMPILER V9.02   CAN_FUNC                                                              10/16/2015 08:39:14 PAGE 3   
+
+  92   1              l=TXBn_Buffer->TX_Len;
+  93   1              if(TXBn_Buffer->IS_RTR==1)
+  94   1                      TXBn_Buffer->TX_Len|=0x40;  //set RTR Bit
+  95   1                              switch(TXBn_Buffer->TXBnD0)
+  96   1                              {
+  97   2                      case TXB0D0 :  BW_2515(TXB0SIDH,(u8)((TXBn_Buffer->TX_ID>>3)&0xff));
+  98   2                                                     BW_2515(TXB0SIDH,(u8)((TXBn_Buffer->TX_ID<<5)&0xE0)); 
+  99   2                                     BW_2515(TXB0SIDH,(u8)((TXBn_Buffer->TX_Len)&0xff));
+ 100   2                                                                  break;
+ 101   2      
+ 102   2                      case TXB0D0 :  BW_2515(TXB1SIDH,(u8)((TXBn_Buffer->TX_ID>>3)&0xff));
+ 103   2                                                     BW_2515(TXB1SIDH,(u8)((TXBn_Buffer->TX_ID<<5)&0xE0)); 
+ 104   2                                     BW_2515(TXB1SIDH,(u8)((TXBn_Buffer->TX_Len)&0xff));
+ 105   2                                                                  break;
+ 106   2                      case TXB0D0 :  BW_2515(TXB2SIDH,(u8)((TXBn_Buffer->TX_ID>>3)&0xff));
+ 107   2                                                     BW_2515(TXB2SIDH,(u8)((TXBn_Buffer->TX_ID<<5)&0xE0)); 
+ 108   2                                     BW_2515(TXB2IDH,(u8)((TXBn_Buffer->TX_Len)&0xff));
+ 109   2                                                                  break;
+ 110   2      
+ 111   2                              }
+ 112   1      
+ 113   1                              cs=select;
+ 114   1                              if(l!=0)
+ 115   1                              {
+ 116   2                    Res=SPI(CMD_WRITE);
+ 117   2                    Res=SPI(TXBn_Buffer->TXBnD0);
+ 118   2                                for(i=0;i<l;i++)   //writing data bytes
+ 119   2                                  Res=SPI(TXBn_Buffer->TX_Data[i]);
+ 120   2      
+ 121   2                              }
+ 122   1      
+ 123   1              cs=\deselect;
+ 124   1        }
+ 125          
+ 126            //CXAN TXION FUNCTION
+ 127            void CANframe_TX(u8 *p,u8 RTR,u16 MESSAGE_ID,U8 l)
+ 128            {
+ 129   1            TXBX_Buffer.TC_Len=1;
+ 130   1                for(;l>0;l--)
+ 131   1                    TXBX_Buffer.TX_Data[l-1]=*(p+l-1);
+ 132   1                TXBX_Buffer.IS_RTR=RTR;
+ 133   1                        TXBX_Buffer.TX_ID=MESSAGE_ID;
+ 134   1                        TXBX_Buffer.TXBnD0=TXB0D0;
+ 135   1                        WrBuf_CANCONTROLLER(&TXBX_Buffer);
+ 136   1                        flag=0;
+ 137   1      
+ 138   1                         CMD_2515(CMD_RTS0);//COMMAND FOR REQUEST TO START CAN TX1ON
+ 139   1                         while(flag==0);  //writing for the data to be transmitted 
+ 140   1                         modify_2515(CANINTF,0XC0,0X00);//clearing the interrupts
+ 141   1      
+ 142   1        }
+ 143          
+ 144            //Function to read data received by the MCP2515 and update the _RXBX_Buffer
+ 145            void RdBuf_2515(struct_RXBX_Buffer*RXBn_Buffer)
+ 146            {
+ 147   1           u8 Res,Tmp_Buffer->RXBnCTRL,i;
+ 148   1      
+ 149   1               if(RXBn_Buffer->RXBnD0==RXB0D0)
+ 150   1               {
+ 151   2             RXBn_Buffer->RX_Len=BR_2515(RXB0DLC);
+ 152   2             Res=BR_2515(RXB0SIDH);
+ 153   2                 RXBn_Buffer->RX_ID=(int)Res*8;
+C51 COMPILER V9.02   CAN_FUNC                                                              10/16/2015 08:39:14 PAGE 4   
+
+ 154   2             Res=BR_2515(RXB0SIDL);
+ 155   2                 Res>>=5;
+ 156   2                 Res&=0x07;
+ 157   2                 RXBn_Buffer->RX_ID+=Res;
+ 158   2                 Tmp_RXBnCTRL=BR_2515(RXB0CTRL);
+ 159   2      
+ 160   2               }
+ 161   1          else
+ 162   1                {
+ 163   2              RXBn_Buffer->RX_Len=BR_2515(RXB1DLC);
+ 164   2                      Res=BR_2515(RXB1SIDH);
+ 165   2                      RXBn_Buffer->RX_ID=(int)Res*8;
+ 166   2                      Res=BR_2515(RXB1SIDL);
+ 167   2                      Res>>=5;
+ 168   2                      Res&=0x07;
+ 169   2                      RXBn_Buffer->RX_ID+=Res;
+ 170   2                      Tmp_RXBnCTRL=BR_2515(RXB1CTRL);
+ 171   2                }
+ 172   1                if(Tmp_RXBnCTRL& 0x08)
+ 173   1                 RXBn_Buffer->IS_RTR=1;
+ 174   1                else
+ 175   1             RXBn_Buffer->IS_RTR=0;
+ 176   1          
+ 177   1                 RXBn_Buffer->RX_Len&=0x0f;    //Get the actual length
+ 178   1      
+ 179   1                 if(RXBn_Buffer->IS_RTR==0)
+ 180   1                 {
+ 181   2                cs=0;
+ 182   2                        Res=SPI(CMD_READ);
+ 183   2                        Res=SPI(RXBn_Buffer->RXBnD0);
+ 184   2                        for(i=0;i<RXBn_Buffer->Rx_Len;i++)
+ 185   2                        {
+ 186   3                    Res=SPI(0xff);
+ 187   3                    RXBn_Buffer->RX_Data[i]=Res;
+ 188   3                        }
+ 189   2                        cs=1;
+ 190   2      
+ 191   2      
+ 192   2      
+ 193   2                 }
+ 194   1                 
+ 195   1      }
+ 196          
+ 197          //CAN RXING FUNCTION
+ 198          u8 CAN_Rx(void)
+ 199          {
+ 200   1         modify_2515(CANINTF,0x07,0x00);//clearing the interrupts
+ 201   1         while(flag==0);
+ 202   1         RXBX_Buffer.RXBnD0=RXB0D0;     //Reading the data received
+ 203   1         RdBuf_2515(&RXBX_Buffer);  //clearing the interrupts
+ 204   1         flag=0;
+ 205   1         if(RXBX_Buffer.IS_RTR==0)
+ 206   1             return(RTBX_Buffer.RX_Data[0]);
+ 207   1      
+ 208   1      
+ 209   1      }
+*** WARNING C316 IN LINE 209 OF CAN_FUNC.C: unterminated conditionals
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  24 ERROR(S)

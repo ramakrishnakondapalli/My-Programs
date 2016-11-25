@@ -1,0 +1,46 @@
+C51 COMPILER V7.08   UART_M0                                                               09/26/2015 09:12:27 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE UART_M0
+OBJECT MODULE PLACED IN uart_m0.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE uart_m0.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"types.h"
+   3          #include"utility.c"
+   4          sbit pl=P3^2;
+   5          void init_uart()
+   6          {
+   7   1      //uart mode 0,receiver enabled,ren=1
+   8   1      SCON=0x10;
+   9   1      }
+  10          u8 uart_rx_read74hc165()
+  11          {
+  12   1         //u8 x;
+  13   1      
+  14   1        pl=0;//make low to load parallel input
+  15   1        pl=1;//Must reset for next load but before reading
+  16   1        while(!RI);//wait untill serially received
+  17   1        
+  18   1        RI=0;
+  19   1        rev_bits2(SBUF);
+  20   1        
+  21   1        return x;
+  22   1      }
+  23          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     72    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

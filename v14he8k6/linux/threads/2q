@@ -1,0 +1,65 @@
+#include"headers.h"
+pthread_t tid1,tid2,tid3;
+pthread_mutex_t m1,m2,m3;
+int fd,i;
+char rdbuf[20],rdbuf1[20],rdbuf2[20];
+void *f1(void *p)
+{  
+//  int i=200000;
+   char ch='A';
+  for(i=0;i<26;i++)
+ {  
+  printf("%c",ch);
+    ch++;
+    for(i=0;i<200;i++)
+    {
+      //printf("enter char");   
+      //getchar();
+     }
+  }
+  pthread_exit(0);
+}
+void *f2(void *p)
+{
+  int ch=1;
+//int i=200000;
+  for(i=0;i<26;i++)
+ {
+  printf(" %d",ch);
+    ch++; 
+   for(i=0;i<200;i++)
+   {
+       
+   }
+ }
+pthread_exit(0); 
+}
+void *f3(void *p)
+{
+  char ch='a';
+//int i=200000;
+ for(i=0;i<26;i++)
+  {
+   printf(" %c\n",ch);
+   ch++;
+   for(i=0;i<2;i++)
+    {
+                     
+     }
+   pthread_exit(0);
+  }
+}
+main()
+{
+  pthread_create(&tid1,NULL,f1,NULL);
+  pthread_create(&tid2,NULL,f2,NULL);
+  pthread_create(&tid3,NULL,f3,NULL);
+//fd=open("f1",O_RDWR);
+//   printf("Enter message:");
+//   gets(rdbuf);
+// pthread_mutex_init(&m1,NULL);
+// pthread_mutex_init(&m2,NULL);
+//  write(fd,rdbuf,4);
+   while(1);
+//   close(fd);
+}

@@ -1,0 +1,78 @@
+C51 COMPILER V7.08   SMS_KEYPAD_MAIN                                                       10/08/2015 09:55:01 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE SMS_KEYPAD_MAIN
+OBJECT MODULE PLACED IN sms_keypad_main.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE sms_keypad_main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"sms_keypad.h"
+   3          //#include"sms_lcd.c"
+   4          //#include"sms_keypad.c"
+   5          // sbit led=P1^2;
+   6          void main()
+   7          {
+   8   1        unsigned int dly,i;
+   9   1         char pos=-1;
+  10   1      unsigned char presskey;
+  11   1        int khcount;
+  12   1        init_lcd();
+  13   1          while(1)
+  14   1           {
+  15   2             khcount=-1;
+  16   2              led=~led;
+  17   2               for(dly=100;dly>0;dly--)
+  18   2                {
+  19   3                   for(i=125;i>0;i--)
+  20   3                    {
+  21   4                       r0=r1=r2=r3=0;
+  22   4                        if(!colscan())
+  23   4                         {
+  24   5                            if(khcount==3)
+  25   5                             {
+  26   6                                khcount=-1;
+  27   6                              }
+  28   5                          else if(khcount==-1)
+  29   5                            {
+  30   6                               pos++;
+  31   6                               if(pos>15)
+  32   6                                 {
+  33   7                                   cmd_lcd(0xc0);
+  34   7                                   str_lcd("             ");
+  35   7                                   cmd_lcd(0x60);
+  36   7                                    pos=0;
+  37   7                                 }
+  38   6                            }
+  39   5                          }
+  40   4                     khcount++;
+  41   4                     presskey=keyscan();
+  42   4                     cmd_lcd(0xc0+pos);
+  43   4                     write_lcd(presskey);
+  44   4                      while(!colscan()) 
+  45   4                         i=125;dly=100;     
+  46   4      
+  47   4      
+  48   4                     }
+  49   3                }
+  50   2           }
+  51   1      
+  52   1      }
+  53            
+
+
+C51 COMPILER V7.08   SMS_KEYPAD_MAIN                                                       10/08/2015 09:55:01 PAGE 2   
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    190    ----
+   CONSTANT SIZE    =     14    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

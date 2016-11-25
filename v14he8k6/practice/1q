@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+void dec_bin(int);
+main()
+{
+  char ch;
+int i,j,num;
+printf("Enter choice\n1.Decimal to binary\n2.Decimal to Hex\n3.Decimal to octal\n");
+scanf("%c",&ch);
+switch(ch)
+{
+  case '1': printf("Enter decimal number\n");
+          scanf("%d",&num);
+           dec_bin(num);
+            break;
+/*case 2: printf("Enter Decimal Number\n");
+        scanf("%d",&num);
+         dec_hex(num);
+         break;
+case 3:printf("Enter Decimal Number\n");
+       scanf("%d",&num);
+        dec_oct(num);
+       break;*/
+default:printf("Enter Correct choice\n");
+
+}
+}
+void dec_bin(int num)
+{
+int i=1,rem=1,sum=0;
+while(num>0)
+{
+   rem=num%2;printf("rem:%d ");
+   sum=sum+rem*i;printf(" %d",sum);
+   i=i*10;
+   //num=num/10;
+}
+printf("%d",sum);
+
+
+
+}
+
+
+
+

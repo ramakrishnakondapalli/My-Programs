@@ -1,0 +1,25 @@
+C51 COMPILER V7.08   MCP3204                                                               10/08/2015 08:44:45 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE MCP3204
+OBJECT MODULE PLACED IN mcp3204.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE mcp3204.h BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #ifndef
+*** ERROR C301 IN LINE 1 OF mcp3204.h: identifier expected
+*** WARNING C323 IN LINE 2 OF mcp3204.h: newline expected, extra characters found
+   2          #define
+   3          
+   4          extern void init_lcd(void);
+   5          extern void cmd_lcd(unsigned char );
+   6          extern unsigned char spi(unsigned char);
+   7          extern float read_adc_mcp3204(unsigned char chno);
+   8          extern float float_lcd(float );
+   9          extern float read1_adc_mcp3204(unsigned char chno);
+  10          extern unsigned char spi(unsigned char );
+  11          
+*** WARNING C312 IN LINE 12 OF mcp3204.h: misplaced endif control
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  1 ERROR(S)

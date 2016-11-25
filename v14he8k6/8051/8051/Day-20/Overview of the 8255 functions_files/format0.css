@@ -1,0 +1,80 @@
+h4, li, ul, span, caption		{font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt}
+
+td, p					{font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt; text-align: justify }
+		 
+B					{font-weight: bold;
+					font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt}
+		 
+H3					{font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 12pt}
+		 
+.head5				{ color: #996633; font-family: Arial, Geneva, Helvetica, sans-serif; 
+					font-size: 18pt}
+		 
+.head3				{ font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 12pt; font-weight: normal}	
+
+.picfooter				{ font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt; font-weight: normal}
+
+.px8:link			{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+					text-decoration: none}
+
+.px8:visited			{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+					text-decoration: none}
+
+.px8:active			{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+					text-decoration: none}
+
+.px8				{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+					LINE-HEIGHT: 12px;}
+
+.px8b				{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+					font-weight:bold}
+					
+.tabhead3			{font-weight: bold;
+					font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 12pt}
+
+.txtmarkerred		{ font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt; background-color:#FFCCCC;
+					color:000000; font-weight:bold}
+
+.overline			{ font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt; font-weight: normal; text-decoration: overline;
+					line-height:18pt}
+
+.overlineb			{ font-family: Arial, Geneva, Helvetica, sans-serif;
+					font-size: 10pt; font-weight: bold; border-top: 2px solid;
+					line-height:18pt}
+
+PRE     			{font-family: Courier New, Courier, mono;
+					font-size: 10pt}
+		 
+a:link				{ color: #0000ff; font-family: Arial, Helvetica, sans-serif;
+					font-size: 10pt; Text-decoration: none}
+a:visited			{ color: #0000A0; font-family: Arial, Helvetica, sans-serif;
+					font-size: 10pt; Text-decoration: none}
+a:active			{ color: #ff0000; font-family: Arial, Helvetica, sans-serif;
+					font-size: 10pt; text-decoration: none}
+					
+.afooter:link		{ color: #0000ff; font-family: Arial, Helvetica, sans-serif;
+					font-size: 7pt; text-decoration: none}
+.afooter:visited	{ color: #0000A0; font-family: Arial, Helvetica, sans-serif; 
+					font-size: 7pt; text-decoration: none}
+.afooter:active		{ color: #ff0000; font-family: Arial, Helvetica, sans-serif; 
+					font-size: 7pt; text-decoration: none}
+					
+.afooter			{ font-family: Arial, Helvetica, sans-serif; font-size: 7pt}
+	
+BODY				{ background-attachment:fixed; background-color:#F7F7E7;
+					SCROLLBAR-FACE-COLOR: #F2E8BA;
+					SCROLLBAR-TRACK-COLOR: #F7F7E7;
+					SCROLLBAR-ARROW-COLOR: #996633;
+					SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF;
+					SCROLLBAR-3DLIGHT-COLOR: #F2E8BA;
+					SCROLLBAR-SHADOW-COLOR: #E4B71C;
+					SCROLLBAR-DARKSHADOW-COLOR: #604020}

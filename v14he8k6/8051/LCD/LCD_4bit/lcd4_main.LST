@@ -1,0 +1,55 @@
+C51 COMPILER V7.08   LCD4_MAIN                                                             10/08/2015 09:31:09 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD4_MAIN
+OBJECT MODULE PLACED IN lcd4_main.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd4_main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*#include<reg51.h>
+   2          #include"delay.h"
+   3          
+   4          #define lcd_data P2
+   5          
+   6            sbit rs=P0^1;
+   7            sbit rw=P0^2;
+   8            sbit en=P0^3;
+   9            bit flag;
+  10          
+  11          code unsigned char cgram_lut[8]={0x1d,0x05,0x05,0x1f,0x14,0x14,0x17,0x00};
+  12          extern void writeln_lcd(unsigned );
+  13          extern void writeun_lcd(unsigned );
+  14          extern void cmdun_lcd(unsigned char );
+  15          extern void cmdln_lcd(unsigned char );
+  16          extern void charln_lcd(unsigned char );
+  17          extern void charun_lcd(unsigned char );*/
+  18          
+  19          #include<reg51.h>
+  20            sbit rs=P0^1;
+  21            sbit rw=P0^2;
+  22            sbit en=P0^3;
+  23            bit flag;
+  24          extern void init_lcd(void);
+  25          extern void delay_ms(unsigned int );
+  26          extern void build_cgram(unsigned char ,unsigned char );
+  27          
+  28          //code unsigned char cgram_lut[8]={0x1d,0x05,0x05,0x1f,0x14,0x14,0x17,0x00};
+  29          
+  30          main()
+  31          {
+  32   1      
+  33   1        init_lcd();
+  34   1       // build_cgram(cgram_lut,8);
+  35   1        charln_lcd('K');
+*** WARNING C206 IN LINE 35 OF LCD4_MAIN.C: 'charln_lcd': missing function-prototype
+*** ERROR C267 IN LINE 35 OF LCD4_MAIN.C: 'charln_lcd': requires ANSI-style prototype
+  36   1        //cmd_lcd(0xc0);
+  37   1        //str_lcd("ramaklrishna");
+  38   1        while(1);
+  39   1         
+  40   1      
+  41   1      
+  42   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)

@@ -1,0 +1,204 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+V:\8051\PROJECT\tx1.uvproj
+Project File Date:  10/15/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling canfun2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+CANFUN2.C(19): error C202: 'IE0': undefined identifier
+CANFUN2.C(26): error C202: 'IEN0': undefined identifier
+CANFUN2.C(27): error C202: 'IT0': undefined identifier
+CANFUN2.C(42): error C202: 'CMD_RESET': undefined identifier
+CANFUN2.C(44): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(45): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(47): error C202: 'CNF1': undefined identifier
+CANFUN2.C(48): error C202: 'CNF2': undefined identifier
+CANFUN2.C(49): error C202: 'CNF3': undefined identifier
+CANFUN2.C(50): error C202: 'CANINTE': undefined identifier
+CANFUN2.C(52): error C202: 'RXB0CTRL': undefined identifier
+CANFUN2.C(53): error C202: 'RXB1CTRL': undefined identifier
+CANFUN2.C(54): error C202: 'BFPCTRL': undefined identifier
+CANFUN2.C(58): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(60): error C202: 'CANSTAT': undefined identifier
+CANFUN2.C(61): error C202: 'MODE_MASK': undefined identifier
+CANFUN2.C(62): error C202: 'MODE_LOOPBACK': undefined identifier
+CANFUN2.C(75): error C202: 'TXB0D0': undefined identifier
+CANFUN2.C(76): error C202: 'TXB0SIDH': undefined identifier
+CANFUN2.C(77): error C202: 'TXB0SIDL': undefined identifier
+CANFUN2.C(78): error C202: 'TXB0DLC': undefined identifier
+CANFUN2.C(80): error C202: 'TXB1D0': undefined identifier
+CANFUN2.C(81): error C202: 'TXB1SIDH': undefined identifier
+CANFUN2.C(82): error C202: 'TXB1SIDL': undefined identifier
+CANFUN2.C(83): error C202: 'TXB1DLC': undefined identifier
+CANFUN2.C(85): error C202: 'TXB2D0': undefined identifier
+CANFUN2.C(86): error C202: 'TXB2SIDH': undefined identifier
+CANFUN2.C(87): error C202: 'TXB2SIDL': undefined identifier
+CANFUN2.C(88): error C202: 'TXB2DLC': undefined identifier
+CANFUN2.C(91): error C202: 'cs': undefined identifier
+CANFUN2.C(94): error C202: 'CMD_WRITE': undefined identifier
+compiling main2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+compiling spi2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+SPI2.C(5): error C202: 'SPCTL': undefined identifier
+SPI2.C(6): error C202: 'cs': undefined identifier
+SPI2.C(12): error C202: 'SPCFG': undefined identifier
+SPI2.C(13): error C202: 'SPDAT': undefined identifier
+SPI2.C(14): error C202: 'SPCFG': undefined identifier
+SPI2.C(15): error C202: 'SPDAT': undefined identifier
+SPI2.C(21): error C202: 'cs': undefined identifier
+SPI2.C(23): error C202: 'cs': undefined identifier
+SPI2.C(28): error C202: 'cs': undefined identifier
+SPI2.C(29): error C202: 'CMD_MODIFY': undefined identifier
+SPI2.C(33): error C202: 'cs': undefined identifier
+SPI2.C(37): error C202: 'cs': undefined identifier
+SPI2.C(38): error C202: 'CMD_WRITE': undefined identifier
+SPI2.C(41): error C202: 'cs': undefined identifier
+SPI2.C(46): error C202: 'cs': undefined identifier
+SPI2.C(47): error C202: 'CMD_READ': undefined identifier
+SPI2.C(50): error C202: 'cs': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling canfun2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+CANFUN2.C(19): error C202: 'IE0': undefined identifier
+CANFUN2.C(26): error C202: 'IEN0': undefined identifier
+CANFUN2.C(27): error C202: 'IT0': undefined identifier
+CANFUN2.C(42): error C202: 'CMD_RESET': undefined identifier
+CANFUN2.C(44): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(45): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(47): error C202: 'CNF1': undefined identifier
+CANFUN2.C(48): error C202: 'CNF2': undefined identifier
+CANFUN2.C(49): error C202: 'CNF3': undefined identifier
+CANFUN2.C(50): error C202: 'CANINTE': undefined identifier
+CANFUN2.C(52): error C202: 'RXB0CTRL': undefined identifier
+CANFUN2.C(53): error C202: 'RXB1CTRL': undefined identifier
+CANFUN2.C(54): error C202: 'BFPCTRL': undefined identifier
+CANFUN2.C(58): error C202: 'CANCTRL': undefined identifier
+CANFUN2.C(60): error C202: 'CANSTAT': undefined identifier
+CANFUN2.C(61): error C202: 'MODE_MASK': undefined identifier
+CANFUN2.C(62): error C202: 'MODE_LOOPBACK': undefined identifier
+CANFUN2.C(75): error C202: 'TXB0D0': undefined identifier
+CANFUN2.C(76): error C202: 'TXB0SIDH': undefined identifier
+CANFUN2.C(77): error C202: 'TXB0SIDL': undefined identifier
+CANFUN2.C(78): error C202: 'TXB0DLC': undefined identifier
+CANFUN2.C(80): error C202: 'TXB1D0': undefined identifier
+CANFUN2.C(81): error C202: 'TXB1SIDH': undefined identifier
+CANFUN2.C(82): error C202: 'TXB1SIDL': undefined identifier
+CANFUN2.C(83): error C202: 'TXB1DLC': undefined identifier
+CANFUN2.C(85): error C202: 'TXB2D0': undefined identifier
+CANFUN2.C(86): error C202: 'TXB2SIDH': undefined identifier
+CANFUN2.C(87): error C202: 'TXB2SIDL': undefined identifier
+CANFUN2.C(88): error C202: 'TXB2DLC': undefined identifier
+CANFUN2.C(91): error C202: 'cs': undefined identifier
+CANFUN2.C(94): error C202: 'CMD_WRITE': undefined identifier
+compiling main2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+compiling spi2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+headers.h(3): warning C318: can't open file 'defines.h'
+headers.h(6): warning C318: can't open file 'canfun.h'
+SPI2.C(5): error C202: 'SPCTL': undefined identifier
+SPI2.C(6): error C202: 'cs': undefined identifier
+SPI2.C(12): error C202: 'SPCFG': undefined identifier
+SPI2.C(13): error C202: 'SPDAT': undefined identifier
+SPI2.C(14): error C202: 'SPCFG': undefined identifier
+SPI2.C(15): error C202: 'SPDAT': undefined identifier
+SPI2.C(21): error C202: 'cs': undefined identifier
+SPI2.C(23): error C202: 'cs': undefined identifier
+SPI2.C(28): error C202: 'cs': undefined identifier
+SPI2.C(29): error C202: 'CMD_MODIFY': undefined identifier
+SPI2.C(33): error C202: 'cs': undefined identifier
+SPI2.C(37): error C202: 'cs': undefined identifier
+SPI2.C(38): error C202: 'CMD_WRITE': undefined identifier
+SPI2.C(41): error C202: 'cs': undefined identifier
+SPI2.C(46): error C202: 'cs': undefined identifier
+SPI2.C(47): error C202: 'CMD_READ': undefined identifier
+SPI2.C(50): error C202: 'cs': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling canfun2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+DEFINES.H(6): error C202: 'P1': undefined identifier
+DEFINES.H(7): error C202: 'P2': undefined identifier
+DEFINES.H(8): error C202: 'P3': undefined identifier
+DEFINES.H(9): error C202: 'P2': undefined identifier
+DEFINES.H(10): error C202: 'P3': undefined identifier
+headers.h(6): warning C318: can't open file 'canfun.h'
+CANFUN2.C(19): error C202: 'IE0': undefined identifier
+CANFUN2.C(26): error C202: 'IEN0': undefined identifier
+CANFUN2.C(27): error C202: 'IT0': undefined identifier
+CANFUN2.C(91): error C202: 'cs': undefined identifier
+compiling main2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+DEFINES.H(6): error C202: 'P1': undefined identifier
+DEFINES.H(7): error C202: 'P2': undefined identifier
+DEFINES.H(8): error C202: 'P3': undefined identifier
+DEFINES.H(9): error C202: 'P2': undefined identifier
+DEFINES.H(10): error C202: 'P3': undefined identifier
+headers.h(6): warning C318: can't open file 'canfun.h'
+compiling spi2.c...
+HEADERS.H(1): error C103: '<string>': unclosed string
+HEADERS.H(1): error C141: syntax error near '<string>'
+headers.h(1): warning C318: can't open file 'p89v51rx2.h'
+headers.h(1): error C305: unterminated string/char const
+DEFINES.H(6): error C202: 'P1': undefined identifier
+DEFINES.H(7): error C202: 'P2': undefined identifier
+DEFINES.H(8): error C202: 'P3': undefined identifier
+DEFINES.H(9): error C202: 'P2': undefined identifier
+DEFINES.H(10): error C202: 'P3': undefined identifier
+headers.h(6): warning C318: can't open file 'canfun.h'
+SPI2.C(5): error C202: 'SPCTL': undefined identifier
+SPI2.C(6): error C202: 'cs': undefined identifier
+SPI2.C(12): error C202: 'SPCFG': undefined identifier
+SPI2.C(13): error C202: 'SPDAT': undefined identifier
+SPI2.C(14): error C202: 'SPCFG': undefined identifier
+SPI2.C(15): error C202: 'SPDAT': undefined identifier
+SPI2.C(21): error C202: 'cs': undefined identifier
+SPI2.C(23): error C202: 'cs': undefined identifier
+SPI2.C(28): error C202: 'cs': undefined identifier
+SPI2.C(33): error C202: 'cs': undefined identifier
+SPI2.C(37): error C202: 'cs': undefined identifier
+SPI2.C(41): error C202: 'cs': undefined identifier
+SPI2.C(46): error C202: 'cs': undefined identifier
+SPI2.C(50): error C202: 'cs': undefined identifier
+Target not created

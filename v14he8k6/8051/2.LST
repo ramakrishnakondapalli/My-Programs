@@ -1,0 +1,32 @@
+A51 MACRO ASSEMBLER  2                                                                    09/01/2015 13:15:58 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN 2.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE 2.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+----                   2     cseg at 0
+0000 7427              3     mov a,#27h
+0002 752718            4     mov 27H,#24
+0005 E6                5     mov a,@r0
+0006 900027            6     mov dptr,#27H
+0009 F0                7     movx @dptr,a
+                       8     end
+                             
+A51 MACRO ASSEMBLER  2                                                                    09/01/2015 13:15:58 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,55 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        09/18/2015  17:13:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL2\C51\BIN\BL51.EXE timer0_sqwv.obj TO counter RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  timer0_sqwv.obj (TIMER0_SQWV)
+
+
+LINK MAP OF MODULE:  counter (TIMER0_SQWV)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0019H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  counter (TIMER0_SQWV)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TIMER0_SQWV
+  C:0011H         SYMBOL        AGAIN
+  C:000FH         SYMBOL        DELAY
+  C:0003H         SYMBOL        HERE
+  D:0090H         SYMBOL        P1
+  B:0088H.5       SYMBOL        TF0
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0000H         LINE#         3
+  C:0003H         LINE#         5
+  C:0006H         LINE#         6
+  C:0009H         LINE#         7
+  C:000BH         LINE#         8
+  C:000DH         LINE#         9
+  C:000FH         LINE#         11
+  C:0011H         LINE#         13
+  C:0014H         LINE#         14
+  C:0016H         LINE#         15
+  C:0018H         LINE#         16
+  -------         ENDMOD        TIMER0_SQWV
+
+Program Size: data=8.0 xdata=0 code=25
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,127 @@
+C51 COMPILER V7.08   CAL                                                                   03/01/2016 09:04:19 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE CAL
+OBJECT MODULE PLACED IN .\cal.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE V:\cal.c BROWSE DEBUG OBJECTEXTEND PRINT(.\cal.lst) OBJECT(.\cal.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          //#include <reg51.h>
+   3          #include "uart.h"
+   4          #include <stdlib.h>
+   5          
+   6          char op,x[3],y[3];
+   7          int s,t,i;
+   8            
+   9          main()
+  10          {
+  11   1        
+  12   1        Init_UART();
+  13   1        while(1)
+  14   1        {
+  15   2          UART_Str("\nEnter format:\n");
+  16   2          UART_Str("\n operand1 operator operand2 :");
+  17   2          for(i=0;i<=1;i++)
+  18   2          {
+  19   3             x[i]=UART_Rx();
+  20   3             UART_Tx(x[i]);  
+  21   3          }
+  22   2          x[2]='\0';
+  23   2          s=atoi(x);
+  24   2          UART_Tx(' ');
+  25   2      
+  26   2          op=UART_Rx();
+  27   2          UART_Tx(op);
+  28   2          UART_Tx(' ');
+  29   2      
+  30   2          for(i=0;i<=1;i++)
+  31   2          {
+  32   3             y[i]=UART_Rx(); 
+  33   3             UART_Tx(y[i]); 
+  34   3          }
+  35   2          y[2]='\0';
+  36   2          t=atoi(y);
+  37   2      
+  38   2          UART_Tx('\n');
+  39   2          switch(op)
+  40   2          {
+  41   3            case 'x': i=s*t;
+  42   3                                      break;
+  43   3            case '+': i=s+t;
+  44   3                                      break;
+  45   3                case '-': i=s-t;
+  46   3                          break;
+  47   3            case '/': i=s/t;
+  48   3                          break;
+  49   3            
+  50   3          }
+  51   2          UART_Int(i);
+*** ERROR C214 IN LINE 51 OF V:\CAL.C: illegal pointer conversion
+  52   2        }
+  53   1        
+  54   1      
+C51 COMPILER V7.08   CAL                                                                   03/01/2016 09:04:19 PAGE 2   
+
+  55   1      void Init_UART()
+  56   1      {
+  57   2         SCON = (0x50|0xc0|0x08);     
+  58   2         TMOD = 0x20; 
+  59   2         TH1  = -3;
+  60   2         TR1  = 1; 
+  61   2      }
+  62   1      
+  63   1      void UART_Tx(char c)
+  64   1      {
+  65   1         SBUF=c;
+  66   1         while(!TI);
+  67   1         TI=0;
+  68   1      }
+  69          
+  70          
+  71          char UART_Rx()
+  72          {
+  73   1         while(!RI);
+  74   1         RI=0;
+  75   1         return SBUF;
+  76   1      }
+  77          
+  78          
+  79          void UART_str(char *str) 
+  80          {
+  81   1         while(*str)
+  82   1         {
+  83   2                      uart_tx(*str);
+  84   2                      str++;
+  85   2         }
+  86   1      }
+  87          
+  88          
+  89          
+  90          } 
+  91          void UART_Int(unsigned int n)
+  92          {
+  93   1        unsigned char a[5];
+  94   1        char i=0;
+  95   1        if(n==0)
+  96   1        {
+  97   2          UART_Tx('0');
+  98   2              return;
+  99   2        }
+ 100   1        else
+ 101   1        {
+ 102   2           while(n>0)
+ 103   2               {
+ 104   3                 a[i++]=(n%10)+48;
+ 105   3                 n=n/10;
+ 106   3               }
+ 107   2               --i;
+ 108   2               for(;i>=0;i--)
+ 109   2               {
+ 110   3                 UART_Tx(a[i]);
+ 111   3               }
+ 112   2         }
+ 113   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

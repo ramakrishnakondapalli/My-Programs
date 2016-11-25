@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///tmp/C_Interview_Questions_Part1.pdf" added="2015-04-10T09:53:03Z" modified="2015-04-14T13:38:07Z" visited="2015-04-10T09:53:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1429018687" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Crack_The_Interview_Questions.pdf" added="2015-04-10T09:55:33Z" modified="2015-04-10T09:55:33Z" visited="2015-04-10T09:55:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1428659733" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/for5.c" added="2015-04-10T09:57:44Z" modified="2015-04-10T09:58:54Z" visited="2015-04-10T09:57:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gedit %U" timestamp="1428659864" count="1"/>
+          <bookmark:application name="gedit" exec="gedit %u" timestamp="1428659934" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/example-content" added="2015-04-10T09:58:17Z" modified="2015-07-27T12:06:53Z" visited="2015-04-10T09:58:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1437998813" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/for6.c" added="2015-04-10T09:58:47Z" modified="2015-04-10T10:01:32Z" visited="2015-04-10T09:58:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gedit %U" timestamp="1428660092" count="2"/>
+          <bookmark:application name="gedit" exec="gedit %u" timestamp="1428660092" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/prog2.o" added="2015-04-10T09:59:39Z" modified="2015-04-10T09:59:39Z" visited="2015-04-10T09:59:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-object"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1428659979" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/C_Questions_Answers.doc" added="2015-04-14T13:53:15Z" modified="2015-04-14T13:53:15Z" visited="2015-04-14T13:53:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1429019595" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Pointers.pdf" added="2015-04-14T13:54:17Z" modified="2015-04-14T13:54:17Z" visited="2015-04-14T13:54:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1429019657" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/C-Programming-FAQ-SAMS_PUBLISHING.pdf" added="2015-04-17T03:07:44Z" modified="2015-04-17T03:07:44Z" visited="2015-04-17T03:07:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1429240064" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/CFAQ.doc" added="2015-04-17T03:10:17Z" modified="2015-05-28T13:21:22Z" visited="2015-04-17T03:10:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1432819282" count="4"/>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1432819171" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/C_Questions_Answers.doc" added="2015-04-17T03:12:27Z" modified="2015-08-04T15:22:29Z" visited="2015-04-17T03:12:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1438701749" count="11"/>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1438692803" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/structure/structure.c" added="2015-05-20T14:48:29Z" modified="2015-05-20T14:48:31Z" visited="2015-05-20T14:48:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432133311" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/files/file15.c" added="2015-05-20T14:52:10Z" modified="2015-05-20T14:52:10Z" visited="2015-05-20T14:52:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432133530" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/file1%20(copy).c" added="2015-05-20T14:52:55Z" modified="2015-05-20T14:52:55Z" visited="2015-05-20T14:52:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432133575" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/command.c" added="2015-05-20T14:58:32Z" modified="2015-05-20T14:58:32Z" visited="2015-05-20T14:58:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432133912" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/cmp.c" added="2015-05-20T14:59:07Z" modified="2015-05-20T14:59:07Z" visited="2015-05-20T14:59:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432133947" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/prog8.c" added="2015-05-20T15:00:56Z" modified="2015-05-20T15:00:56Z" visited="2015-05-20T15:00:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432134056" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/prog10.c" added="2015-05-20T15:03:15Z" modified="2015-05-20T15:03:43Z" visited="2015-05-20T15:03:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432134223" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/rev.c" added="2015-05-20T15:03:24Z" modified="2015-05-20T15:03:24Z" visited="2015-05-20T15:03:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432134204" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/dectobin.c" added="2015-05-20T15:03:59Z" modified="2015-05-20T15:03:59Z" visited="2015-05-20T15:03:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432134239" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/increment.c" added="2015-05-20T15:14:02Z" modified="2015-05-20T15:14:02Z" visited="2015-05-20T15:14:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1432134842" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Data%20Structures%20And%20Program%20Design%20In%20C.pdf" added="2015-05-29T06:44:54Z" modified="2015-05-29T06:44:54Z" visited="2015-05-29T06:44:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="evince %U" timestamp="1432881894" count="1"/>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1432881894" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/C-Programming-FAQ-SAMS_PUBLISHING.pdf" added="2015-05-29T06:45:36Z" modified="2015-05-29T06:45:37Z" visited="2015-05-29T06:45:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="evince %U" timestamp="1432881936" count="1"/>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1432881937" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/CFAQ(2).doc" added="2015-05-29T06:46:28Z" modified="2015-08-04T12:30:28Z" visited="2015-05-29T06:46:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1438691285" count="2"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1438691428" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/01-pointers-66.doc" added="2015-05-29T06:46:34Z" modified="2015-05-29T07:23:38Z" visited="2015-05-29T06:46:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1432881994" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1432884218" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/01-DoublyLinkedList-14.doc" added="2015-05-29T07:24:00Z" modified="2015-05-29T07:40:30Z" visited="2015-05-29T07:24:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1432884669" count="2"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1432885230" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/round-robin-sample-results.xls" added="2015-06-09T06:27:19Z" modified="2015-06-15T07:45:52Z" visited="2015-06-09T06:27:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-excel"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434354352" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/OperatingSystemConcepts_7thEdition.pdf" added="2015-06-09T06:29:08Z" modified="2015-06-09T06:29:08Z" visited="2015-06-09T06:29:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1433831348" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/functions/atoi.c" added="2015-06-09T07:05:59Z" modified="2015-06-09T07:05:59Z" visited="2015-06-09T07:05:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1433833559" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/HOSTNAME%3Dsystem53.vectorindia.com" added="2015-06-09T07:06:34Z" modified="2015-06-09T07:06:35Z" visited="2015-06-09T07:06:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gedit %U" timestamp="1433833594" count="1"/>
+          <bookmark:application name="gedit" exec="gedit %u" timestamp="1433833595" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/heap.c" added="2015-06-12T12:09:10Z" modified="2015-06-12T12:09:10Z" visited="2015-06-12T12:09:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1434110950" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/5process.ppt" added="2015-06-13T10:08:07Z" modified="2015-06-13T10:08:07Z" visited="2015-06-13T10:08:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434190087" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/round-robin-sample-results-1.xls" added="2015-06-15T07:45:55Z" modified="2015-06-15T07:45:55Z" visited="2015-06-15T07:45:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-excel"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434354355" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Advanced_Linux_Programming_NeWriders.pdf" added="2015-06-15T07:47:11Z" modified="2015-06-15T07:47:11Z" visited="2015-06-15T07:47:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1434354431" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/UNIX_2_scheduler.ppt" added="2015-06-15T07:51:06Z" modified="2015-08-21T14:24:20Z" visited="2015-06-15T07:51:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434807687" count="2"/>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1440167060" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linkedlist.c" added="2015-06-15T09:11:17Z" modified="2015-06-15T09:11:18Z" visited="2015-06-15T09:11:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1434359478" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///dev/pts/1" added="2015-06-18T14:30:46Z" modified="2015-06-18T14:30:46Z" visited="2015-06-18T14:30:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="x-special/device-char"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1434637846" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/1intro%20to%20UNIX(2).ppt" added="2015-06-20T13:41:39Z" modified="2015-06-20T13:46:57Z" visited="2015-06-20T13:41:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434808017" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/3%20File%20io%20in%20unix.ppt" added="2015-06-20T13:47:12Z" modified="2015-06-20T13:49:24Z" visited="2015-06-20T13:47:12Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1434808164" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linux/fifo/fifo1.c" added="2015-06-23T10:06:25Z" modified="2015-06-23T10:37:16Z" visited="2015-06-23T10:06:26Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1435055836" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linux/fifo1.c" added="2015-06-23T10:06:39Z" modified="2015-06-23T10:37:08Z" visited="2015-06-23T10:06:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="x-special/fifo"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1435055828" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linux/fifo/fifo2.c" added="2015-06-23T10:07:17Z" modified="2015-06-23T10:07:17Z" visited="2015-06-23T10:07:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1435054037" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linux/fifo/headers.h" added="2015-06-23T10:07:20Z" modified="2015-06-23T10:07:20Z" visited="2015-06-23T10:07:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-chdr"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1435054040" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/linux/fifo3.c" added="2015-06-23T10:07:58Z" modified="2015-06-23T10:07:58Z" visited="2015-06-23T10:07:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="x-special/fifo"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1435054078" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Introduction%20to%20PERL.ppt" added="2015-06-29T09:02:15Z" modified="2015-06-29T09:05:39Z" visited="2015-06-29T09:02:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1435568739" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/link%20to%20C_Questions_Answers(2).doc" added="2015-06-29T09:10:55Z" modified="2015-06-29T09:13:39Z" visited="2015-06-29T09:10:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1435569055" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1435569219" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Dynamic%20Memory%20Management.ppt" added="2015-06-30T09:18:06Z" modified="2015-06-30T09:18:16Z" visited="2015-06-30T09:18:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1435655886" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1435655896" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/untitled%20folder/sample.txt" added="2008-08-12T16:23:21Z" modified="2008-08-12T16:24:01Z" visited="2008-08-12T16:23:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gedit %U" timestamp="1218558202" count="2"/>
+          <bookmark:application name="gedit" exec="gedit %u" timestamp="1218558241" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/cmdshell.doc" added="2008-08-12T16:26:54Z" modified="2008-08-12T15:16:46Z" visited="2008-08-12T16:26:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218554206" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Unix_Linux_CMD-Reference.pdf" added="2008-08-12T16:30:50Z" modified="2008-08-12T16:30:50Z" visited="2008-08-12T16:30:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1218558650" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/TCPIPQuestions.docx" added="2008-08-12T16:31:49Z" modified="2015-08-11T14:55:46Z" visited="2008-08-12T16:31:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1439304946" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/TCPIP_MCQ.pdf" added="2008-08-12T16:31:57Z" modified="2015-08-12T09:13:19Z" visited="2008-08-12T16:31:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1439370799" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/tcp_devices_vector.ppt" added="2008-08-12T16:32:34Z" modified="2008-08-12T16:34:51Z" visited="2008-08-12T16:32:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218558891" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/sem_lock.c" added="2008-08-12T16:35:19Z" modified="2008-08-12T16:35:19Z" visited="2008-08-12T16:35:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="gedit %u" timestamp="1218558919" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Fundamentals_Unix.ppt" added="2008-08-12T16:37:22Z" modified="2008-08-12T16:59:46Z" visited="2008-08-12T16:37:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218560386" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/PPT+THREADS.ppt" added="2008-08-12T17:01:10Z" modified="2008-08-12T17:03:07Z" visited="2008-08-12T17:01:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218560587" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Make%20utility.ppt" added="2008-08-12T17:03:14Z" modified="2008-08-12T17:05:05Z" visited="2008-08-12T17:03:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218560705" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/DFS.pdf" added="2008-08-12T15:14:39Z" modified="2008-08-12T15:14:39Z" visited="2008-08-12T15:14:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1218554079" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/bourne%20shell.ppt" added="2008-08-12T15:19:04Z" modified="2008-08-12T15:19:04Z" visited="2008-08-12T15:19:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218554344" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///etc/passwd-" added="2008-08-12T15:25:31Z" modified="2008-08-12T15:25:31Z" visited="2008-08-12T15:25:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1218554731" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/bourne%20shell(2).ppt" added="2008-08-12T16:30:55Z" modified="2008-08-12T16:31:06Z" visited="2008-08-12T16:30:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1218558666" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/8086_intel.pdf" added="2011-04-25T02:34:32Z" modified="2011-04-25T02:34:32Z" visited="2011-04-25T02:34:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1303698872" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Chap-01%20Intro.ppt" added="2015-07-10T07:33:15Z" modified="2015-07-10T07:35:18Z" visited="2015-07-10T07:33:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436513718" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Chap-03%20Underlying%20Technology.ppt" added="2015-07-10T07:37:01Z" modified="2015-07-10T07:53:55Z" visited="2015-07-10T07:37:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436514835" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Chap-04%20IP%20Addresses%20Classful.ppt" added="2015-07-10T07:54:08Z" modified="2015-07-10T07:54:31Z" visited="2015-07-10T07:54:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436514871" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Chap-06%20Delivery%20and%20Routing%20of%20IP%20Packets.ppt" added="2015-07-10T07:54:44Z" modified="2015-07-10T08:41:25Z" visited="2015-07-10T07:54:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436517685" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/socket%20api%20review.pdf" added="2015-07-10T08:40:09Z" modified="2015-07-10T08:40:09Z" visited="2015-07-10T08:40:09Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1436517609" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Raw-Sockets-Basics-Presentation.ppt" added="2015-07-10T15:43:03Z" modified="2015-07-10T15:53:14Z" visited="2015-07-10T15:43:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436543594" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Socket_Tutorial.pdf" added="2015-07-10T15:53:47Z" modified="2015-07-10T15:53:47Z" visited="2015-07-10T15:53:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1436543627" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/TCPIP_MCQ-1.pdf" added="2015-07-10T15:54:40Z" modified="2015-07-21T09:39:37Z" visited="2015-07-10T15:54:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1437471577" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/TCPIPQuestions-1.docx" added="2015-07-10T15:54:54Z" modified="2015-07-10T15:54:54Z" visited="2015-07-10T15:54:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1436543694" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/DFS-1.pdf" added="2015-07-10T15:55:19Z" modified="2015-07-10T15:55:19Z" visited="2015-07-10T15:55:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1436543719" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/A%20Network%20Primer.ppt" added="2009-03-30T05:52:46Z" modified="2009-03-30T06:04:30Z" visited="2009-03-30T05:52:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1238392366" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1238393070" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Introduction.ppt" added="2001-12-31T18:40:33Z" modified="2001-12-31T18:43:22Z" visited="2001-12-31T18:40:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1009824202" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Digital_logic_design.ppt" added="2001-12-31T18:43:29Z" modified="2001-12-31T18:54:23Z" visited="2001-12-31T18:43:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1009824863" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Architecture.ppt" added="2001-12-31T18:54:42Z" modified="2001-12-31T18:59:01Z" visited="2001-12-31T18:54:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1009825141" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/C%2B%2B_FAQ.pdf" added="2015-08-04T14:36:30Z" modified="2015-08-24T08:05:32Z" visited="2015-08-04T14:36:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1440403532" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/ANSI_C%2B%2B.pdf" added="2015-08-04T14:37:20Z" modified="2015-08-05T09:24:15Z" visited="2015-08-04T14:37:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1438766655" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/C_%2B%2B_Programming_HOWTO.pdf" added="2015-08-04T14:37:42Z" modified="2015-08-24T08:07:30Z" visited="2015-08-04T14:37:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1440403650" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Structure_Union.ppt" added="2015-08-05T10:23:53Z" modified="2005-10-21T23:00:29Z" visited="2015-08-05T10:23:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1129935629" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/InstructionSet.ppt" added="2015-08-10T08:39:22Z" modified="2015-08-10T09:20:16Z" visited="2015-08-10T08:39:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1439198416" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Assembler%20Directives.ppt" added="2015-08-10T09:20:38Z" modified="2005-10-20T23:32:42Z" visited="2015-08-10T09:20:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1129851162" count="4"/>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1129851093" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/InstructionSetContd(2).ppt" added="2015-08-10T09:22:53Z" modified="2015-08-10T09:23:52Z" visited="2015-08-10T09:22:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1439198632" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/InstructionSetContd(3).ppt" added="2015-08-10T09:24:11Z" modified="2015-08-10T09:24:26Z" visited="2015-08-10T09:24:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1439198666" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/rakib.lnk" added="2015-08-21T14:24:43Z" modified="2015-08-21T14:24:43Z" visited="2015-08-21T14:24:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1440167083" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/untitled%20folder/ls-l1.c.lnk" added="2015-08-21T14:30:14Z" modified="2015-08-21T14:30:14Z" visited="2015-08-21T14:30:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1440167414" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/ExtInterrups.ppt" added="2015-08-22T09:37:44Z" modified="2005-10-20T23:24:04Z" visited="2015-08-22T09:37:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1129850644" count="6"/>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1129850620" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/heap%20sort.ppt" added="2015-09-02T13:36:23Z" modified="2015-09-02T20:39:30Z" visited="2015-09-02T13:36:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441226370" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/insertion%20sort.ppt" added="2015-09-02T20:53:42Z" modified="2015-09-02T20:53:42Z" visited="2015-09-02T20:53:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441227222" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/7_seg.doc" added="2015-09-04T12:05:37Z" modified="2015-09-04T12:08:24Z" visited="2015-09-04T12:05:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -writer %U" timestamp="1441368337" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441368504" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/insertion%20sort(2).ppt" added="2015-09-04T15:01:17Z" modified="2015-09-04T15:05:57Z" visited="2015-09-04T15:01:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441379157" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/selection%20sort(2).ppt" added="2015-09-04T15:06:18Z" modified="2015-09-04T17:38:50Z" visited="2015-09-04T15:06:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441388330" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/quick.ppt" added="2015-09-05T08:55:53Z" modified="2015-09-05T09:56:13Z" visited="2015-09-05T08:55:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="openoffice.org -impress %U" timestamp="1441443353" count="1"/>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441446973" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/list.c" added="2015-09-05T09:34:25Z" modified="2015-09-05T09:34:28Z" visited="2015-09-05T09:34:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1441445668" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/tree.c" added="2015-09-05T09:34:46Z" modified="2015-09-05T09:34:46Z" visited="2015-09-05T09:34:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="emacs %f" timestamp="1441445686" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/02-trees-57.doc" added="2015-09-05T09:37:49Z" modified="2015-09-05T09:48:01Z" visited="2015-09-05T09:37:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441446481" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/AVL%20trees%20and%20B%20Trees(2).doc" added="2015-09-05T09:48:06Z" modified="2015-09-05T09:48:13Z" visited="2015-09-05T09:48:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441446493" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/02-hashing-54.doc" added="2015-09-05T09:48:16Z" modified="2015-09-05T09:49:58Z" visited="2015-09-05T09:48:16Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441446598" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/Data%20Structures%20And%20Program%20Design%20In%20C(2).pdf" added="2015-09-05T09:50:03Z" modified="2015-09-05T09:50:03Z" visited="2015-09-05T09:50:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1441446603" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/SerialInterrups.ppt" added="2015-09-05T10:02:22Z" modified="2015-09-05T11:01:26Z" visited="2015-09-05T10:02:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441450886" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/TimerInterrupts.ppt" added="2015-09-05T11:01:38Z" modified="2015-09-05T11:01:53Z" visited="2015-09-05T11:01:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441450913" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/quick(2).ppt" added="2015-09-10T10:44:24Z" modified="2015-09-10T10:54:16Z" visited="2015-09-10T10:44:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1441882456" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Hex2BCD.pdf" added="2015-09-14T10:49:57Z" modified="2015-09-14T10:49:57Z" visited="2015-09-14T10:49:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1442227797" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/linklist.lnk" added="2005-10-20T23:25:34Z" modified="2005-10-20T23:25:34Z" visited="2005-10-20T23:25:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="gnome-open %u" timestamp="1129850734" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Real-Time%20Embedded%20Multithreading%20Using%20ThreadX%20and%20ARM.pdf" added="2015-09-29T09:52:58Z" modified="2015-09-29T09:52:58Z" visited="2015-09-29T09:52:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1443520378" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/CAN%20PROTOCOL.ppt" added="2015-09-29T14:26:15Z" modified="2015-09-29T14:26:15Z" visited="2015-09-29T14:26:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1443536775" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Architecture.ppt" added="2015-10-02T09:57:48Z" modified="2015-10-02T09:57:48Z" visited="2015-10-02T09:57:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1443779868" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/RTC_PROJECT.doc" added="2015-10-08T05:47:24Z" modified="2015-10-08T05:49:48Z" visited="2015-10-08T05:47:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1444283388" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/ARM7TDMIvE.pdf" added="2015-10-08T05:48:05Z" modified="2015-10-08T05:48:05Z" visited="2015-10-08T05:48:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Evince Document Viewer" exec="evince %u" timestamp="1444283285" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/ARM%20Introduction%202.ppt" added="2015-10-08T05:50:55Z" modified="2015-10-08T06:20:25Z" visited="2015-10-08T05:50:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1444285225" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/v14he8k6/Desktop/ARM%20Instructions%201.ppt" added="2015-10-08T06:20:44Z" modified="2015-10-08T06:22:22Z" visited="2015-10-08T06:20:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1444285342" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/CAN.pptx" added="2015-10-08T06:23:06Z" modified="2015-10-08T06:23:06Z" visited="2015-10-08T06:23:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1444285386" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/can.ppt" added="2015-10-08T06:23:38Z" modified="2015-10-08T06:23:38Z" visited="2015-10-08T06:23:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-powerpoint"/>
+        <bookmark:applications>
+          <bookmark:application name="OpenOffice.org 3.1" exec="soffice %u" timestamp="1444285418" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

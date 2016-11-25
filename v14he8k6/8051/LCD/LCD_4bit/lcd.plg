@@ -1,0 +1,201 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\8051\LCD\LCD_4bit\lcd.uv2
+Project File Date:  08/18/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD_4BITUN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(12): error C202: 'en': undefined identifier
+LCD_4BITUN.C(13): error C202: 'en': undefined identifier
+LCD_4BITUN.C(14): error C202: 'en': undefined identifier
+LCD_4BITUN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(19): error C202: 'en': undefined identifier
+LCD_4BITUN.C(20): error C202: 'en': undefined identifier
+compiling lcd_4bitln.c...
+LCD_4BITLN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(12): error C202: 'en': undefined identifier
+LCD_4BITLN.C(13): error C202: 'en': undefined identifier
+LCD_4BITLN.C(14): error C202: 'en': undefined identifier
+LCD_4BITLN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(19): error C202: 'en': undefined identifier
+LCD_4BITLN.C(20): error C202: 'en': undefined identifier
+compiling delay.h...
+DELAY.H(6): error C202: 'j': undefined identifier
+DELAY.H(7): error C141: syntax error near '}'
+compiling lcd4_main.c...
+lcd4_main.c(2): error C301: identifier expected
+lcd4_main.c(2): error C305: unterminated string/char const
+LCD4_MAIN.C(22): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD_4BITUN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(12): error C202: 'en': undefined identifier
+LCD_4BITUN.C(13): error C202: 'en': undefined identifier
+LCD_4BITUN.C(14): error C202: 'en': undefined identifier
+LCD_4BITUN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(19): error C202: 'en': undefined identifier
+LCD_4BITUN.C(20): error C202: 'en': undefined identifier
+compiling lcd_4bitln.c...
+LCD_4BITLN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(12): error C202: 'en': undefined identifier
+LCD_4BITLN.C(13): error C202: 'en': undefined identifier
+LCD_4BITLN.C(14): error C202: 'en': undefined identifier
+LCD_4BITLN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(19): error C202: 'en': undefined identifier
+LCD_4BITLN.C(20): error C202: 'en': undefined identifier
+compiling delay.h...
+DELAY.H(6): error C202: 'j': undefined identifier
+DELAY.H(7): error C141: syntax error near '}'
+compiling lcd4_main.c...
+DELAY.H(6): error C202: 'j': undefined identifier
+DELAY.H(7): error C141: syntax error near '}'
+LCD4_MAIN.C(24): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD_4BITUN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(12): error C202: 'en': undefined identifier
+LCD_4BITUN.C(13): error C202: 'en': undefined identifier
+LCD_4BITUN.C(14): error C202: 'en': undefined identifier
+LCD_4BITUN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(19): error C202: 'en': undefined identifier
+LCD_4BITUN.C(20): error C202: 'en': undefined identifier
+compiling lcd_4bitln.c...
+LCD_4BITLN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(12): error C202: 'en': undefined identifier
+LCD_4BITLN.C(13): error C202: 'en': undefined identifier
+LCD_4BITLN.C(14): error C202: 'en': undefined identifier
+LCD_4BITLN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(19): error C202: 'en': undefined identifier
+LCD_4BITLN.C(20): error C202: 'en': undefined identifier
+compiling delay.h...
+DELAY.H(7): error C141: syntax error near '}'
+compiling lcd4_main.c...
+DELAY.H(7): error C141: syntax error near '}'
+LCD4_MAIN.C(24): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD_4BITUN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(12): error C202: 'en': undefined identifier
+LCD_4BITUN.C(13): error C202: 'en': undefined identifier
+LCD_4BITUN.C(14): error C202: 'en': undefined identifier
+LCD_4BITUN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(19): error C202: 'en': undefined identifier
+LCD_4BITUN.C(20): error C202: 'en': undefined identifier
+compiling lcd_4bitln.c...
+LCD_4BITLN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(12): error C202: 'en': undefined identifier
+LCD_4BITLN.C(13): error C202: 'en': undefined identifier
+LCD_4BITLN.C(14): error C202: 'en': undefined identifier
+LCD_4BITLN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(19): error C202: 'en': undefined identifier
+LCD_4BITLN.C(20): error C202: 'en': undefined identifier
+compiling delay.h...
+compiling lcd4_main.c...
+LCD4_MAIN.C(25): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD_4BITUN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(12): error C202: 'en': undefined identifier
+LCD_4BITUN.C(13): error C202: 'en': undefined identifier
+LCD_4BITUN.C(14): error C202: 'en': undefined identifier
+LCD_4BITUN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITUN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITUN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITUN.C(19): error C202: 'en': undefined identifier
+LCD_4BITUN.C(20): error C202: 'en': undefined identifier
+compiling lcd_4bitln.c...
+LCD_4BITLN.C(9): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(10): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(11): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(12): error C202: 'en': undefined identifier
+LCD_4BITLN.C(13): error C202: 'en': undefined identifier
+LCD_4BITLN.C(14): error C202: 'en': undefined identifier
+LCD_4BITLN.C(16): error C202: 'lcd_data': undefined identifier
+LCD_4BITLN.C(17): error C202: 'flag': undefined identifier
+LCD_4BITLN.C(18): error C202: 'rs': undefined identifier
+LCD_4BITLN.C(19): error C202: 'en': undefined identifier
+LCD_4BITLN.C(20): error C202: 'en': undefined identifier
+compiling delay.h...
+compiling lcd4_main.c...
+LCD4_MAIN.C(5): error C141: syntax error near 'sbit'
+LCD4_MAIN.C(6): error C141: syntax error near 'sbit'
+LCD4_MAIN.C(7): error C141: syntax error near 'sbit'
+LCD4_MAIN.C(25): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD4_MAIN.C(26): error C202: 'cgram_lut': undefined identifier
+compiling lcd_4bitln.c...
+LCD4_MAIN.C(26): error C202: 'cgram_lut': undefined identifier
+compiling delay.h...
+compiling lcd4_main.c...
+LCD4_MAIN.C(26): error C202: 'cgram_lut': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD4_MAIN.C(10): error C202: 'ox1f': undefined identifier
+compiling lcd_4bitln.c...
+LCD4_MAIN.C(10): error C202: 'ox1f': undefined identifier
+compiling delay.h...
+compiling lcd4_main.c...
+LCD4_MAIN.C(10): error C202: 'ox1f': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD4_MAIN.C(11): error C202: 'ox1f': undefined identifier
+compiling lcd_4bitln.c...
+LCD4_MAIN.C(11): error C202: 'ox1f': undefined identifier
+compiling lcd4_main.c...
+LCD4_MAIN.C(11): error C202: 'ox1f': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd_4bitun.c...
+LCD4_MAIN.C(11): error C202: 'ox11': undefined identifier
+compiling lcd_4bitln.c...
+LCD4_MAIN.C(11): error C202: 'ox11': undefined identifier
+compiling lcd4_main.c...
+LCD4_MAIN.C(11): error C202: 'ox11': undefined identifier
+Target not created

@@ -1,0 +1,30 @@
+C51 COMPILER V7.08   UTILITY                                                               09/26/2015 09:11:47 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE UTILITY
+OBJECT MODULE PLACED IN utility.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE utility.h BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #ifndef UTILITY_H
+   2          
+   3          #define UTILITY_H
+   4          extern void rev_bits2(u8);
+   5          
+   6          #endif
+   7          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

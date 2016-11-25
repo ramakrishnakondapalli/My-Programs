@@ -1,0 +1,5 @@
+"spi_adcmcp3204_main.obj",
+"spi_adcmcp3204.obj",
+"UART.obj" 
+TO "project_assign" 
+RAMSIZE(256) 

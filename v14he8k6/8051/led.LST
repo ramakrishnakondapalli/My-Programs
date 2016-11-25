@@ -1,0 +1,102 @@
+A51 MACRO ASSEMBLER  LED                                                                  08/12/2015 14:04:09 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN led.OBJ
+ASSEMBLER INVOKED BY: C:\Keil2\C51\BIN\A51.EXE led.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;$include (delay_100ms.asm)
+                +1     2     ;$include (delay_10ms.asm)
+                +2     3     
+                +2     4     ;$include (delay_1ms.asm)
+                +3     5     
+                +3     6     delay1 segment code
+----            +3     7     rseg delay1
+                +3     8     
+0000            +3     9     delay_1ms:
+0000 7FFA       +3    10     mov r7,#250;1mc
+0002            +3    11     l1:
+0002 DFFE       +3    12     djnz r7,l1;2*250
+0004 7EF8       +3    13     mov r6,#248;1mc
+0006            +3    14     l2:
+0006 DEFE       +3    15     djnz r6,l2;2*248
+0008 22         +3    16     ret        ;2mc
+                +3    17     
+                +2    18     
+                +2    19     delay2 segment code
+----            +2    20     rseg delay2
+                +2    21     
+0000            +2    22     delay_10ms:
+0000 7D09       +2    23     mov r5,#09;1mc
+0002            +2    24     l3:
+0002 1100     F +2    25     acall delay_1ms;9*1ms=9ms
+0004 DDFC       +2    26     djnz r5,l3     ;2*9=18mc
+0006 7FFA       +2    27     mov r7,#250    ;1mc
+0008            +2    28     l4:
+0008 DFFE       +2    29     djnz r7,l4      ;2*250=500mc
+000A 7DE4       +2    30     mov r5,#228     ;1mc
+000C            +2    31     l5:
+000C DDFE       +2    32     djnz r5,l5      ;2*228=456mc
+000E 22         +2    33     ret             ;2mc 
+                +1    34     
+                +1    35     ;$include(delay_1ms.asm)
+                +1    36     delay3 segment code
+----            +1    37     rseg delay3
+                +1    38     
+0000            +1    39     delay_100ms:
+0000 7809       +1    40     mov r0,#09       ;1mc
+0002            +1    41     l:
+0002 1100     F +1    42     acall delay_10ms  ;9*10ms
+0004 D8FC       +1    43     djnz r0,l          ;2*9mc
+0006 7809       +1    44     mov r0,#09          ;1mc
+0008            +1    45     s:
+0008 1100     F +1    46     acall delay_1ms     ;1*9ms
+000A D8FC       +1    47     djnz r0,s           ;2mc*9=18mc
+000C 79FF       +1    48     mov r1,#255          ;1mc
+000E D9FE       +1    49     djnz r1,$            ;2*255=510mc
+0010 7DE0       +1    50     mov r5,#224          ;1mc
+0012 DDFE       +1    51     djnz r5,$            ;2*224mc=448mc
+0014 22         +1    52     ret                  ;2mc
+                +1    53     
+                      54     
+----                  55     cseg at 0
+0000                  56     l6:
+0000 759000           57     mov p1,#0x00
+0003 1100     F       58     acall delay_100ms
+A51 MACRO ASSEMBLER  LED                                                                  08/12/2015 14:04:09 PAGE     2
+
+0005 7590FF           59     mov p1,#0xff
+0008 1100     F       60     acall delay_100ms
+000A 80F4             61     sjmp l6
+                      62     end
+A51 MACRO ASSEMBLER  LED                                                                  08/12/2015 14:04:09 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY1 . . . . . .  C SEG    0009H       REL=UNIT
+DELAY2 . . . . . .  C SEG    000FH       REL=UNIT
+DELAY3 . . . . . .  C SEG    0015H       REL=UNIT
+DELAY_100MS. . . .  C ADDR   0000H   R   SEG=DELAY3
+DELAY_10MS . . . .  C ADDR   0000H   R   SEG=DELAY2
+DELAY_1MS. . . . .  C ADDR   0000H   R   SEG=DELAY1
+L. . . . . . . . .  C ADDR   0002H   R   SEG=DELAY3
+L1 . . . . . . . .  C ADDR   0002H   R   SEG=DELAY1
+L2 . . . . . . . .  C ADDR   0006H   R   SEG=DELAY1
+L3 . . . . . . . .  C ADDR   0002H   R   SEG=DELAY2
+L4 . . . . . . . .  C ADDR   0008H   R   SEG=DELAY2
+L5 . . . . . . . .  C ADDR   000CH   R   SEG=DELAY2
+L6 . . . . . . . .  C ADDR   0000H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+S. . . . . . . . .  C ADDR   0008H   R   SEG=DELAY3
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

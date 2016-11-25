@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+V:\8051\LCD\lcd.uv2
+Project File Date:  08/31/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling temp.c...
+TEMP.C(49): error C202: 'dlyu': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling temp.c...
+linking...
+Program Size: data=9.0 xdata=0 code=117
+"lcd" - 0 Error(s), 0 Warning(s).

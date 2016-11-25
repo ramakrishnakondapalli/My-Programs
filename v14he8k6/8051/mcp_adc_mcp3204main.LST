@@ -1,0 +1,48 @@
+C51 COMPILER V9.02   MCP_ADC_MCP3204MAIN                                                   09/29/2015 18:27:15 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE MCP_ADC_MCP3204MAIN
+OBJECT MODULE PLACED IN mcp_adc_mcp3204main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE mcp_adc_mcp3204main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"P89V51Rx2.h"
+   2          #include"spi_adcmcp3204.h"
+   3          #include"spi_adcmcp3204.c"
+   4          #include"UART.h"
+   5           main()
+   6          {
+   7   1           init_uart();
+   8   1           init_lcd();
+   9   1           cmd_lcd(0x80);
+  10   1           delay_ms(10);
+  11   1           cmd_lcd(0x01);     
+  12   1               delay_ms(10);
+  13   1        while(1)
+  14   1        {
+  15   2         unsigned char t;
+  16   2              float_lcd(read_adcmcp3204(0));
+  17   2               t=SPDAT;
+  18   2         //t=uart_rx();
+  19   2         // char_lcd(t);
+  20   2         uart_tx(t);
+  21   2        }
+  22   1      
+  23   1                                                                 
+  24   1      }
+*** WARNING C291 IN LINE 97 OF MCP_ADC_MCP3204MAIN.C: not every exit path returns a value
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    410    ----
+   CONSTANT SIZE    =      5    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      20
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

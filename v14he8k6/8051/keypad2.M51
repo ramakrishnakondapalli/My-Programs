@@ -1,0 +1,110 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        08/17/2015  14:40:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL2\C51\BIN\BL51.EXE keypad2.obj TO keypad2
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  keypad2.obj (KEYPAD2)
+
+
+LINK MAP OF MODULE:  keypad2 (KEYPAD2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?INIT_ROWS?KEYPAD2
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0061H     UNIT         ?PR?KEY_SCAN?KEYPAD2
+            CODE    0061H     0019H     UNIT         ?PR?INIT_ROWS?KEYPAD2
+            CODE    007AH     0014H     UNIT         ?CO?KEYPAD2
+            CODE    008EH     000AH     UNIT         ?PR?COLSCAN?KEYPAD2
+
+
+
+OVERLAY MAP OF MODULE:   keypad2 (KEYPAD2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  keypad2 (KEYPAD2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KEYPAD2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:007AH         PUBLIC        keypad_lut
+  C:0000H         PUBLIC        key_scan
+  C:0061H         PUBLIC        init_rows
+  C:008EH         PUBLIC        colscan
+  C:008AH         PUBLIC        Scan_codes
+  -------         PROC          COLSCAN
+  C:008EH         LINE#         8
+  C:008EH         LINE#         9
+  C:008EH         LINE#         10
+  C:0096H         LINE#         11
+  C:0097H         LINE#         13
+  -------         ENDPROC       COLSCAN
+  -------         PROC          INIT_ROWS
+BL51 BANKED LINKER/LOCATER V5.03                                                      08/17/2015  14:40:23  PAGE 2
+
+
+  -------         DO            
+  D:0008H         SYMBOL        r0
+  D:000AH         SYMBOL        r1
+  D:000CH         SYMBOL        r2
+  D:000EH         SYMBOL        r3
+  -------         ENDDO         
+  C:0061H         LINE#         14
+  C:0061H         LINE#         15
+  C:0061H         LINE#         17
+  C:0079H         LINE#         18
+  -------         ENDPROC       INIT_ROWS
+  -------         PROC          KEY_SCAN
+  -------         DO            
+  D:0004H         SYMBOL        row
+  D:0005H         SYMBOL        col
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0000H         LINE#         19
+  C:0000H         LINE#         20
+  C:0000H         LINE#         22
+  C:0003H         LINE#         24
+  C:0009H         LINE#         27
+  C:0010H         LINE#         28
+  C:0010H         LINE#         29
+  C:0019H         LINE#         30
+  C:001EH         LINE#         31
+  C:0022H         LINE#         32
+  C:0025H         LINE#         34
+  C:002DH         LINE#         35
+  C:002DH         LINE#         36
+  C:0044H         LINE#         37
+  C:0044H         LINE#         38
+  C:0045H         LINE#         39
+  C:0045H         LINE#         40
+  C:0060H         LINE#         41
+  C:0060H         LINE#         45
+  -------         ENDPROC       KEY_SCAN
+  -------         ENDMOD        KEYPAD2
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEYPAD2
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+Program Size: data=16.0 xdata=0 code=152
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

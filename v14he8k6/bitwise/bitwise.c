@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+  int a=10,b=20,c=30,d;
+  d=a&b;
+  printf("%d\n",d);
+  d=a|b;
+printf("%d\n",d);
+  d=a^b;
+printf("%d\n",d);
+ d=a<<5;
+printf("%d\n",d); 
+  d=a>>5;
+printf("%d\n",d);
+ d=~a;
+printf("%d\n",d);
+ printf("%d\n",~10);
+printf("%d\n",~567);
+ printf("%d\n",~1);
+}

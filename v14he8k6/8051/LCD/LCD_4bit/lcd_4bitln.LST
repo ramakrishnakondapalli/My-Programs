@@ -1,0 +1,75 @@
+C51 COMPILER V7.08   LCD_4BITLN                                                            10/08/2015 09:31:06 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD_4BITLN
+OBJECT MODULE PLACED IN lcd_4bitln.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd_4bitln.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"delay.h"
+   3          #define lcd_data P2
+   4          sbit rs=P0^1;
+   5            sbit rw=P0^2;
+   6            sbit en=P0^3;
+   7            bit flag;
+   8          void writeln_lcd(unsigned dat)
+   9          {
+  10   1        lcd_data=(dat&0xf0);
+  11   1        if(flag)
+  12   1          rs=1;
+  13   1          en=1;
+  14   1          
+  15   1          en=0;
+  16   1          //lower nibble,rs=rw=en=0
+  17   1         lcd_data=(dat&0x0f)<<4;
+  18   1          if(flag)
+  19   1            rs=1;
+  20   1            en=1;
+  21   1            en=0;
+  22   1         delay_ms(2);
+  23   1      }
+  24          
+  25          void cmdln_lcd(unsigned char cmd)
+  26          {
+  27   1        lcd_data=(cmd&0xf0)|0x08; 
+  28   1        lcd_data&=~(1<<3);
+  29   1        lcd_data=((cmd&0x0f)<<4)|0x08; 
+  30   1        lcd_data&=~(1<<3);
+  31   1         delay_ms(2); 
+  32   1      
+  33   1      }
+  34          void charln_lcd(unsigned char ch)
+  35          {
+  36   1        lcd_data=(ch&0xf0)|0x0a;
+  37   1        lcd_data&=~(1<<3);
+  38   1        lcd_data=(((ch&0x0f)<<4)|0x0a);
+  39   1        lcd_data&=~(1<<3);
+  40   1        delay_ms(2);
+  41   1      }
+  42          void init_lcd(void)
+  43          {
+  44   1         cmdln_lcd(0x28);
+  45   1         cmdln_lcd(0x00);
+  46   1         cmdln_lcd(0x01);
+  47   1         cmdln_lcd(0x06);
+  48   1         cmdln_lcd(0x80);
+  49   1      }
+  50          void build_cgram(unsigned char *p,unsigned char n)
+  51          {
+  52   1        unsigned int i;
+  53   1        cmd_lcd(0x40);
+*** WARNING C206 IN LINE 53 OF LCD_4BITLN.C: 'cmd_lcd': missing function-prototype
+*** ERROR C267 IN LINE 53 OF LCD_4BITLN.C: 'cmd_lcd': requires ANSI-style prototype
+C51 COMPILER V7.08   LCD_4BITLN                                                            10/08/2015 09:31:06 PAGE 2   
+
+  54   1        for(i=0;i<n;i++)
+  55   1         {
+  56   2            char_lcd(p[i]);
+  57   2         }
+  58   1         cmd_lcd(0x80);
+  59   1      
+  60   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)

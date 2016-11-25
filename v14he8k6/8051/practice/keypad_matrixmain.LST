@@ -1,0 +1,43 @@
+C51 COMPILER V7.08   KEYPAD_MATRIXMAIN                                                     10/02/2015 11:09:47 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE KEYPAD_MATRIXMAIN
+OBJECT MODULE PLACED IN keypad_matrixmain.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE keypad_matrixmain.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"keypad_matrix.h"
+   3          
+   4          
+   5          main()
+   6          {
+   7   1      unsigned char keypad_val;
+   8   1      init_keypad();
+   9   1      init_lcd();
+  10   1      while(1)
+  11   1      {
+  12   2         
+  13   2        P3=keyscan();
+  14   2        keypad_val=P3;
+  15   2        char_lcd(keypad_val);
+  16   2      
+  17   2      }
+  18   1      
+  19   1      
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

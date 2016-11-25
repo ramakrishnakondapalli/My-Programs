@@ -1,0 +1,8 @@
+#include<strdio.h>
+main()
+{
+  
+
+
+
+}

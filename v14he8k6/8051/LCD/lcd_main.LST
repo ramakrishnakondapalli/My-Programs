@@ -1,0 +1,39 @@
+C51 COMPILER V7.08   LCD_MAIN                                                              08/31/2015 16:03:09 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LCD_MAIN
+OBJECT MODULE PLACED IN C:\New Folder (21)\lcd_main.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE lcd_main.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\New Folder (21)\lcd_main.ob
+                    -j)
+
+line level    source
+
+   1          #include"lcd.h"
+   2          #include"delay.h"
+   3          
+   4          main()
+   5          {
+   6   1      char k;
+   7   1        init_lcd();
+   8   1      char_lcd('N');
+   9   1      for(k=0;k<10;k++)
+  10   1      {
+  11   2      char_lcd(k+48);
+  12   2      delay_ms(1000);
+  13   2      }
+  14   1        while(1);
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     39    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

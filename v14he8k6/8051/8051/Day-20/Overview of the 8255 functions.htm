@@ -1,0 +1,151 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Overview of the 8255 functions">
+<meta name="abstract" content="Overview of the 8255 functions">
+<meta name="audience" content="alle">
+<meta name="page-topic" content="Gesellschaft">
+<meta name="page-type" content="Private Homepage">
+<meta name="keywords" content="Sharp MZ-700, MZ-700, MZ-7xx, MZ-711, MZ-721, MZ-731, SHARP, MZ-800, MZ-811, MZ-821, MZ-80, MZ-8xx, MZ">
+<meta name="author" content="www.sharpmz.org">
+<meta name="copyright" content="(C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006 by www.sharpmz.org">
+<meta name="publisher" content="www.sharpmz.org">
+<meta name="CREATED" content="19980701">
+<meta name="CHANGEDBY" content="www.sharpmz.org">
+<meta name="CHANGED" content="20020804">
+<meta name="revisit-after" content="30 days">
+<meta name="robots" content="index,follow">
+<meta http-equiv="expires" content="0">
+<meta name="LANGUAGE" content="english, en"><title>Overview of the 8255 functions</title>
+
+<link rel="stylesheet" type="text/css" href="Overview%20of%20the%208255%20functions_files/format0.css"></head><body background="Overview%20of%20the%208255%20functions_files/SHARPbg.gif">
+<a name="top"></a>
+<div align="center">
+<table bgcolor="#f7f7e7" border="1" bordercolor="#996633" cellpadding="7">
+  <tbody><tr> 
+    <td height="90"> <img src="Overview%20of%20the%208255%20functions_files/argo.gif" alt="Sharp logo" align="left" height="45" width="45"> 
+      <div class="head5" align="right">8255 functions&nbsp;</div>
+      <div class="head3" align="right">( General overview )&nbsp;&nbsp;</div>
+    </td>
+  </tr>
+  <tr> 
+    <td bordercolor="#F7EBBD"> 
+      <p><b>General</b></p>
+      <p>The Intel 8255A is a general purpose programmable I/O device which is 
+        designed for use with all Intel and most other microprocessors. It provides 
+        24 I/O pins which may be individually programmed in 2 groups of 12 and 
+        used in 3 major modes of operation.<br>
+        <br>
+        In MODE 0, each group of 12 I/O pins may be programmed in sets of 4 and 
+        8 to be inputs or outputs. In MODE 1, each group may be programmed to 
+        have 8 lines of input or output. 3 of the remaining 4 pins are used for 
+        handshaking and interrupt control signals. MODE 2 is a strobed bi-directional 
+        bus configuration. </p>
+      <p>The 8255 is a 40 pin integrated circuit (IC), designed to perform a variety 
+        of interface functions in a computer environment. The 8255 wasn't originally 
+        designed to be connected to the Z80. It was manufactured by Intel for 
+        the 8080 microprocessor.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td bordercolor="#F7EBBD"> <a name="8255pinout"></a>
+      <p><b>PIN configuration</b></p>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr> 
+          <td> 
+            <div align="left"><img src="Overview%20of%20the%208255%20functions_files/8255.gif" alt="8255 device pinout" height="281" width="155"></div>
+          </td>
+          <td width="15">&nbsp;</td>
+          <td> <b>D0 - D7</b> These are the data input/output lines for the device. 
+            All information read from and written to the 8255 occurs via these 
+            8 data lines. <br>
+            <span class="overlineb">CS</span> (<i>Chip Select Input</i>). 
+            If this line is a logical 0, the microprocessor can read and write 
+            to the 8255. <br>
+            <span class="overlineb">RD</span> (<i>Read Input</i>) 
+            Whenever this input line is a logical 0 and the <span class="overline">RD</span> 
+            input is a logical 0, the 8255 data outputs are enabled onto the system 
+            data bus. <br>
+            <span class="overlineb">WR</span> (<i>Write Input</i>) 
+            Whenever this input line is a logical 0 and the <span class="overline">CS</span> 
+            input is a logical 0, data is written to the 8255 from the system 
+            data bus <br>
+            <b>A0 - A1</b> (<i>Address Inputs</i>) The logical combination of 
+            these two input lines determines which internal register of the 8255 
+            data is written to or read from. <br>
+            <b>RESET</b> The 8255 is placed into its reset state if this input 
+            line is a logical 1. All peripheral ports are set to the input mode. 
+            <br>
+            <b>PA0 - PA7</b>, <b>PB0 - PB7</b>, <b>PC0 - PC7</b> These signal 
+            lines are used as 8-bit I/O ports. They can be connected to peripheral 
+            devices. The 8255 has three 8 bit I/O ports and each one can be connected 
+            to the physical lines of an external device. These lines are labeled 
+            PA0-PA7, PB0-PB7, and PC0-PC7. The groups of the signals are divided 
+            into three different I/O ports labeled port A (PA), port B (PB), and 
+            port C (PC).</td>
+        </tr>
+      </tbody></table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td bordercolor="#F7EBBD"> 
+      <p><b>Block diagram</b></p>
+      <img src="Overview%20of%20the%208255%20functions_files/8255blkd.gif" alt="8255 block diagram" height="406" width="450"> 
+      <div class="picfooter">Block diagram of the 8255 </div>
+      <p>Two control groups, labeled group A control and group B control define 
+        how the three I/O ports operate. There are several different operating 
+        modes for the 8255 and these modes must be defined by the CPU writing 
+        programming or control words to the device 8255. </p>
+      <p>The line group of port C consists of two 4 bit ports. One of the 4 bit 
+        group is associated with group A control and the other 4 bit group with 
+        group B control device signals. The upper 4 bits of port C are associated 
+        with group A control while the lower 4 bits are associated with group 
+        B control. 
+      </p><p>The final logic blocks are read/write control logic and data bus buffer. 
+        These blocks provide the electrical interface between the Z80 and the 
+        8255.</p>
+      <p>The data bus buffer buffers the data I/O lines to/from the Z80 data bus. 
+        The read/write control logic routes the data to and from the correct internal 
+        registers with the right timing. The internal path being enabled depends 
+        on the type of operation performed by the Z80. The type of operation can 
+        be I/O read or I/O write.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td bordercolor="#F7EBBD"> 
+      <p><b>Control Word Register</b></p>
+      <p>Before going to discuss the detailed description about the usage of the 
+        8255 in the MZ-700, you should see the bit definitions of the 8255 control 
+        word register (port $E003 of the MZ-700).</p>
+      <p>If bit 7 of the control word is a logical 1 then the 8255 will be configured. 
+        See the picture of the practicable configurations:</p>
+      <a name="configctrlword"></a> <img src="Overview%20of%20the%208255%20functions_files/8255ctrl.gif" alt="8255 mode definition" height="329" width="256"> 
+      <div class="picfooter">Mode definition of the 8255 control register<br>
+        to configure the 8255 </div>
+      <p><a name="singlebit"></a>If bit 7 of the control word is a logical 0 then 
+        each bit of the port C can be set or reset. See the picture of the practicable 
+        possibilities:</p>
+      <img src="Overview%20of%20the%208255%20functions_files/8255ctrlbit.gif" alt="8255 single bit" height="217" width="373"> 
+      <div class="picfooter">Bit definitions of the 8255 control register to modify 
+        single bits of port C </div>
+      <p>Examples: <br>
+        If you want to set/reset bit 0 of port C then set D3 to D1 to 000. <br>
+        Bit 1 of port C will be set/reset if you code 001 to D3 to D1. <br>
+        Bit 6 of port C is set/reset if D3 to D1 is 110.</p>
+      <p>Go to page "<a href="http://www.sharpmz.org/mz-700/memio.htm">Memory mapped I/O</a>" to download 
+        the complex datasheet of the 8255.</p>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+<p class="afooter"><br>
+  <a href="#top"><img src="Overview%20of%20the%208255%20functions_files/top.gif" alt="Go to the top of this page" border="0" height="11" width="10"></a> 
+  <a href="http://www.sharpmz.org/index.html" target="_top"><img src="Overview%20of%20the%208255%20functions_files/home.gif" alt="Home" border="0" height="14" hspace="25" width="13"></a> 
+  <br>
+  <br>
+  last updated August 4, 2002<br>
+  <img src="Overview%20of%20the%208255%20functions_files/copyright.gif" align="absbottom" height="12" width="12"> 
+  <a href="mailto:sharpmz@sharpmz.org" class="afooter">sharpmz@sharpmz.org<br>
+  </a></p>
+</body></html>

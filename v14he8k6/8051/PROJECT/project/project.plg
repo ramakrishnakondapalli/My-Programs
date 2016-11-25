@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+V:\8051\PROJECT\project\project.uvproj
+Project File Date:  10/16/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling CAN_FUNC.C...
+Headers.h(4): warning C318: can't open file 'P89V51Rx2.H'
+spi.h(5): warning C318: can't open file 'tyes.h'
+SPI.H(7): error C202: 'P1': undefined identifier
+canfunc.h(6): error C301: identifier expected
+canfunc.h(6): error C304: bad macro parameter list
+CANFUNC.H(13): error C202: 'SPCTL': undefined identifier
+CANFUNC.H(14): error C202: 'cs': undefined identifier
+CANFUNC.H(22): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(23): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(24): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(25): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(31): error C202: 'cs': undefined identifier
+CANFUNC.H(33): error C202: 'cs': undefined identifier
+CANFUNC.H(39): error C202: 'cs': undefined identifier
+CANFUNC.H(44): error C202: 'cs': undefined identifier
+CANFUNC.H(50): error C202: 'cs': undefined identifier
+CANFUNC.H(52): error C202: 'addr': undefined identifier
+CANFUNC.H(54): error C202: 'cs': undefined identifier
+CANFUNC.H(62): error C202: 'cs': undefined identifier
+CANFUNC.H(65): error C202: 'cs': undefined identifier
+CAN_FUNC.C(34): error C202: 'IE': undefined identifier
+CAN_FUNC.C(40): error C202: 'IEN0': undefined identifier
+CAN_FUNC.C(41): error C202: 'IT0': undefined identifier
+CAN_FUNC.C(41): error C141: syntax error near '/'
+CAN_FUNC.C(41): error C202: 'falling': undefined identifier
+CAN_FUNC.C(209): warning C316: unterminated conditionals
+compiling SPI.C...
+..\SPI.C(7): error C202: 'SPCTL': undefined identifier
+..\SPI.C(8): error C202: 'cs': undefined identifier
+..\SPI.C(11): error C141: syntax error near 'CMD', expected ')'
+..\SPI.C(13): error C202: 'cs': undefined identifier
+..\SPI.C(16): error C202: '_cs': undefined identifier
+..\SPI.C(26): error C202: '_cs': undefined identifier
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling CAN_FUNC.C...
+Headers.h(4): warning C318: can't open file 'P89V51Rx2.H'
+spi.h(5): warning C318: can't open file 'tyes.h'
+SPI.H(7): error C202: 'P1': undefined identifier
+canfunc.h(6): error C301: identifier expected
+canfunc.h(6): error C304: bad macro parameter list
+CANFUNC.H(13): error C202: 'SPCTL': undefined identifier
+CANFUNC.H(14): error C202: 'cs': undefined identifier
+CANFUNC.H(22): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(23): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(24): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(25): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(31): error C202: 'cs': undefined identifier
+CANFUNC.H(33): error C202: 'cs': undefined identifier
+CANFUNC.H(39): error C202: 'cs': undefined identifier
+CANFUNC.H(44): error C202: 'cs': undefined identifier
+CANFUNC.H(50): error C202: 'cs': undefined identifier
+CANFUNC.H(52): error C202: 'addr': undefined identifier
+CANFUNC.H(54): error C202: 'cs': undefined identifier
+CANFUNC.H(62): error C202: 'cs': undefined identifier
+CANFUNC.H(65): error C202: 'cs': undefined identifier
+CAN_FUNC.C(34): error C202: 'IE': undefined identifier
+CAN_FUNC.C(40): error C202: 'IEN0': undefined identifier
+CAN_FUNC.C(41): error C202: 'IT0': undefined identifier
+CAN_FUNC.C(41): error C141: syntax error near '/'
+CAN_FUNC.C(41): error C202: 'falling': undefined identifier
+CAN_FUNC.C(209): warning C316: unterminated conditionals
+compiling SPI.C...
+..\SPI.C(7): error C202: 'SPCTL': undefined identifier
+..\SPI.C(8): error C202: 'cs': undefined identifier
+..\SPI.C(11): error C141: syntax error near 'CMD', expected ')'
+..\SPI.C(13): error C202: 'cs': undefined identifier
+..\SPI.C(16): error C202: 'cs': undefined identifier
+..\SPI.C(26): error C202: 'cs': undefined identifier
+compiling main.c...
+Target not created
+Build target 'Target 1'
+compiling CAN_FUNC.C...
+Headers.h(4): warning C318: can't open file 'P89V51Rx2.H'
+spi.h(5): warning C318: can't open file 'tyes.h'
+SPI.H(7): error C202: 'P1': undefined identifier
+canfunc.h(6): error C301: identifier expected
+canfunc.h(6): error C304: bad macro parameter list
+CANFUNC.H(13): error C202: 'SPCTL': undefined identifier
+CANFUNC.H(14): error C202: 'cs': undefined identifier
+CANFUNC.H(22): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(23): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(24): error C202: 'SPCFG': undefined identifier
+CANFUNC.H(25): error C202: 'SPDAT': undefined identifier
+CANFUNC.H(31): error C202: 'cs': undefined identifier
+CANFUNC.H(33): error C202: 'cs': undefined identifier
+CANFUNC.H(39): error C202: 'cs': undefined identifier
+CANFUNC.H(44): error C202: 'cs': undefined identifier
+CANFUNC.H(50): error C202: 'cs': undefined identifier
+CANFUNC.H(52): error C202: 'addr': undefined identifier
+CANFUNC.H(54): error C202: 'cs': undefined identifier
+CANFUNC.H(62): error C202: 'cs': undefined identifier
+CANFUNC.H(65): error C202: 'cs': undefined identifier
+HEADERS.H(11): error C202: 'P1': undefined identifier
+CAN_FUNC.C(34): error C202: 'IE': undefined identifier
+CAN_FUNC.C(40): error C202: 'IEN0': undefined identifier
+CAN_FUNC.C(41): error C202: 'IT0': undefined identifier
+CAN_FUNC.C(41): error C141: syntax error near '/'
+CAN_FUNC.C(41): error C202: 'falling': undefined identifier
+CAN_FUNC.C(209): warning C316: unterminated conditionals
+compiling SPI.C...
+..\SPI.C(7): error C202: 'SPCTL': undefined identifier
+..\SPI.C(8): error C202: 'cs': undefined identifier
+..\SPI.C(11): error C141: syntax error near 'CMD', expected ')'
+..\SPI.C(13): error C202: 'cs': undefined identifier
+..\SPI.C(16): error C202: 'cs': undefined identifier
+..\SPI.C(26): error C202: 'cs': undefined identifier
+Target not created

@@ -1,0 +1,34 @@
+C51 COMPILER V7.08   UART_MO_MAIN                                                          09/26/2015 09:11:47 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE UART_MO_MAIN
+OBJECT MODULE PLACED IN uart_mo_main.OBJ
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE uart_mo_main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include"uart_m0.h"
+   3          main()
+   4          {
+   5   1        init_uart();
+   6   1        while(1)
+   7   1        {
+   8   2         P1=uart_rx_read74hc165();
+   9   2        }
+  10   1      
+  11   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     10    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

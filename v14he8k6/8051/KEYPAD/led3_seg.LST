@@ -1,0 +1,79 @@
+C51 COMPILER V7.08   LED3_SEG                                                              10/02/2015 11:25:08 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE LED3_SEG
+OBJECT MODULE PLACED IN C:\v14he8k6\HEX\led3_seg.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE led3_seg.c BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\HEX\led3_seg.obj)
+
+line level    source
+
+   1          #include"headers.h"
+   2          sbit sel1=P1^0;
+   3          sbit sel2=P1^1;
+   4          sbit sel3=P1^2;
+   5          sbit sel4=P1^3;
+   6          #define seg  P0
+   7          code char LUT[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+   8          char dp1=0xff,dp2=0xff,dp3=0xff,dp4=0xff;
+   9          void displ_mux_seg(unsigned int i)
+  10          {
+  11   1        seg=LUT[i/1000]&dp1;
+  12   1          sel1=0;
+  13   1              delay_ms(1);
+  14   1           sel1=1;
+  15   1        seg=LUT[(i/100)%10]&dp2;
+  16   1          sel2=0;
+  17   1              delay_ms(1);
+  18   1           sel2=1;
+  19   1        seg=LUT[(i/10)%10]&dp3;
+  20   1          sel3=0;
+  21   1              delay_ms(1);
+  22   1           sel3=1;
+  23   1         seg=LUT[i%10]&dp4;
+  24   1          sel4=0;
+  25   1              delay_ms(1);
+  26   1           sel4=1;
+  27   1      
+  28   1      }
+  29          /*void dispf_mux_seg(float f)
+  30          {
+  31          unsigned int i;
+  32          if((f>0.0)&&(f<10.0))
+  33           {
+  34             dp1=0x7f;
+  35              f=f*1000;
+  36                  displ_mux_seg(i);
+  37          }
+  38          else if((f>10.0)&&(f<100.0))
+  39          {
+  40             dp2=0x7f;
+  41             f=f*100;
+  42             i=f;
+  43             displ_mux_seg(i);
+  44          }
+  45          else if((f>100.0)&&(f<1000.0))
+  46          {
+  47             dp3=0x7f;
+  48             f=f*10;
+  49             i=f;
+  50             displ_mux_seg(i);
+  51          }
+  52          
+  53          //dp1=0xff;dp2=0xff;dp3=0xff;
+  54          }*/
+
+C51 COMPILER V7.08   LED3_SEG                                                              10/02/2015 11:25:08 PAGE 2   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    167    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

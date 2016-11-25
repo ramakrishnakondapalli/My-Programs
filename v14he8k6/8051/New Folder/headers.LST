@@ -1,0 +1,27 @@
+C51 COMPILER V7.08   HEADERS                                                               08/19/2015 15:22:48 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE HEADERS
+OBJECT MODULE PLACED IN C:\v14he8k6\HEX\headers.obj
+COMPILER INVOKED BY: C:\Keil2\C51\BIN\C51.EXE headers.h BROWSE DEBUG OBJECTEXTEND OBJECT(C:\v14he8k6\HEX\headers.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void displ_mux_seg(unsigned int);
+   3          void dispf_mux_seg(float);
+   4          void delay_ms(unsigned int);
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

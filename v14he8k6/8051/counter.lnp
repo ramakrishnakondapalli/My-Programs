@@ -1,0 +1,3 @@
+"timer0_sqwv.obj" 
+TO "counter" 
+RAMSIZE(256) 
